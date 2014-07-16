@@ -1,0 +1,231 @@
+a.add_enrollment_link:link {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_enrollment_link:visited {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_enrollment_link:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_enrollment_student_selector:link {
+    color: #122ed9;
+    left: 150px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_enrollment_student_selector:visited {
+    color: #122ed9;
+    left: 150px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_enrollment_student_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_enrollment_first_class_attended {
+    font-size: 1.3em;
+    left: 20px;
+    position: absolute;
+    top: 153px;
+}
+
+.add_enrollment_first_class_attended_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 155px;
+}
+
+.add_enrollment_last_class_attended {
+    font-size: 1.3em;
+    left: 355px;
+    position: absolute;
+    top: 153px;
+}
+
+.add_enrollment_last_class_attended_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 346px;
+    position: absolute;
+    top: 155px;
+}
+
+.add_enrollment_leave_term {
+    font-size: 1.3em;
+    left: 355px;
+    position: absolute;
+    top: 113px;
+}
+
+.add_enrollment_leave_reason {
+    border: 0;
+    color: #9b9898;
+    font-size: 1.3em;
+    font-style: italic;
+    height: 140px;
+    left: 620px;
+    overflow: auto;
+    position: absolute;
+    top: 113px;
+    width: 370px;
+}
+
+.add_enrollment_leave_reason_category {
+    font-size: 1.3em;
+    left: 620px;
+    position: absolute;
+    top: 73px;
+}
+
+.add_enrollment_leave_reason_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 622px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 99px;
+}
+
+.add_enrollment_link_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 42px;
+}
+
+.add_enrollment_list_student {
+    display: none;
+}
+
+.add_enrollment_list_student a.list_student_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_enrollment_list_student a.list_student_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_enrollment_list_student a.list_student_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_enrollment_list_student .list_student_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1530px;
+}
+
+.add_enrollment_list_student .list_student_create {
+	display: none;
+}
+
+.add_enrollment_list_student .list_student_delete {
+    display: none;
+}
+
+.add_enrollment_list_student .list_student_edit {
+    display: none;
+}
+
+.add_enrollment_list_student .student_list {
+    display: none;
+    height: 1460px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.add_enrollment_school {
+    font-size: 1.3em;
+    left: 20px;
+    position: absolute;
+    top: 73px;
+}
+
+.add_enrollment_school_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 75px;
+}
+
+.add_enrollment_student_selector_label {
+    left: 20px;
+    position: absolute;
+    top: 35px;
+}
+
+.add_enrollment_student_selector_wait {
+    display: none;
+    left: 169px;
+    position: absolute;
+    top: 39px;
+}
+
+.add_enrollment_term {
+    font-size: 1.3em;
+    left: 20px;
+    position: absolute;
+    top: 113px;
+}
+
+.add_enrollment_term_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 115px;
+}
+
+.required_symbol {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 400px;
+}
+
+.required_text {
+    font-size: 0.88em;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 395px;
+}

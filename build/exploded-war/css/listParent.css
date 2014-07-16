@@ -1,0 +1,831 @@
+a.list_parent_child_selector:link {
+	color: #122ed9;
+	display: none;
+	left: 199px;
+	position: absolute;
+	text-decoration: none;
+	top: 149px;
+}
+
+a.list_parent_child_selector:visited {
+	color: #122ed9;
+	display: none;
+	left: 199px;
+	position: absolute;
+	text-decoration: none;
+	top: 149px;
+}
+
+a.list_parent_child_selector:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.list_parent_deceased_label:link {
+    color: #122ed9;
+    left: 365px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_deceased_label:visited {
+    color: #122ed9;
+    left: 365px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_deceased_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_email_label:link {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_parent_email_label:visited {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_parent_email_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_first_name_label:link {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_first_name_label:visited {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_first_name_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_id_label:link {
+    color: #122ed9;
+    left: 662px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_id_label:visited {
+    color: #122ed9;
+    left: 662px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_id_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_last_name_label:link {
+    color: #122ed9;
+    left: 195px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_last_name_label:visited {
+    color: #122ed9;
+    left: 195px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_last_name_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_prev_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_parent_prev_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_parent_prev_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_primary_phone_label:link {
+    color: #122ed9;
+    left: 670px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_primary_phone_label:visited {
+    color: #122ed9;
+    left: 670px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_primary_phone_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_profession_label:link {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_profession_label:visited {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_profession_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_relative_selector:link {
+	color: #122ed9;
+	display: none;
+	left: 694px;
+	position: absolute;
+	text-decoration: none;
+	top: 149px;
+}
+
+a.list_parent_relative_selector:visited {
+	color: #122ed9;
+	display: none;
+	left: 694px;
+	position: absolute;
+	text-decoration: none;
+	top: 149px;
+}
+
+a.list_parent_relative_selector:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.list_parent_secondary_phone_label:link {
+    color: #122ed9;
+    left: 356px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_parent_secondary_phone_label:visited {
+    color: #122ed9;
+    left: 356px;
+    text-decoration: none;
+}
+
+a.list_parent_secondary_phone_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_select:link {
+    color: #122ed9;
+    left: 885px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_select:visited {
+    color: #122ed9;
+    left: 885px;
+    position: absolute;
+    text-decoration: none;
+    top: 51px;
+}
+
+a.list_parent_select:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_parent_village_label:link {
+    color: #122ed9;
+    left: 490px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_village_label:visited {
+    color: #122ed9;
+    left: 490px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_parent_village_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.actions_label {
+    left: 915px;
+    position: absolute;
+    top: 35px;
+}
+
+input.list_parent_email {
+    display: none;
+    left: 137px;
+    position: absolute;
+    top: 12px;
+    width: 190px;
+}
+
+input.list_parent_first_name {
+    display: none;
+    left: 27px;
+    position: absolute;
+    top: 3px;
+    width: 130px;
+}
+
+input.list_parent_last_name {
+    display: none;
+    left: 184px;
+    position: absolute;
+    top: 3px;
+    width: 130px;
+}
+
+input.list_parent_primary_phone {
+	display: none;
+    left: 659px;
+    position: absolute;
+    top: 3px;
+    width: 280px;
+}
+
+input.list_parent_profession {
+	display: none;
+	left: 137px;
+	position: absolute;
+	top: 46px;
+	width: 190px;
+}
+
+input.list_parent_secondary_phone {
+    display: none;
+    left: 520px;
+    position: absolute;
+    top: 12px;
+    width: 280px;
+}
+
+input.list_parent_village {
+	display: none;
+    left: 469px;
+    position: absolute;
+    top: 3px;
+    width: 130px;
+}
+
+label.list_parent_deceased_label {
+	display: none;
+    left: 357px;
+    position: absolute;
+    top: 8px;
+}
+
+label.list_parent_deceased_label input {
+	display: none;
+}
+
+.list_guardian_of_label {
+	display: none;
+	left: 670px;
+	position: absolute;
+	top: 149px;
+}
+
+.list_parent_disabled_button {
+	opacity: 0.2;
+}
+
+.list_parent_cancel {
+    display: none;
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_parent_child_button {
+	display: none;
+	height: 30px;
+	left: 450px;
+	position: absolute;
+	top: 144px;
+}
+
+.list_parent_child_delete_button {
+	display: none;
+	height: 30px;
+}
+
+.list_parent_child_list_student {
+    display: none;
+}
+
+.list_parent_child_list_student a.list_student_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.list_parent_child_list_student a.list_student_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.list_parent_child_list_student a.list_student_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.list_parent_child_list_student .list_student_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1425px;
+}
+
+.list_parent_child_list_student .list_student_delete {
+    display: none;
+}
+
+.list_parent_child_list_student .list_student_edit {
+    display: none;
+}
+
+.list_parent_child_list_student .student_list {
+    display: none;
+    height: 1355px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.list_parent_child_selector_wait {
+	display: none;
+	left: 224px;
+	position: absolute;
+	top: 153px;
+}
+
+.list_parent_child_table_container {
+	height: 200px;
+    left: 18px;
+    overflow: auto;
+    position: absolute;
+    top: 187px;
+    width: 490px;
+}
+
+.list_parent_child_table_relationship {
+	width: 150px;
+}
+
+.list_parent_child_table_selector {
+	width: 271px;
+}
+
+.list_parent_child_table_selector a:link {
+	color: #122ed9;
+	text-decoration: none;
+}
+
+.list_parent_child_table_selector a:visited {
+	color: #122ed9;
+	text-decoration: none;
+}
+
+.list_parent_child_table_selector a:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+.list_parent_child_table_selector_wait {
+	display: none;
+}
+
+.list_parent_deceased {
+	left: 357px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_parent_delete {
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_parent_details {
+    height: 400px;
+    position: relative;
+}
+
+.list_parent_edit {
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_parent_email {
+    left: 140px;
+    position: absolute;
+}
+
+.list_parent_email_colon {
+	color: #122ed9;
+	left: 130px;
+	position: absolute;
+}
+
+.list_parent_first_name {
+    left: 30px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_parent_first_name_required_ind {
+    color: #dc1d38;
+    display: none;
+    font-size: 0.56em;
+    left: 18px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_parent_guardian_of_label {
+    border-bottom-color: #888888;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    left: 515px;
+    position: absolute;
+    top: 111px;
+    width: 475px;
+}
+
+.list_parent_id {
+    left: 695px;
+    position: absolute;
+    top: 51px;
+}
+
+.list_parent_last_name {
+    left: 187px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_parent_last_update_by {
+    left: 46px;
+    position: absolute;
+    top: 401px;
+}
+
+.list_parent_last_update_by_label {
+    left: 16px;
+    position: absolute;
+    top: 401px;
+}
+
+.list_parent_last_update_label {
+    left: 16px;
+    position: absolute;
+    top: 331px;
+}
+
+.list_parent_last_update_on {
+    left: 46px;
+    position: absolute;
+    top: 366px;
+}
+
+.list_parent_last_update_on_label {
+    left: 16px;
+    position: absolute;
+    top: 366px;
+}
+
+.list_parent_of_label {
+	display: none;
+	left: 175px;
+	position: absolute;
+	top: 149px;
+}
+
+.list_parent_parent_of_label {
+    border-bottom-color: #888888;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    left: 20px;
+    position: absolute;
+    top: 111px;
+    width: 475px;
+}
+
+.list_parent_prev_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 65px;
+}
+
+.list_parent_primary_phone {
+    left: 662px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_parent_profession {
+    left: 140px;
+    position: absolute;
+    top: 51px;
+}
+
+.list_parent_profession_colon {
+	color: #122ed9;
+    left: 130px;
+    position: absolute;
+    top: 51px;
+}
+
+.list_parent_relationship {
+    border: 0;
+    color: #9b9898;
+    display: none;
+    font-style: italic;
+    left: 515px;
+    position: absolute;
+    top: 146px;
+    width: 130px;
+}
+
+.list_parent_relationship_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 517px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 132px;
+}
+
+.list_parent_relationship_list {
+	display: none;
+    font-size: 1.3em;
+    left: 20px;
+    position: absolute;
+    top: 149px;
+}
+
+.list_parent_relative_button {
+	display: none;
+	height: 30px;
+	left: 947px;
+	position: absolute;
+	top: 144px;
+}
+
+.list_parent_relative_delete_button {
+	display: none;
+	height: 30px;
+}
+
+.list_parent_relative_list_student {
+    display: none;
+}
+
+.list_parent_relative_list_student a.list_student_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.list_parent_relative_list_student a.list_student_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.list_parent_relative_list_student a.list_student_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.list_parent_relative_list_student .list_student_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1425px;
+}
+
+.list_parent_relative_list_student .list_student_delete {
+    display: none;
+}
+
+.list_parent_relative_list_student .list_student_edit {
+    display: none;
+}
+
+.list_parent_relative_list_student .student_list {
+    display: none;
+    height: 1355px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.list_parent_relative_selector_wait {
+	display: none;
+	left: 720px;
+	position: absolute;
+	top: 153px;
+}
+
+.list_parent_relative_table_container {
+	height: 200px;
+    left: 515px;
+    overflow: auto;
+    position: absolute;
+    top: 187px;
+    width: 490px;
+}
+
+.list_parent_relative_table_relationship {
+	width: 150px;
+}
+
+.list_parent_relative_table_selector {
+	width: 271px;
+}
+
+.list_parent_relative_table_selector a:link {
+	color: #122ed9;
+	text-decoration: none;
+}
+
+.list_parent_relative_table_selector a:visited {
+	color: #122ed9;
+	text-decoration: none;
+}
+
+.list_parent_relative_table_selector a:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+.list_parent_relative_table_selector_wait {
+	display: none;
+}
+
+.list_parent_save {
+    display: none;
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_parent_save_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 22px;
+}
+
+.list_parent_secondary_phone {
+    left: 523px;
+    position: absolute;
+}
+
+.list_parent_village {
+    left: 472px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_record_form a.list_parent_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+.list_record_form a.list_parent_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+.list_record_form a.list_parent_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.list_record_form .list_parent_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 640px;
+}
+
+.list_record_form .list_parent_select {
+    display: none;
+}
+
+.list_record_form .parent_list {
+    display: none;
+    height: 540px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.parent_list h3 {
+	height: 22px;
+}

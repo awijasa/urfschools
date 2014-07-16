@@ -1,0 +1,13 @@
+#admin_tabs {
+    height: 1200px;
+    left: -1px;
+    position: absolute;
+    top: 50px;
+    width: 1016px;
+}
+
+#admin_tabs li .ui-icon {
+    float: left;
+    margin: 0.4em 0.2em 0 0;
+    cursor: pointer;
+}

@@ -1,0 +1,84 @@
+Manifest-Version: 1.0
+Export-Package: org.codehaus.groovy.cli;version="2.1.5",org.codehaus.g
+ roovy.classgen.asm.sc;version="2.1.5",org.apache.commons.cli;version=
+ "2.1.5",org.codehaus.groovy.tools.gse;version="2.1.5",org.codehaus.gr
+ oovy.tools.shell.util;version="2.1.5",org.codehaus.groovy.syntax;vers
+ ion="2.1.5",org.codehaus.groovy.vmplugin;version="2.1.5",org.codehaus
+ .groovy.runtime.typehandling;version="2.1.5",groovy.io;version="2.1.5
+ ",org.codehaus.groovy.runtime.m12n;version="2.1.5",org.codehaus.groov
+ y.control.io;version="2.1.5",org.codehaus.groovy.tools.ast;version="2
+ .1.5",org.codehaus.groovy.ast;version="2.1.5",groovy.ui;version="2.1.
+ 5",org.codehaus.groovy.transform.sc.transformers;version="2.1.5",org.
+ codehaus.groovy.runtime.metaclass;version="2.1.5",org.codehaus.groovy
+ .classgen.asm;version="2.1.5",groovy.beans;version="2.1.5",org.codeha
+ us.groovy.runtime.callsite;version="2.1.5",org.codehaus.groovy.ast.to
+ ols;version="2.1.5",org.codehaus.groovy.classgen;version="2.1.5",org.
+ codehaus.groovy.reflection.stdclasses;version="2.1.5",org.codehaus.gr
+ oovy.transform.sc;version="2.1.5",org.codehaus.groovy.runtime.dgmimpl
+ ;version="2.1.5",groovy.grape;version="2.1.5",org.codehaus.groovy;ver
+ sion="2.1.5",org.codehaus.groovy.control.messages;version="2.1.5",org
+ .codehaus.groovy.ast.expr;version="2.1.5",org.codehaus.groovy.ast.stm
+ t;version="2.1.5",org.codehaus.groovy.control.customizers.builder;ver
+ sion="2.1.5",org.codehaus.groovy.runtime.dgmimpl.arrays;version="2.1.
+ 5",groovy.transform;version="2.1.5",org.codehaus.groovy.antlr.java;ve
+ rsion="2.1.5",groovy.xml;version="2.1.5",org.codehaus.groovy.ast.buil
+ der;version="2.1.5",org.codehaus.groovy.transform;version="2.1.5",gro
+ ovy.util;version="2.1.5",groovy.lang;version="2.1.5",org.codehaus.gro
+ ovy.tools.shell;version="2.1.5",org.codehaus.groovy.plugin;version="2
+ .1.5",org.codehaus.groovy.tools;version="2.1.5",org.codehaus.groovy.r
+ untime.wrappers;version="2.1.5",org.codehaus.groovy.runtime.powerasse
+ rt;version="2.1.5",org.codehaus.groovy.vmplugin.v5;version="2.1.5",or
+ g.codehaus.groovy.runtime.memoize;version="2.1.5",org.codehaus.groovy
+ .vmplugin.v6;version="2.1.5",org.codehaus.groovy.control.customizers;
+ version="2.1.5",org.codehaus.groovy.tools.xml;version="2.1.5",org.cod
+ ehaus.groovy.antlr.parser;version="2.1.5",org.codehaus.groovy.antlr;v
+ ersion="2.1.5",org.codehaus.groovy.reflection;version="2.1.5",org.cod
+ ehaus.groovy.antlr.treewalker;version="2.1.5",org.codehaus.groovy.tra
+ nsform.stc;version="2.1.5",org.codehaus.groovy.control;version="2.1.5
+ ",groovy.security;version="2.1.5",groovy.util.logging;version="2.1.5"
+ ,org.codehaus.groovy.runtime;version="2.1.5",groovy.time;version="2.1
+ .5",groovy.inspect;version="2.1.5",org.codehaus.groovy.tools.javac;ve
+ rsion="2.1.5",org.codehaus.groovy.util;version="2.1.5"
+Private-Package: .
+Bundle-Version: 2.1.5
+Tool: Bnd-1.50.0
+Bundle-Name: Groovy Runtime
+Created-By: 1.7.0_21 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: groovy
+Import-Package: antlr,antlr.collections;resolution:=optional,antlr.col
+ lections.impl;resolution:=optional,antlr.debug.misc;resolution:=optio
+ nal,com.thoughtworks.xstream;resolution:=optional,javax.swing;resolut
+ ion:=optional,javax.swing.border;resolution:=optional,javax.swing.tex
+ t;resolution:=optional,javax.xml.parsers;resolution:=optional,jline;r
+ esolution:=optional;version="[1.0,2)",org.apache.ivy;resolution:=opti
+ onal;version="[2.0,3)",org.apache.ivy.core.cache;resolution:=optional
+ ;version="[2.0,3)",org.apache.ivy.core.event;resolution:=optional;ver
+ sion="[2.0,3)",org.apache.ivy.core.event.download;resolution:=optiona
+ l;version="[2.0,3)",org.apache.ivy.core.event.resolve;resolution:=opt
+ ional;version="[2.0,3)",org.apache.ivy.core.module.descriptor;resolut
+ ion:=optional;version="[2.0,3)",org.apache.ivy.core.module.id;resolut
+ ion:=optional;version="[2.0,3)",org.apache.ivy.core.report;resolution
+ :=optional;version="[2.0,3)",org.apache.ivy.core.resolve;resolution:=
+ optional;version="[2.0,3)",org.apache.ivy.core.settings;resolution:=o
+ ptional;version="[2.0,3)",org.apache.ivy.plugins.matcher;resolution:=
+ optional;version="[2.0,3)",org.apache.ivy.plugins.resolver;resolution
+ :=optional;version="[2.0,3)",org.apache.ivy.util;resolution:=optional
+ ;version="[2.0,3)",org.fusesource.jansi;resolution:=optional;version=
+ "[1.6,2)",org.objectweb.asm,org.w3c.dom;resolution:=optional
+Built-By: glaforge
+Extension-Name: groovy
+Specification-Title: Groovy: a powerful, dynamic language for the JVM
+Specification-Version: 2.1.5
+Specification-Vendor: The Codehaus
+Implementation-Title: Groovy: a powerful, dynamic language for the JVM
+Implementation-Version: 2.1.5
+Implementation-Vendor: The Codehaus
+Bundle-Description: Groovy Runtime
+Bundle-Vendor: The Codehaus
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-BuddyPolicy: dependent
+DynamicImport-Package: *
+Main-class: groovy.ui.GroovyMain
+

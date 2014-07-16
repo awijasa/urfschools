@@ -1,0 +1,101 @@
+<!-- Indices written at Mon, 13 Aug 2012 01:46:25 CDT -->
+
+<datastore-indexes autoGenerate="true">
+
+    <!-- Used 10 times in query history -->
+    <datastore-index kind="Term" ancestor="false" source="auto">
+        <property name="termSchool" direction="asc"/>
+        <property name="year" direction="desc"/>
+        <property name="termNo" direction="desc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Term" ancestor="false">
+        <property name="termSchool" direction="asc"/>
+        <property name="startDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Class" ancestor="true" source="manual">
+        <property name="level" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index source="manual" ancestor="false" kind="StudentWithEnrollment">
+        <property direction="asc" name="schoolName"></property>
+        <property direction="desc" name="enrollTermYear"></property>
+        <property direction="desc" name="enrollTermNo"></property>
+        <property direction="asc" name="firstName"></property>
+        <property direction="asc" name="lastName"></property>
+    </datastore-index>
+
+    <!-- Used 4 times in query history -->
+    <datastore-index kind="StudentWithLastEnrollment" ancestor="false" source="auto">
+        <property name="lastEnrollmentTermYear" direction="desc"/>
+        <property name="lastEnrollmentTermNo" direction="desc"/>
+        <property name="firstName" direction="asc"/>
+        <property name="lastName" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 15 times in query history -->
+    <datastore-index kind="AnonymousParentalRelationship" ancestor="false" source="auto">
+        <property name="studentId" direction="asc"/>
+        <property name="parentalRelationship" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Relationship" ancestor="false" source="manual">
+        <property name="studentId" direction="asc"/>
+        <property name="guardianRelationship" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Term" ancestor="false" source="manual">
+        <property name="termSchool" direction="asc"/>
+        <property name="year" direction="asc"/>
+        <property name="startDate" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Payment" ancestor="false" source="manual">
+        <property name="schoolName" direction="asc"/>
+        <property name="classTermYear" direction="desc"/>
+        <property name="classTermNo" direction="desc"/>
+        <property name="studentId" direction="asc"/>
+        <property name="fundingSource" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Payment" ancestor="false" source="manual">
+        <property name="enrollTermNo" direction="asc"/>
+        <property name="enrollTermYear" direction="asc"/>
+        <property name="schoolName" direction="asc"/>
+        <property name="studentId" direction="asc"/>
+        <property name="classTermYear" direction="desc"/>
+        <property name="classTermNo" direction="desc"/>
+        <property name="fundingSource" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Fee" ancestor="false" source="manual">
+        <property name="schoolName" direction="asc"/>
+        <property name="classTermYear" direction="desc"/>
+        <property name="classTermNo" direction="desc"/>
+        <property name="studentId" direction="asc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Fee" ancestor="false" source="manual">
+        <property name="enrollTermNo" direction="asc"/>
+        <property name="enrollTermYear" direction="asc"/>
+        <property name="schoolName" direction="asc"/>
+        <property name="studentId" direction="asc"/>
+        <property name="classTermYear" direction="desc"/>
+        <property name="classTermNo" direction="desc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="ClassAttended" ancestor="true" source="manual">
+    	<property name="classLevel" direction="asc"/>
+    	<property name="classTermYear" direction="asc"/>
+    	<property name="classTermNo" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Fee" ancestor="false">
+	  <property name="enrollTermYear" direction="desc" />
+	  <property name="enrollTermNo" direction="desc" />
+	</datastore-index>
+
+</datastore-indexes>

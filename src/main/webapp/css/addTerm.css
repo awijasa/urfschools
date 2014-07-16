@@ -1,0 +1,212 @@
+a.add_term_link:link {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_term_link:visited {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_term_link:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_term_boarding_fee {
+    width: 130px;
+}
+
+.add_term_class_fees {
+	display: none;
+	height: 270px;
+    left: 20px;
+    overflow: auto;
+    position: absolute;
+    top: 120px;
+	width: 970px;
+}
+
+.add_term_class_fees table {
+	position: relative;
+}
+
+.add_term_class_fees td {
+	min-width: 60px;
+	padding-right: 10px;
+}
+
+.add_term_class_fees_header {
+	display: none;
+	left: 20px;
+	position: absolute;
+	top: 80px;
+}
+
+.add_term_class_fees_header td {
+	min-width: 60px;
+	padding-right: 10px;
+}
+
+.add_term_end_date {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 705px;
+    position: absolute;
+    top: 35px;
+    width: 130px;
+}
+
+.add_term_end_date_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 708px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 21px;
+}
+
+.add_term_end_date_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 696px;
+    position: absolute;
+    top: 40px;
+}
+
+.add_term_link_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 42px;
+}
+
+.add_term_no {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 230px;
+    position: absolute;
+    top: 35px;
+    width: 130px;
+}
+
+.add_term_no_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 232px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 21px;
+}
+
+.add_term_no_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 221px;
+    position: absolute;
+    top: 40px;
+}
+
+.add_term_school {
+    left: 20px;
+    position: absolute;
+    top: 35px;
+}
+
+.add_term_school_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 40px;
+}
+
+.add_term_start_date {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 530px;
+    position: absolute;
+    top: 35px;
+    width: 130px;
+}
+
+.add_term_start_date_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 532px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 21px;
+}
+
+.add_term_start_date_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 521px;
+    position: absolute;
+    top: 40px;
+}
+
+.add_term_tuition_fee {
+    width: 130px;
+}
+
+.add_term_year {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 405px;
+    position: absolute;
+    top: 35px;
+    width: 100px;
+}
+
+.add_term_year_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 407px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 21px;
+}
+
+.add_term_year_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 396px;
+    position: absolute;
+    top: 40px;
+}
+
+.required_symbol {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 400px;
+}
+
+.required_text {
+    font-size: 0.88em;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 395px;
+}

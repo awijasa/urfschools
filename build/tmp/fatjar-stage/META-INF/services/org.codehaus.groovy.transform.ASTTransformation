@@ -1,0 +1,12 @@
+groovyx.gaelyk.query.QueryDslTransformation
+groovyx.gaelyk.search.SearchDslAstTransformation
+# global transformation to handle @Grab annotation
+groovy.grape.GrabAnnotationTransformation
+
+#global transformation for AST Builder
+org.codehaus.groovy.ast.builder.AstBuilderTransformation
+# global transformation to handle @Grab annotation
+groovy.grape.GrabAnnotationTransformation
+
+#global transformation for AST Builder
+org.codehaus.groovy.ast.builder.AstBuilderTransformation

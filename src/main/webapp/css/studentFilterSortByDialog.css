@@ -1,0 +1,214 @@
+a.student_filter_sortby_dialog_filter_apply:link {
+	display: none;
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_apply:visited {
+	display: none;
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_apply:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.student_filter_sortby_dialog_filter_less:link {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_less:visited {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_less:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.student_filter_sortby_dialog_filter_more:link {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_more:visited {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.student_filter_sortby_dialog_filter_more:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+.student_boarding_fees_filter_sortby_dialog .student_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.student_filter_sortby_dialog_asc_sort_direction_button {
+	display: none;
+	cursor: pointer;
+	height: 30px;
+	left: 80px;
+	position: absolute;
+	top: 6px;
+	vertical-align: top;
+}
+
+.student_filter_sortby_dialog_dsc_sort_direction_button {
+	display: none;
+	cursor: pointer;
+	height: 30px;
+	left: 80px;
+	position: absolute;
+	top: 8px;
+	vertical-align: top;
+}
+
+.student_filter_sortby_dialog_fees_due_filter {
+	width: 130px;
+}
+
+.student_filter_sortby_dialog_fees_due_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.student_filter_sortby_dialog_filter_apply_wait {
+	display: none;
+}
+
+.student_filter_sortby_dialog_filter_button {
+	cursor: pointer;
+	height: 30px;
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	vertical-align: top;
+}
+
+.student_filter_sortby_dialog_filter_form > table {
+	left: 0px;
+	position: absolute;
+	top: 3px;
+	width: 345px;
+}
+
+.student_filter_sortby_dialog_filter_less_row {
+	display: none;
+}
+
+.student_filter_sortby_dialog_filter_more_row {
+	display: none;
+}
+
+.student_filter_sortby_dialog_filter_panel {
+	display: none;
+	height: 65px;
+	left: 10px;
+	position: absolute;
+	top: 45px;
+	width: 330px;
+}
+
+.student_filter_sortby_dialog_first_name_filter {
+	width: 175px;
+}
+
+.student_filter_sortby_dialog_first_name_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.student_filter_sortby_dialog_last_name_filter {
+	width: 175px;
+}
+
+.student_filter_sortby_dialog_last_name_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.student_filter_sortby_dialog_lookup_button {
+	cursor: pointer;
+	display: none;
+	left: 120px;
+	position: absolute;
+	top: 17px;
+	vertical-align: top;
+}
+
+.student_filter_sortby_dialog_sort_button {
+	cursor: pointer;
+	height: 30px;
+	left: 45px;
+	position: absolute;
+	top: 10px;
+	vertical-align: top;
+}
+
+.student_filter_sortby_dialog_sort_order {
+	font-size: 0.7em;
+	left: 100px;
+	position: absolute;
+	top: 15px;
+	vertical-align: top;
+}
+
+.student_fees_due_filter_sortby_dialog a.student_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.student_fees_due_filter_sortby_dialog .student_filter_sortby_dialog_fees_due_filter_row {
+	display: table-row;
+}
+
+.student_fees_due_filter_sortby_dialog .student_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.student_first_name_filter_sortby_dialog a.student_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.student_first_name_filter_sortby_dialog .student_filter_sortby_dialog_first_name_filter_row {
+	display: table-row;
+}
+
+.student_first_name_filter_sortby_dialog .student_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.student_last_name_filter_sortby_dialog a.student_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.student_last_name_filter_sortby_dialog .student_filter_sortby_dialog_last_name_filter_row {
+	display: table-row;
+}
+
+.student_last_name_filter_sortby_dialog .student_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.student_other_fees_filter_sortby_dialog .student_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.student_payments_filter_sortby_dialog .student_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.student_tuition_fees_filter_sortby_dialog .student_filter_sortby_dialog_lookup_button {
+	display: block;
+}

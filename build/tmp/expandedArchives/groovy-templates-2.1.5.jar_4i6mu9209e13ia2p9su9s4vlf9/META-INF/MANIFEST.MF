@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Export-Package: groovy.text;version="2.1.5"
+Bundle-Version: 2.1.5
+Tool: Bnd-1.50.0
+Created-By: 1.7.0_21 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: groovy-templates
+Import-Package: groovy.lang,groovy.util,groovy.xml,javax.xml.parsers,o
+ rg.codehaus.groovy.control,org.codehaus.groovy.runtime,org.xml.sax
+Built-By: glaforge
+Specification-Title: Groovy: a powerful, dynamic language for the JVM
+Specification-Version: 2.1.5
+Specification-Vendor: The Codehaus
+Implementation-Title: Groovy: a powerful, dynamic language for the JVM
+Implementation-Version: 2.1.5
+Implementation-Vendor: The Codehaus
+Bundle-Vendor: The Codehaus
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-BuddyPolicy: dependent
+DynamicImport-Package: *
+

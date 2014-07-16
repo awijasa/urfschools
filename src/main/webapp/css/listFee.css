@@ -1,0 +1,379 @@
+a.list_fee_amount_label:link {
+    color: #122ed9;
+    left: 670px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_amount_label:visited {
+    color: #122ed9;
+    left: 670px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_amount_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_comment_label:link {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_fee_comment_label:visited {
+    color: #122ed9;
+    left: 16px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_fee_comment_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_name_label:link {
+    color: #122ed9;
+    left: 245px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_name_label:visited {
+    color: #122ed9;
+    left: 245px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_name_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_prev_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_fee_prev_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_fee_prev_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_select:link {
+    color: #122ed9;
+    left: 885px;
+    position: absolute;
+    text-decoration: none;
+    top: 14px;
+}
+
+a.list_fee_select:visited {
+    color: #122ed9;
+    left: 885px;
+    position: absolute;
+    text-decoration: none;
+    top: 14px;
+}
+
+a.list_fee_select:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_student_id:link {
+    color: #122ed9;
+    text-decoration: none;
+}
+
+a.list_fee_student_id:visited {
+    color: #122ed9;
+    text-decoration: none;
+}
+
+a.list_fee_student_id:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_student_id_label:link {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_student_id_label:visited {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_student_id_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_fee_term_label:link {
+    color: #122ed9;
+    left: 465px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_term_label:visited {
+    color: #122ed9;
+    left: 465px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_fee_term_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.actions_label {
+    left: 915px;
+    position: absolute;
+    top: 35px;
+}
+
+div.list_fee_student_id {
+	display: none;
+}
+
+.fee_list h3 {
+	height: 22px;
+}
+
+input.list_fee_amount {
+	display: none;
+	left: 712px;
+	position: absolute;
+	top: 8px;
+	width: 130px;
+}
+
+.list_fee_amount {
+	left: 712px;
+	position: absolute;
+	top: 8px;
+}
+
+.list_fee_amount_currency {
+    left: 662px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_fee_amount_required_ind {
+	display: none;
+	color: #dc1d38;
+    font-size: 0.56em;
+    left: 707px;
+	position: absolute;
+	top: 10px;
+}
+
+.list_fee_cancel {
+    display: none;
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_fee_comment {
+    height: 260px;
+    left: 16px;
+    overflow: auto;
+    position: absolute;
+    top: 51px;
+    width: 830px;
+}
+
+.list_fee_delete {
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_fee_details {
+    height: 400px;
+    position: relative;
+}
+
+.list_fee_disabled_button {
+	opacity: 0.2;
+}
+
+.list_fee_edit {
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_fee_fees_due {
+	display: none;
+}
+
+.list_fee_last_update_by {
+    left: 46px;
+    position: absolute;
+    top: 401px;
+}
+
+.list_fee_last_update_by_label {
+    left: 16px;
+    position: absolute;
+    top: 401px;
+}
+
+.list_fee_last_update_label {
+    left: 16px;
+    position: absolute;
+    top: 331px;
+}
+
+.list_fee_last_update_on {
+    left: 46px;
+    position: absolute;
+    top: 366px;
+}
+
+.list_fee_last_update_on_label {
+    left: 16px;
+    position: absolute;
+    top: 366px;
+}
+
+.list_fee_name {
+    left: 237px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_fee_prev_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 65px;
+}
+
+.list_fee_save {
+    display: none;
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_fee_save_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 22px;
+}
+
+.list_fee_student_id {
+    left: 30px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_fee_student_id_wait {
+	display: none;
+	left: 45px;
+	position: absolute;
+	top: 12px;
+}
+
+.list_fee_term {
+    left: 465px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_record_form a.list_fee_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+.list_record_form a.list_fee_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+.list_record_form a.list_fee_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.list_record_form .list_fee_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 640px;
+}
+
+.list_record_form .list_fee_select {
+    display: none;
+}
+
+.list_record_form .fee_list {
+    display: none;
+    height: 540px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+textarea.list_fee_comment {
+    display: none;
+    height: 260px;
+    left: 13px;
+    overflow: auto;
+    position: absolute;
+    top: 46px;
+    width: 830px;
+}

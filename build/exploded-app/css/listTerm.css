@@ -1,0 +1,337 @@
+a.list_term_boarding_fee_label:link {
+    color: #122ed9;
+    left: 400px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_term_boarding_fee_label:visited {
+    color: #122ed9;
+    left: 400px;
+    position: absolute;
+    text-decoration: none;
+}
+
+a.list_term_boarding_fee_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_end_date_label:link {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_end_date_label:visited {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_end_date_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+a.list_term_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 640px;
+}
+
+a.list_term_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_no_label:link {
+    color: #122ed9;
+    left: 235px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_no_label:visited {
+    color: #122ed9;
+    left: 235px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_no_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_prev_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_term_prev_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 65px;
+}
+
+a.list_term_prev_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_school_label:link {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_school_label:visited {
+    color: #122ed9;
+    left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_school_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_start_date_label:link {
+    color: #122ed9;
+    left: 535px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_start_date_label:visited {
+    color: #122ed9;
+    left: 535px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_start_date_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_term_year_label:link {
+    color: #122ed9;
+    left: 410px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_year_label:visited {
+    color: #122ed9;
+    left: 410px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_term_year_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.actions_label {
+    left: 915px;
+    position: absolute;
+    top: 35px;
+}
+
+input.list_term_boarding_fee {
+    display: none;
+    width: 130px;
+}
+
+input.list_term_end_date {
+    display: none;
+    left: 697px;
+    position: absolute;
+    top: 3px;
+    width: 130px;
+}
+
+input.list_term_start_date {
+    display: none;
+    left: 522px;
+    position: absolute;
+    top: 3px;
+    width: 130px;
+}
+
+input.list_term_tuition_fee {
+    display: none;
+    width: 130px;
+}
+
+.list_term_cancel {
+    display: none;
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_term_class_fees {
+	height: 370px;
+    left: 16px;
+    overflow: auto;
+    position: absolute;
+    top: 50px;
+	width: 970px;
+}
+
+.list_term_class_fees table {
+	position: relative;
+}
+
+.list_term_class_fees td:first-child {
+	min-width: 60px;
+}
+
+.list_term_class_fees td {
+	height: 28px;
+	min-width: 179px;
+	padding-right: 10px;
+}
+
+.list_term_class_fees_header {
+    left: 16px;
+    position: absolute;
+}
+
+.list_term_class_fees_header td:first-child {
+	min-width: 60px;
+}
+
+.list_term_class_fees_header td {
+	min-width: 179px;
+	padding-right: 10px;
+}
+
+.list_term_delete {
+    height: 30px;
+    left: 930px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_term_details {
+    height: 400px;
+    position: relative;
+}
+
+.list_term_edit {
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_term_end_date {
+    left: 700px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_term_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 640px;
+}
+
+.list_term_no {
+    left: 225px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_term_prev_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 65px;
+}
+
+.list_term_save {
+    display: none;
+    height: 30px;
+    left: 885px;
+    position: absolute;
+    top: 14px;
+}
+
+.list_term_save_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 22px;
+}
+
+.list_term_school {
+    left: 30px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_term_start_date {
+    left: 525px;
+    position: absolute;
+    top: 8px;
+}
+
+.list_term_year {
+    left: 400px;
+    position: absolute;
+    top: 8px;
+}
+
+.term_list {
+    height: 540px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.term_list h3 {
+	height: 22px;
+}

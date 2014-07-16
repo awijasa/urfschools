@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: groovy.json;version="2.1.5"
+Bundle-Version: 2.1.5
+Tool: Bnd-1.50.0
+Created-By: 1.7.0_21 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: groovy-json
+Import-Package: groovy.io,groovy.lang,groovy.transform,groovy.util,org
+ .codehaus.groovy.reflection,org.codehaus.groovy.runtime,org.codehaus.
+ groovy.runtime.callsite,org.codehaus.groovy.runtime.typehandling
+Built-By: glaforge
+Specification-Title: Groovy: a powerful, dynamic language for the JVM
+Specification-Version: 2.1.5
+Specification-Vendor: The Codehaus
+Implementation-Title: Groovy: a powerful, dynamic language for the JVM
+Implementation-Version: 2.1.5
+Implementation-Vendor: The Codehaus
+Bundle-Vendor: The Codehaus
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-BuddyPolicy: dependent
+DynamicImport-Package: *
+

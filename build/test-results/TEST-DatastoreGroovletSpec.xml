@@ -1,0 +1,36 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="DatastoreGroovletSpec" tests="1" failures="0" errors="0" timestamp="2014-07-06T02:04:43" hostname="awijasa-PC" time="2.0">
+  <properties/>
+  <testcase name="the datastore is used from within the groovlet" classname="DatastoreGroovletSpec" time="2.0"/>
+  <system-out><![CDATA[
+]]></system-out>
+  <system-err><![CDATA[Jul 05, 2014 9:04:43 PM org.codehaus.groovy.runtime.m12n.SimpleExtensionModule getMetaMethods
+WARNING: Module [gaelyk-extension-module] - Unable to load extension class [class groovy.servlet.ServletCategory] due to [javax/el/ELContext]. Maybe this module is not supported by your JVM version.
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+]]></system-err>
+</testsuite>

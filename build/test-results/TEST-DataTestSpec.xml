@@ -1,0 +1,174 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="DataTestSpec" tests="6" failures="0" errors="0" timestamp="2014-07-06T02:04:45" hostname="awijasa-PC" time="2.247">
+  <properties/>
+  <testcase name="findByTermSchoolAndDate returns the correct Term" classname="DataTestSpec" time="0.135"/>
+  <testcase name="findByTermSchoolAndTermRange returns the correct Terms" classname="DataTestSpec" time="0.145"/>
+  <testcase name="findLastEnrollmentDocumentByStudentId returns the correct EnrollmentDocument Test 1" classname="DataTestSpec" time="1.496"/>
+  <testcase name="findOverlappedEnrollment returns the correct Enrollment when comparing a supplied Enrollment to an existing Enrollment with a defined Leave Term" classname="DataTestSpec" time="0.266"/>
+  <testcase name="findOverlappedEnrollment returns the correct Enrollment when comparing a supplied Enrollment to an existing Enrollment with no Leave Term" classname="DataTestSpec" time="0.129"/>
+  <testcase name="findOverlappedTerm returns the correct Term" classname="DataTestSpec" time="0.072"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jul 06, 2014 2:04:45 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:45 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:45 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:45 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+Jul 06, 2014 2:04:45 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:46 AM com.google.appengine.api.search.dev.LocalSearchService <init>
+INFO: Local search service created
+Jul 06, 2014 2:04:46 AM com.google.appengine.api.search.dev.LocalSearchService init
+INFO: search initialized
+Jul 06, 2014 2:04:46 AM com.google.appengine.api.search.dev.LocalSearchService start
+INFO: search started
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.datastore.dev.LocalDatastoreService init
+INFO: Local Datastore initialized: 
+	Type: Master/Slave
+	Storage: In-memory
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: LocalTaskQueue is initialized
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
+INFO: Automatic task execution is disabled.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: Test worker
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
+Jul 06, 2014 2:04:47 AM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Jul 06, 2014 2:04:47 AM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
+Jul 06, 2014 2:04:47 AM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
+INFO: Local task queue initialized with base url http://localhost:8080
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler standby
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+Jul 06, 2014 2:04:47 AM org.quartz.core.QuartzScheduler shutdown
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+]]></system-err>
+</testsuite>

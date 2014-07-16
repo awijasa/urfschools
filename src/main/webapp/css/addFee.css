@@ -1,0 +1,296 @@
+a.add_fee_link:link {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_fee_link:visited {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_fee_link:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_fee_enrollment_selector:link {
+    color: #122ed9;
+    left: 120px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_fee_enrollment_selector:visited {
+    color: #122ed9;
+    left: 120px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_fee_enrollment_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_fee_term_selector {
+	display: none;
+}
+
+a.add_fee_term_selector:link {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_fee_term_selector:visited {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_fee_term_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_fee_amount {
+	border: 0;
+    color: #9b9898;
+    font-style: italic;
+	left: 70px;
+	position: absolute;
+	top: 73px;
+	width: 130px;
+}
+
+.add_fee_amount_label {
+	background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+	left: 72px;
+	padding-left: 2px;
+    padding-right: 2px;
+	position: absolute;
+	top: 59px;
+}
+
+.add_fee_amount_currency {
+	left: 20px;
+	position: absolute;
+	top: 73px;
+}
+
+.add_fee_amount_required_ind {
+	color: #dc1d38;
+    font-size: 0.56em;
+    left: 65px;
+	position: absolute;
+	top: 75px;
+}
+
+.add_fee_comment {
+    border: 0;
+    color: #9b9898;
+    font-size: 1.3em;
+    font-style: italic;
+    height: 300px;
+    left: 355px;
+    overflow: auto;
+    position: absolute;
+    top: 73px;
+    width: 635px;
+}
+
+.add_fee_comment_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 357px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 59px;
+}
+
+.add_fee_dialog_class_attended a.dialog_class_attended_term_link:link {
+	display: inline;
+}
+
+.add_fee_dialog_class_attended a.dialog_class_attended_term_link:visited {
+	display: inline;
+}
+
+.add_fee_dialog_class_attended a.dialog_class_attended_term_link:hover {
+	display: inline;
+}
+
+.add_fee_dialog_class_attended table {
+	border-collapse: collapse;
+}
+
+.add_fee_dialog_class_attended table tr td {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.add_fee_dialog_class_attended table tr td:first-child {
+	text-align: left;
+}
+
+.add_fee_dialog_class_attended table tr td:first-child span {
+	display: none;
+}
+
+.add_fee_dialog_class_attended table tr td:last-child {
+	text-align: center;
+}
+
+.add_fee_enrollment {
+	left: 20px;
+    position: absolute;
+    top: 35px;
+}
+
+.add_fee_enrollment_selector_wait {
+	display: none;
+    left: 135px;
+    position: absolute;
+    top: 39px;
+}
+
+.add_fee_funding_source_selector_wait {
+    display: none;
+    left: 515px;
+    position: absolute;
+    top: 39px;
+}
+
+.add_fee_link_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 42px;
+}
+
+.add_fee_list_enrollment {
+    display: none;
+}
+
+.add_fee_list_enrollment a.list_enrollment_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_fee_list_enrollment a.list_enrollment_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_fee_list_enrollment a.list_enrollment_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_fee_list_enrollment .list_enrollment_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1530px;
+}
+
+.add_fee_list_enrollment .list_enrollment_delete {
+    display: none;
+}
+
+.add_fee_list_enrollment .list_enrollment_edit {
+    display: none;
+}
+
+.add_fee_list_enrollment .enrollment_list {
+    display: none;
+    height: 1460px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.add_fee_name {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 355px;
+    position: absolute;
+    top: 35px;
+    width: 260px;
+}
+
+.add_fee_name_label {
+	background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+	left: 357px;
+	padding-left: 2px;
+    padding-right: 2px;
+	position: absolute;
+	top: 21px;
+}
+
+.add_fee_name_required_ind {
+	color: #dc1d38;
+    font-size: 0.56em;
+    left: 350px;
+	position: absolute;
+	top: 37px;
+}
+
+.add_fee_term {
+	display: none;
+	left: 655px;
+	position: absolute;
+	top: 35px;
+}
+
+.add_fee_term_selector_wait {
+    display: none;
+    left: 725px;
+    position: absolute;
+    top: 39px;
+}
+
+.required_symbol {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 400px;
+}
+
+.required_text {
+    font-size: 0.88em;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 395px;
+}

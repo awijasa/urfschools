@@ -1,0 +1,23 @@
+<!-- Indices written at Mon, 7 Jul 2014 15:21:00 CDT -->
+
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="UserPrivilege" ancestor="true" source="auto">
+        <property name="privilege" direction="asc"/>
+        <property name="schoolName" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Term" ancestor="false" source="auto">
+        <property name="termSchool" direction="asc"/>
+        <property name="year" direction="desc"/>
+        <property name="termNo" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="UserPrivilege" ancestor="true" source="auto">
+        <property name="schoolName" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

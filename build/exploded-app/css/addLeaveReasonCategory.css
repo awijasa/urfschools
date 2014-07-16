@@ -1,0 +1,72 @@
+a.add_leave_reason_category_link:link {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_leave_reason_category_link:visited {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_leave_reason_category_link:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_leave_reason_category {
+    border: 0;
+    color: #9b9898;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 35px;
+    width: 800px;
+}
+
+.add_leave_reason_category_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 22px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 21px;
+}
+
+.add_leave_reason_category_link_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 42px;
+}
+
+.add_leave_reason_category_required_ind {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 40px;
+}
+
+.required_symbol {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 400px;
+}
+
+.required_text {
+    font-size: 0.88em;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 395px;
+}

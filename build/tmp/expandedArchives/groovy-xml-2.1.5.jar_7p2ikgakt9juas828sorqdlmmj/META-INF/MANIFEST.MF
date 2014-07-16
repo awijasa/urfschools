@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Export-Package: org.codehaus.groovy.tools.xml;version="2.1.5",groovy.x
+ ml;version="2.1.5",groovy.xml.streamingmarkupsupport;version="2.1.5",
+ groovy.util;version="2.1.5",groovy.util.slurpersupport;version="2.1.5
+ ",org.codehaus.groovy.runtime;version="2.1.5",groovy.xml.dom;version=
+ "2.1.5"
+Bundle-Version: 2.1.5
+Tool: Bnd-1.50.0
+Created-By: 1.7.0_21 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: groovy-xml
+Import-Package: groovy.io,groovy.lang,javax.xml.namespace,javax.xml.pa
+ rsers,javax.xml.transform,javax.xml.transform.dom,javax.xml.transform
+ .stream,javax.xml.validation,javax.xml.xpath,org.codehaus.groovy.refl
+ ection,org.codehaus.groovy.runtime.callsite,org.codehaus.groovy.runti
+ me.typehandling,org.codehaus.groovy.syntax,org.w3c.dom,org.xml.sax,or
+ g.xml.sax.ext,org.xml.sax.helpers
+Built-By: glaforge
+Specification-Title: Groovy: a powerful, dynamic language for the JVM
+Specification-Version: 2.1.5
+Specification-Vendor: The Codehaus
+Implementation-Title: Groovy: a powerful, dynamic language for the JVM
+Implementation-Version: 2.1.5
+Implementation-Vendor: The Codehaus
+Bundle-Vendor: The Codehaus
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-BuddyPolicy: dependent
+DynamicImport-Package: *
+

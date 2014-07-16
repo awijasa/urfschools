@@ -1,0 +1,100 @@
+a.list_gender_code_label:link {
+    color: #122ed9;
+    left: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_gender_code_label:visited {
+    color: #122ed9;
+    left: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_gender_code_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.list_gender_desc_label:link {
+    color: #122ed9;
+    left: 180px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_gender_desc_label:visited {
+    color: #122ed9;
+    left: 180px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.list_gender_desc_label:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.actions_label {
+    left: 915px;
+    position: absolute;
+    top: 35px;
+}
+
+.gender_list {
+    height: 580px;
+    left: 15px;
+    overflow: auto;
+    position: absolute;
+    top: 70px;
+}
+
+.gender_list table {
+    border-collapse: collapse;
+    width: 975px;
+}
+
+.gender_list table tr td {
+    vertical-align: middle;
+}
+
+.gender_list_tr {
+	background-color: transparent;
+	border-color: transparent;
+	border-left-style: dotted;
+	border-left-width: 5px;
+}
+
+.gender_list_tr_hover {
+	background-color: #e6f2ff;
+	border-color: #006bcb;
+	border-left-style: solid;
+	border-left-width: 5px;
+}
+
+input.list_gender_desc {
+    display: none;
+}
+
+.list_gender_cancel {
+    display: none;
+    height: 30px;
+}
+
+.list_gender_delete {
+    height: 30px;
+}
+
+.list_gender_edit {
+    height: 30px;
+}
+
+.list_gender_save {
+    display: none;
+    height: 30px;
+}

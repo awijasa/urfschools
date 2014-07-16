@@ -1,0 +1,214 @@
+a.enrollment_filter_sortby_dialog_filter_apply:link {
+	display: none;
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_apply:visited {
+	display: none;
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_apply:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.enrollment_filter_sortby_dialog_filter_less:link {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_less:visited {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_less:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+a.enrollment_filter_sortby_dialog_filter_more:link {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_more:visited {
+	color: #122ed9;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+a.enrollment_filter_sortby_dialog_filter_more:hover {
+	color: #122ed9;
+	text-decoration: underline;
+}
+
+.enrollment_boarding_fees_filter_sortby_dialog .enrollment_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.enrollment_filter_sortby_dialog_asc_sort_direction_button {
+	display: none;
+	cursor: pointer;
+	height: 30px;
+	left: 80px;
+	position: absolute;
+	top: 6px;
+	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_dsc_sort_direction_button {
+	display: none;
+	cursor: pointer;
+	height: 30px;
+	left: 80px;
+	position: absolute;
+	top: 8px;
+	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_fees_due_filter {
+	width: 130px;
+}
+
+.enrollment_filter_sortby_dialog_fees_due_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.enrollment_filter_sortby_dialog_filter_apply_wait {
+	display: none;
+}
+
+.enrollment_filter_sortby_dialog_filter_button {
+	cursor: pointer;
+	height: 30px;
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_filter_form > table {
+	left: 0px;
+	position: absolute;
+	top: 3px;
+	width: 345px;
+}
+
+.enrollment_filter_sortby_dialog_filter_less_row {
+	display: none;
+}
+
+.enrollment_filter_sortby_dialog_filter_more_row {
+	display: none;
+}
+
+.enrollment_filter_sortby_dialog_filter_panel {
+	display: none;
+	height: 65px;
+	left: 10px;
+	position: absolute;
+	top: 45px;
+	width: 330px;
+}
+
+.enrollment_filter_sortby_dialog_first_name_filter {
+	width: 175px;
+}
+
+.enrollment_filter_sortby_dialog_first_name_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.enrollment_filter_sortby_dialog_last_name_filter {
+	width: 175px;
+}
+
+.enrollment_filter_sortby_dialog_last_name_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
+.enrollment_filter_sortby_dialog_lookup_button {
+	cursor: pointer;
+	display: none;
+	left: 120px;
+	position: absolute;
+	top: 17px;
+	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_sort_button {
+	cursor: pointer;
+	height: 30px;
+	left: 45px;
+	position: absolute;
+	top: 10px;
+	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_sort_order {
+	font-size: 0.7em;
+	left: 100px;
+	position: absolute;
+	top: 15px;
+	vertical-align: top;
+}
+
+.enrollment_fees_due_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.enrollment_fees_due_filter_sortby_dialog .enrollment_filter_sortby_dialog_fees_due_filter_row {
+	display: table-row;
+}
+
+.enrollment_fees_due_filter_sortby_dialog .enrollment_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.enrollment_first_name_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.enrollment_first_name_filter_sortby_dialog .enrollment_filter_sortby_dialog_first_name_filter_row {
+	display: table-row;
+}
+
+.enrollment_first_name_filter_sortby_dialog .enrollment_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.enrollment_last_name_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.enrollment_last_name_filter_sortby_dialog .enrollment_filter_sortby_dialog_last_name_filter_row {
+	display: table-row;
+}
+
+.enrollment_last_name_filter_sortby_dialog .enrollment_filter_sortby_dialog_filter_more_row {
+	display: table-row;
+}
+
+.enrollment_other_fees_filter_sortby_dialog .enrollment_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.enrollment_payments_filter_sortby_dialog .enrollment_filter_sortby_dialog_lookup_button {
+	display: block;
+}
+
+.enrollment_tuition_fees_filter_sortby_dialog .enrollment_filter_sortby_dialog_lookup_button {
+	display: block;
+}

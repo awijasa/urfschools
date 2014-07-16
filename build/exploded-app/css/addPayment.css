@@ -1,0 +1,397 @@
+a.add_payment_link:link {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_payment_link:visited {
+    color: #122ed9;
+    left: 870px;
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+}
+
+a.add_payment_link:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_payment_enrollment_selector:link {
+    color: #122ed9;
+    left: 120px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_enrollment_selector:visited {
+    color: #122ed9;
+    left: 120px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_enrollment_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_payment_funding_source_selector {
+	display: none;
+}
+
+a.add_payment_funding_source_selector:link {
+    color: #122ed9;
+    left: 500px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_funding_source_selector:visited {
+    color: #122ed9;
+    left: 500px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_funding_source_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+a.add_payment_term_selector {
+	display: none;
+}
+
+a.add_payment_term_selector:link {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_term_selector:visited {
+    color: #122ed9;
+    left: 710px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+}
+
+a.add_payment_term_selector:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_payment_amount {
+	border: 0;
+    color: #9b9898;
+    font-style: italic;
+	left: 70px;
+	position: absolute;
+	top: 73px;
+	width: 130px;
+}
+
+.add_payment_amount_label {
+	background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+	left: 72px;
+	padding-left: 2px;
+    padding-right: 2px;
+	position: absolute;
+	top: 59px;
+}
+
+.add_payment_amount_currency {
+	left: 20px;
+	position: absolute;
+	top: 73px;
+}
+
+.add_payment_amount_required_ind {
+	color: #dc1d38;
+    font-size: 0.56em;
+    left: 65px;
+	position: absolute;
+	top: 75px;
+}
+
+.add_payment_comment {
+    border: 0;
+    color: #9b9898;
+    font-size: 1.3em;
+    font-style: italic;
+    height: 300px;
+    left: 355px;
+    overflow: auto;
+    position: absolute;
+    top: 73px;
+    width: 635px;
+}
+
+.add_payment_comment_label {
+    background-color: #e7c6a5;
+    font-size: 0.56em;
+    display: none;
+    left: 357px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    top: 59px;
+}
+
+.add_payment_dialog_class_attended a.dialog_class_attended_term_link:link {
+	display: inline;
+}
+
+.add_payment_dialog_class_attended a.dialog_class_attended_term_link:visited {
+	display: inline;
+}
+
+.add_payment_dialog_class_attended a.dialog_class_attended_term_link:hover {
+	display: inline;
+}
+
+.add_payment_dialog_class_attended table {
+	border-collapse: collapse;
+}
+
+.add_payment_dialog_class_attended table tr td {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.add_payment_dialog_class_attended table tr td:first-child {
+	text-align: left;
+}
+
+.add_payment_dialog_class_attended table tr td:first-child span {
+	display: none;
+}
+
+.add_payment_dialog_class_attended table tr td:last-child {
+	text-align: center;
+}
+
+.add_payment_enrollment {
+	left: 20px;
+    position: absolute;
+    top: 35px;
+}
+
+.add_payment_enrollment_selector_wait {
+	display: none;
+    left: 135px;
+    position: absolute;
+    top: 39px;
+}
+
+.add_payment_funding_source_selector_wait {
+    display: none;
+    left: 515px;
+    position: absolute;
+    top: 39px;
+}
+
+.add_payment_link_wait {
+    display: none;
+    left: 920px;
+    position: absolute;
+    top: 42px;
+}
+
+.add_payment_list_enrollment {
+    display: none;
+}
+
+.add_payment_list_enrollment a.list_enrollment_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_payment_list_enrollment a.list_enrollment_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1530px;
+}
+
+.add_payment_list_enrollment a.list_enrollment_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_payment_list_enrollment .list_enrollment_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1530px;
+}
+
+.add_payment_list_enrollment .list_enrollment_delete {
+    display: none;
+}
+
+.add_payment_list_enrollment .list_enrollment_edit {
+    display: none;
+}
+
+.add_payment_list_enrollment .enrollment_list {
+    display: none;
+    height: 1460px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.add_payment_list_funding_source {
+    display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 695px;
+}
+
+.add_payment_list_funding_source a.list_parent_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 695px;
+}
+
+.add_payment_list_funding_source a.list_parent_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_payment_list_funding_source a.list_parent_prev_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 135px;
+}
+
+.add_payment_list_funding_source a.list_parent_prev_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 135px;
+}
+
+.add_payment_list_funding_source a.list_parent_prev_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_payment_list_funding_source .list_funding_source_school {
+	left: 25px;
+	padding-left: 7px;
+	padding-right: 7px;
+	position: absolute;
+	top: 80px;
+}
+
+.add_payment_list_funding_source .list_funding_source_self {
+	left: 25px;
+	padding-left: 7px;
+	padding-right: 7px;
+	position: absolute;
+	top: 120px;
+}
+
+.add_payment_list_funding_source .list_parent_delete {
+	display: none;
+}
+
+.add_payment_list_funding_source .list_parent_edit {
+	display: none;
+}
+
+.add_payment_list_funding_source .list_parent_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 695px;
+}
+
+.add_payment_list_funding_source .list_parent_prev_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 135px;
+}
+
+.add_payment_list_funding_source .parent_list {
+    display: none;
+    height: 555px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 160px;
+    width: 1000px;
+}
+
+.add_payment_term {
+	display: none;
+	left: 655px;
+	position: absolute;
+	top: 35px;
+}
+
+.add_payment_term_selector_wait {
+    display: none;
+    left: 725px;
+    position: absolute;
+    top: 39px;
+}
+
+div.add_payment_funding_source {
+	display: none;
+	left: 355px;
+    position: absolute;
+    top: 35px;
+}
+
+.required_symbol {
+    color: #dc1d38;
+    font-size: 0.56em;
+    left: 11px;
+    position: absolute;
+    top: 400px;
+}
+
+.required_text {
+    font-size: 0.88em;
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+    top: 395px;
+}

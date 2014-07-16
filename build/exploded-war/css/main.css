@@ -1,0 +1,413 @@
+a.signout_link:link {
+    color: #ffffff;
+    font-size: 0.81em;
+    left: 920px;
+    position: absolute;
+    text-decoration: none;
+    top: 15px;
+}
+
+a.signout_link:visited {
+    color: #ffffff;
+    font-size: 0.81em;
+    left: 920px;
+    position: absolute;
+    text-decoration: none;
+    top: 15px;
+}
+
+a.signout_link:hover {
+    color: #ffffff;
+    font-size: 0.81em;
+    text-decoration: underline;
+}
+
+.add_parent_child_list_student {
+    display: none;
+}
+
+.add_parent_child_list_student a.list_student_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.add_parent_child_list_student a.list_student_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.add_parent_child_list_student a.list_student_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_parent_child_list_student .list_student_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1425px;
+}
+
+.add_parent_child_list_student .list_student_delete {
+    display: none;
+}
+
+.add_parent_child_list_student .list_student_edit {
+    display: none;
+}
+
+.add_parent_child_list_student .student_list {
+    display: none;
+    height: 1355px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.add_parent_relative_list_student {
+    display: none;
+}
+
+.add_parent_relative_list_student a.list_student_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.add_parent_relative_list_student a.list_student_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 1425px;
+}
+
+.add_parent_relative_list_student a.list_student_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.add_parent_relative_list_student .list_student_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 1425px;
+}
+
+.add_parent_relative_list_student .list_student_delete {
+    display: none;
+}
+
+.add_parent_relative_list_student .list_student_edit {
+    display: none;
+}
+
+.add_parent_relative_list_student .student_list {
+    display: none;
+    height: 1355px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+body {
+    font-family: Verdana;
+}
+
+.dialog_list_parent {
+    display: none;
+}
+
+.dialog_list_parent a.list_parent_next_twenty:link {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 625px;
+}
+
+.dialog_list_parent a.list_parent_next_twenty:visited {
+    color: #122ed9;
+    font-size: 0.8em;
+    left: 444px;
+    position: absolute;
+    text-decoration: none;
+    top: 625px;
+}
+
+.dialog_list_parent a.list_parent_next_twenty:hover {
+    color: #122ed9;
+    text-decoration: underline;
+}
+
+.dialog_list_parent .list_parent_next_twenty_wait {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 625px;
+}
+
+.dialog_list_parent .list_parent_select {
+	display: none;
+}
+
+.dialog_list_parent .parent_list {
+    display: none;
+    height: 555px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.dialog_student_lookup {
+    display: none;
+}
+
+.dialog_student_lookup .list_student_delete {
+    display: none;
+}
+
+.dialog_student_lookup .list_student_edit {
+    display: none;
+}
+
+.dialog_student_lookup .list_student_next_twenty_wait {
+    display: none;
+}
+
+.dialog_student_lookup .list_student_select {
+	display: none;
+}
+
+.dialog_student_lookup .student_list {
+    display: none;
+    height: 555px;
+    left: 8px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+    width: 1000px;
+}
+
+.download_radio_dialog {
+    display: none;
+    font-size: 0.81em;
+}
+
+.download_radio_dialog a {
+    color: #122ed9;
+}
+
+.glyphicons {
+	background-image: url( '/img/glyphicons-halflings.png' );
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 35px;
+	overflow: hidden;
+	width: 28px;
+}
+
+.glyphicons_arrow_down {
+	background-position: -307px -110px;
+}
+
+.glyphicons_arrow_up {
+	background-position: -282px -109px;
+}
+
+.glyphicons_pale {
+	background-image: url( '/img/glyphicons-halflings-pale.png' );
+	background-repeat: no-repeat;
+	display: block;
+	height: 35px;
+	overflow: hidden;
+	width: 28px;
+}
+
+.glyphicons_trash {
+	background-position: -452px 10px;
+}
+
+.header_filter {
+    left: 830px;
+    position: absolute;
+    top: 42px;
+}
+
+.header_filter_sortby_dialog {
+    display: none;
+    font-size: 0.81em;
+}
+
+.header_filter_sortby_dialog a {
+    color: #122ed9;
+}
+
+.header_sortby {
+    left: 907px;
+    position: absolute;
+    top: 42px;
+}
+
+.list_record_form {
+    border-width: 1px;
+    border-color: #9b9898;
+    border-style: dashed;
+    height: 667px;
+    left: 4px;
+    position: absolute;
+    top: 532px;
+    width: 1012px;
+}
+
+.list_record_radio {
+    left: 446px;
+    position: absolute;
+    top: 518px;
+    z-index: 1;
+}
+
+.main_content {
+    height: 100%;
+    left: 50%;
+    margin-left: -512px;
+    position: absolute;
+    width: 1024px;
+}
+
+.main_header {
+    background-color: #000000;
+    height: 80px;
+    width: 1024px;
+}
+
+.main_header_ribbon {
+    background-color: #383332;
+    height: 5px;
+    position: absolute;
+    top: 75px;
+    width: 1024px;
+}
+
+.middle_filter {
+    left: 830px;
+    position: absolute;
+    top: 496px;
+}
+
+.middle_filter_sortby_dialog {
+    display: none;
+    font-size: 0.81em;
+}
+
+.middle_filter_sortby_dialog a {
+    color: #122ed9;
+}
+
+.middle_sortby {
+    left: 907px;
+    position: absolute;
+    top: 496px;
+}
+
+.new_record_form {
+    border-width: 1px;
+    border-color: #9b9898;
+    border-style: dashed;
+    height: 415px;
+    left: 4px;
+    position: absolute;
+    top: 72px;
+    width: 1012px;
+}
+
+.new_record_radio {
+    left: 438px;
+    position: absolute;
+    top: 58px;
+    z-index: 1;
+}
+
+.progress_bar {
+	display: none;
+	height: 15px;
+	left: 50%;
+	margin-left: -100px;
+	position: absolute;
+	top: 200px;
+	width: 200px;
+}
+
+.slogan {
+    color: #7d6f5f;
+    font-size: 0.81em;
+    left: 160px;
+    position: absolute;
+    top: 52px;
+}
+
+#tabs {
+    height: 1200px;
+    position: relative;
+    top: 5px;
+}
+
+#tabs li .ui-icon {
+    float: left;
+    margin: 0.4em 0.2em 0 0;
+    cursor: pointer;
+}
+
+.ui-accordion .ui-accordion-content {
+	overflow: hidden;
+}
+
+.ui-button-text {
+    font-size: 0.7em;
+}
+
+.ui-datepicker {
+    font-size: 0.8em;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	height: 35px;
+	margin: -17px 0 0 0;
+	width: 36px;
+}
+
+.upload_radio_dialog {
+    display: none;
+    font-size: 0.81em;
+}
+
+.upload_radio_dialog a {
+    color: #122ed9;
+}
+
+.webapp_title {
+    color: #ffffff;
+    font-size: 1.5em;
+    left: 160px;
+    position: absolute;
+    top: 25px;
+}
