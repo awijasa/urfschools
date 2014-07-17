@@ -81,7 +81,7 @@ else {
 	}
 	
 	/*
-     * Delete a StudentDocument identified by the id parameter and its associated Enrollment, EnrollmentWithStudent,
+     * Delete a StudentDocument identified by the id parameter and its associated Enrollment, EnrollmentDocument,
      * AnonymousParentalRelationship, and Student entities when the action parameter value is "delete".
      */
     else if( params.action.equals( "delete" ) ) {

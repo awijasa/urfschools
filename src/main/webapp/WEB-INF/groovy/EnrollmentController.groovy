@@ -79,7 +79,7 @@ else if( params.action == "count" ) {
 }
 
 /*
- * Delete an Enrollment entity identified by the id parameter and its associated EnrollmentWithStudent entity when the action parameter value is "delete".
+ * Delete an Enrollment entity identified by the id parameter and its associated EnrollmentDocument entity when the action parameter value is "delete".
  */
 else if( params.action.equals( "delete" ) ) {
 	List<Entity> classesAttendedList
@@ -242,7 +242,7 @@ else if( params.action.equals( "delete" ) ) {
 	}
 	catch( Exception e ) {
 		e.printStackTrace()
-		/* Rollback the deleted Classes Attended, Enrollment and EnrollmentWithStudent. Rollback the edited StudentDocument */
+		/* Rollback the deleted Classes Attended, Enrollment and EnrollmentDocument. Rollback the edited StudentDocument */
 		try { enrollment?.save() } catch( Exception saveException ) {}
 		try { enrollmentIndex.put( enrollmentDocument ) } catch( Exception saveException ) {}
 		try { enrollmentMetaDataBackup.save() } catch( Exception saveException ) {}
@@ -313,7 +313,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 			else
 				throw new EmptyRequiredFieldException( "Enrollment", "studentId" )
 		
-			/* If the schoolName parameter value is "School" or empty, do not put it into the Enrollment/EnrollmentWithStudent/StudentWithDocument entity's schoolName/lastEnrollmentSchool field. */
+			/* If the schoolName parameter value is "School" or empty, do not put it into the Enrollment/EnrollmentDocument/StudentWithDocument entity's schoolName/lastEnrollmentSchool field. */
 			if( params.schoolName != null && !params.schoolName.equals( "School" ) && !params.schoolName.equals( "" ) )
 				schoolNameString = params.schoolName
 
@@ -322,7 +322,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 				throw new EmptyRequiredFieldException( "Enrollment", "schoolName" )
 		}
 
-		/* If the leaveReasonCategory parameter value is "Leave Reason Category" or empty, do not put it into the Enrollment/EnrollmentWithStudent/StudentDocument entity's leaveReasonCategory/lastEnrollmentLeaveReasonCategory field. */
+		/* If the leaveReasonCategory parameter value is "Leave Reason Category" or empty, do not put it into the Enrollment/EnrollmentDocument/StudentDocument entity's leaveReasonCategory/lastEnrollmentLeaveReasonCategory field. */
 		if( params.leaveReasonCategory != null && !params.leaveReasonCategory.equals( "Leave Reason Category" ) && !params.leaveReasonCategory.equals( "" ) )
 			leaveReasonCategoryString = params.leaveReasonCategory
 		
@@ -330,7 +330,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 		else if( Enrollment.isRequired( "leaveReasonCategory" ) )
 			throw new EmptyRequiredFieldException( "Enrollment", "leaveReasonCategory" )
 
-		/* If the leaveReason parameter value is "Leave Reason" or empty, do not put it into the Enrollment/EnrollmentWithStudent/StudentDocument entity's leaveReason/lastEnrollmentLeaveReason field. */
+		/* If the leaveReason parameter value is "Leave Reason" or empty, do not put it into the Enrollment/EnrollmentDocument/StudentDocument entity's leaveReason/lastEnrollmentLeaveReason field. */
 		if( params.leaveReason != null && !params.leaveReason.equals( "Leave Reason" ) && !params.leaveReason.equals( "" ) )
 			leaveReasonString = params.leaveReason
 			
@@ -362,7 +362,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 
 				/*
 				 * If the value of Enrollment Term parameter associated to the iterated School is "Enrollment Term", do not put it into the
-				 * Enrollment/EnrollmentWithStudent/StudentDocument entity's enrollTermYear & enrollTermNo/lastEnrollmentTermYear & lastEnrollmentTermNo fields.
+				 * Enrollment/EnrollmentDocument/StudentDocument entity's enrollTermYear & enrollTermNo/lastEnrollmentTermYear & lastEnrollmentTermNo fields.
 				 */
 				if( enrollTerm != null && !enrollTerm.equals( "Enrollment Term" ) ) {
 					String[] enrollTermComponents = enrollTerm.split( " " )
@@ -374,7 +374,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 
 				/*
 				 * If the value of Leave Term parameter associated to the iterated School is "Leave Term", do not put it into the
-				 * Enrollment/EnrollmentWithStudent/StudentDocument entity's leaveTermYear & leaveTermNo/lastEnrollmentLeaveTermYear & lastEnrollmentLeaveTermNo fields.
+				 * Enrollment/EnrollmentDocument/StudentDocument entity's leaveTermYear & leaveTermNo/lastEnrollmentLeaveTermYear & lastEnrollmentLeaveTermNo fields.
 				 */
 				if( leaveTermParamValue != null && !leaveTermParamValue.equals( "Leave Term" ) ) {
 					String[] leaveTermComponents = leaveTermParamValue.split( " " )
@@ -386,7 +386,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 
 				/*
 				 * If the value of First Class Attended parameter associated to the iterated School is "First Class Attended", do not put it into the
-				 * Enrollment/EnrollmentWithStudent/StudentDocument entity's firstClassAttended/lastEnrollmentFirstClassAttended field.
+				 * Enrollment/EnrollmentDocument/StudentDocument entity's firstClassAttended/lastEnrollmentFirstClassAttended field.
 				 */
 				if( firstClassAttendedParamValue != null && !firstClassAttendedParamValue.equals( "First Class Attended" ) ) {
 					firstClassAttendedString = firstClassAttendedParamValue
@@ -429,7 +429,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 
 			/*
 			 * If the value of Leave Term parameter associated to the iterated School is "Leave Term", do not put it into the
-			 * Enrollment/EnrollmentWithStudent/StudentDocument entity's leaveTermYear & leaveTermNo/lastEnrollmentLeaveTermYear & lastEnrollmentLeaveTermNo fields.
+			 * Enrollment/EnrollmentDocument/StudentDocument entity's leaveTermYear & leaveTermNo/lastEnrollmentLeaveTermYear & lastEnrollmentLeaveTermNo fields.
 			 */
 			if( leaveTermParamValue != null && !leaveTermParamValue.equals( "Leave Term" ) ) {
 				String[] leaveTermComponents = leaveTermParamValue.split( " " )
@@ -481,14 +481,14 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 
 			/*
 			 * If the value of First Class Attended parameter associated to the iterated School is "First Class Attended", do not put it into the
-			 * Enrollment/EnrollmentWithStudent/StudentDocument entity's firstClassAttended/lastEnrollmentFirstClassAttended field.
+			 * Enrollment/EnrollmentDocument/StudentDocument entity's firstClassAttended/lastEnrollmentFirstClassAttended field.
 			 */
 			if( firstClassAttendedString != null && firstClassAttendedString != "First Class Attended" )
 				isFirstClassAttendedEmpty = false
 
 			/*
 			 * If the value of Last Class Attended parameter associated to the iterated School is "Last Class Attended", do not put it into the
-			 * Enrollment/EnrollmentWithStudent/StudentDocument entity's lastClassAttended/lastEnrollmentLastClassAttended field.
+			 * Enrollment/EnrollmentDocument/StudentDocument entity's lastClassAttended/lastEnrollmentLastClassAttended field.
 			 */
 			if( lastClassAttendedString != null && lastClassAttendedString != "Last Class Attended" )
 				isLastClassAttendedEmpty = false
@@ -796,7 +796,7 @@ else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 				}
 			)
 			
-			/* Restore the old values of Enrollment, EnrollmentWithStudent and StudentWithLastEnrollment. */
+			/* Restore the old values of Enrollment and EnrollmentDocument */
 			try{ enrollmentBackup?.save() } catch( Exception backupRestoreException ) {}
 			
 			try {

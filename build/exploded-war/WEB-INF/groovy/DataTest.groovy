@@ -1,1 +1,0 @@
-log.info "Testing the data classes."

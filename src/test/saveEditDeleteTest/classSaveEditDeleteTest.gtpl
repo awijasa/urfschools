@@ -1,10 +1,11 @@
 <%
   import com.google.appengine.api.datastore.Entity
+  import com.google.appengine.api.search.Document
   import data.Class
   import data.ClassAttended
   import data.ClassFees
   import data.School
-  import data.StudentWithLastEnrollment
+  import data.StudentDocument
   import data.Term
   import data.URFUser
   import data.UserPrivilege
@@ -353,14 +354,14 @@
 	      assert classCount == Class.findBySchoolName( "Saint John's College MN" ).size(), "User was able to save a Duplicate Class through edit action."
 	      assert classFeesCount == ClassFees.findBySchoolName( "Saint John's College MN" ).size(), "User was able to save a Duplicate ClassFees through edit action"
 	    
-	      Entity studentWithLastEnrollment = StudentWithLastEnrollment.findByStudentId( "0201aoey" )
+	      Document studentDocument = StudentDocument.findByStudentId( "0201aoey" )
 	      
 	      urlFetch.fetch( new URIBuilder( "http://localhost:8080/StudentController.groovy" )
 	        .addQueryParam( "action", "delete" )
-	        .addQueryParam( "id", studentWithLastEnrollment.getKey().getId() )
+	        .addQueryParam( "id", studentDocument.getId() )
 	        .addQueryParam( "studentId", "0201aoey" )
 	        .addQueryParam( "nextTwentyOffset", 20 )
-	        .addQueryParam( "lastUpdateDate", studentWithLastEnrollment.lastUpdateDate.format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
+	        .addQueryParam( "lastUpdateDate", studentDocument.getOnlyField( "lastUpdateDate" ).getDate().format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
 	      
 	      Entity term = Term.findByTermSchoolAndTermNoAndYear( "Saint John's College MN", 1, 1901 )
 	      

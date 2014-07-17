@@ -5,7 +5,6 @@
   import data.ClassAttended
   import data.Enrollment
   import data.EnrollmentDocument
-  import data.EnrollmentWithTerms
   import data.Fee
   import data.Parent
   import data.ParentalRelationship
@@ -182,7 +181,6 @@
         .addQueryParam( "lastUpdateDate", studentDocument.getOnlyField( "lastUpdateDate" ).getDate().format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
       assert StudentDocument.findByStudentId( "0202aoey" ) == null, "User was unable to delete a Student."
       assert EnrollmentDocument.findLastEnrollmentDocumentByStudentId( "0202aoey" ) == null, "User was unable to delete a Student."
-      assert EnrollmentWithTerms.findLastEnrollmentWithTermsByStudentId( "0202aoey" ) == null, "User was unable to delete a Student."
       assert Student.findByStudentId( "0202aoey" ) == null, "User was unable to delete a Student."
       assert AnonymousParentalRelationship.findByStudentId( "0202aoey" ).size() == 0, "User was unable to delete a Student."
       assert Relationship.findByStudentId( "0202aoey" ).size() == 0, "User was unable to delete a Student."

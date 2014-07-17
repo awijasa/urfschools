@@ -1,9 +1,10 @@
 <%
   import com.google.appengine.api.datastore.Entity
+  import com.google.appengine.api.search.Document
   import data.ClassAttended
   import data.ClassFees
   import data.School
-  import data.StudentWithLastEnrollment
+  import data.StudentDocument
   import data.Term
   import data.URFUser
   import data.UserPrivilege
@@ -1134,14 +1135,14 @@
 	      
 	      assert termCount == Term.list().size(), "User was able to edit a Term into an Overlapping Term."
 	    
-	      Entity studentWithLastEnrollment = StudentWithLastEnrollment.findByStudentId( "0201aoey" )
+	      Document studentDocument = StudentDocument.findByStudentId( "0201aoey" )
 	      
 	      urlFetch.fetch( new URIBuilder( "http://localhost:8080/StudentController.groovy" )
 	        .addQueryParam( "action", "delete" )
 	        .addQueryParam( "id", studentWithLastEnrollment.getKey().getId() )
 	        .addQueryParam( "studentId", "0201aoey" )
 	        .addQueryParam( "nextTwentyOffset", 20 )
-	        .addQueryParam( "lastUpdateDate", studentWithLastEnrollment.lastUpdateDate.format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
+	        .addQueryParam( "lastUpdateDate", studentDocument.getOnlyField( "lastUpdateDate" ).getDate().format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
 	      
 	      /* School Delete Test. */
 	      
