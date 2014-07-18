@@ -1,4 +1,4 @@
-<!-- Indices written at Thu, 17 Jul 2014 16:55:08 CDT -->
+<!-- Indices written at Fri, 18 Jul 2014 01:36:58 CDT -->
 
 <datastore-indexes>
 
@@ -8,7 +8,7 @@
         <property name="schoolName" direction="asc"/>
     </datastore-index>
 
-    <!-- Used 2 times in query history -->
+    <!-- Used 5 times in query history -->
     <datastore-index kind="Term" ancestor="false" source="auto">
         <property name="termSchool" direction="asc"/>
         <property name="year" direction="desc"/>
@@ -20,21 +20,9 @@
         <property name="schoolName" direction="asc"/>
     </datastore-index>
 
-    <!-- Used 5 times in query history -->
-    <datastore-index kind="ClassFees" ancestor="true" source="auto">
-        <property name="class" direction="asc"/>
-        <property name="classLevel" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 2 times in query history -->
+    <!-- Used 3 times in query history -->
     <datastore-index kind="AnonymousParentalRelationship" ancestor="true" source="auto">
         <property name="parentalRelationship" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 1 time in query history -->
-    <datastore-index kind="Parent" ancestor="false" source="auto">
-        <property name="firstName" direction="asc"/>
-        <property name="lastName" direction="asc"/>
     </datastore-index>
 
 </datastore-indexes>

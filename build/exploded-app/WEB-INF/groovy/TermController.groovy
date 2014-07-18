@@ -5,17 +5,22 @@ Author     : awijasa
  */
 
 import com.google.appengine.api.datastore.Entity
+import com.google.appengine.api.search.Document
+import com.google.appengine.api.search.Field
+import com.google.appengine.api.search.Index
 import data.AuthorizationException
 import data.Class
 import data.ClassAttended
 import data.ClassFees
 import data.DuplicateEntityException
 import data.EmptyRequiredFieldException
+import data.EnrollmentDocument
 import data.EntityIsUsedException
 import data.InvalidDateRangeException
 import data.InvalidValueException
 import data.OverlappedTermException
 import data.StaleRecordException
+import data.StudentDocument
 import data.Term
 import data.URFUser
 import data.UserPrivilege
@@ -104,7 +109,11 @@ else {
         else if( params.action.equals( "edit" ) || params.action.equals( "save" ) ) {
 			List<Entity> classesAttendedBackup = new ArrayList()
 			List<Entity> classFeesBackup = new ArrayList()
+			Map<String, Document> enrollmentDocumentBackups = new LinkedHashMap()
+			Index enrollmentIndex = search.index( "Enrollment" )
 			List<Entity> newClassFees = new ArrayList()
+			Map<String, Document> studentDocumentBackups = new LinkedHashMap()
+			Index studentIndex = search.index( "Student" )
 			Entity term
 			Entity termBackup
 			
@@ -192,7 +201,6 @@ else {
                             /* User with Modify privilege for the Term's School */
                             UserPrivilege.findByUserEmailAndSchoolName( user.getEmail(), term.termSchool )?.privilege?.equals( "Modify" ) ) {
                             term.save()
-                            Term.deleteMemcache( term.termSchool )
                         }
                         else
                             throw new AuthorizationException( term.termSchool )
@@ -323,11 +331,196 @@ else {
 							
 							ClassAttended.findBySchoolNameAndClassAndClassTermNoAndClassTermYear( classFees.schoolName, classFees.getProperty( "class" ), classFees.termNo, classFees.termYear ).each(
 								{
+									Number tuitionFeeDiff = ( tuitionFee?: 0 ) - ( it.tuitionFee?: 0 )
+									Number boardingFeeDiff = 0
+									
+									if( it.boardingInd == "Y" )
+										boardingFeeDiff = ( boardingFee?: 0 ) - ( it.boardingFee?: 0 )
+									
 									it.tuitionFee = tuitionFee
 									it.boardingFee = boardingFee
 									it.lastUpdateDate = new Date()
 									it.lastUpdateUser = user?.getEmail()
 									it.save()
+									
+									Document enrollmentDocument = EnrollmentDocument.findByStudentIdAndSchoolNameAndEnrollTermNoAndEnrollTermYear(
+										it.studentId,
+										it.schoolName,
+										it.enrollTermNo,
+										it.enrollTermYear
+									)
+									
+									Set<String> enrollmentDocumentFieldNames = enrollmentDocument.getFieldNames()
+									
+									if(
+										tuitionFeeDiff != 0 ||
+										boardingFeeDiff != 0 ||
+										(
+											enrollmentDocument.getOnlyField( "enrollTermNo" ).getNumber() == term.termNo &&
+											enrollmentDocument.getOnlyField( "enrollTermYear" ).getNumber() == term.year &&
+											enrollmentDocument.getOnlyField( "enrollTermStartDate" ).getDate() != term.startDate
+										) ||
+										(
+											enrollmentDocumentFieldNames.contains( "leaveTermNo" ) &&
+											enrollmentDocument.getOnlyField( "leaveTermNo" ).getNumber() == term.termNo &&
+											enrollmentDocument.getOnlyField( "leaveTermYear" ).getNumber() == term.year &&
+											enrollmentDocument.getOnlyField( "leaveTermEndDate" ).getDate() != term.endDate
+										)
+									) {
+										
+										if( !enrollmentDocumentBackups.containsKey( enrollmentDocument.getId() ) )
+											enrollmentDocumentBackups.put( enrollmentDocument.getId(), enrollmentDocument )
+											
+										/* Populate the EnrollmentDocument fields. */
+										Number newTuitionFees = enrollmentDocument.getOnlyField( "tuitionFees" ).getNumber() + tuitionFeeDiff
+										Number newBoardingFees = enrollmentDocument.getOnlyField( "boardingFees" ).getNumber() + boardingFeeDiff
+										Number newFeesDue = newTuitionFees + newBoardingFees + enrollmentDocument.getOnlyField( "otherFees" ).getNumber() - enrollmentDocument.getOnlyField( "payments" ).getNumber()
+		
+										if( newFeesDue < 0 )
+											newFeesDue = 0
+										
+										Document.Builder enrollmentDocBuilder = Document.newBuilder()
+											
+										enrollmentDocBuilder.setId( "" + enrollmentDocument.getId() )
+											.addField( Field.newBuilder().setName( "studentId" ).setAtom( enrollmentDocument.getOnlyField( "studentId" ).getAtom() ) )
+											.addField( Field.newBuilder().setName( "firstName" ).setText( enrollmentDocument.getOnlyField( "firstName" ).getText() ) )
+											.addField( Field.newBuilder().setName( "schoolName" ).setText( enrollmentDocument.getOnlyField( "schoolName" ).getText() ) )
+											.addField( Field.newBuilder().setName( "termsEnrolled" ).setText( enrollmentDocument.getOnlyField( "termsEnrolled" ).getText() ) )
+											.addField( Field.newBuilder().setName( "enrollTermYear" ).setNumber( enrollmentDocument.getOnlyField( "enrollTermYear" ).getNumber() ) )
+											.addField( Field.newBuilder().setName( "enrollTermNo" ).setNumber( enrollmentDocument.getOnlyField( "enrollTermNo" ).getNumber() ) )
+											.addField( Field.newBuilder().setName( "classesAttended" ).setText( enrollmentDocument.getOnlyField( "classesAttended" ).getText() ) )
+											.addField( Field.newBuilder().setName( "firstClassAttended" ).setText( enrollmentDocument.getOnlyField( "firstClassAttended" ).getText() ) )
+											.addField( Field.newBuilder().setName( "lastClassAttended" ).setText( enrollmentDocument.getOnlyField( "lastClassAttended" ).getText() ) )
+											.addField( Field.newBuilder().setName( "tuitionFees" ).setNumber( newTuitionFees ) )
+											.addField( Field.newBuilder().setName( "boardingFees" ).setNumber( newBoardingFees ) )
+											.addField( Field.newBuilder().setName( "otherFees" ).setNumber( enrollmentDocument.getOnlyField( "otherFees" ).getNumber() ) )
+											.addField( Field.newBuilder().setName( "payments" ).setNumber( enrollmentDocument.getOnlyField( "payments" ).getNumber() ) )
+											.addField( Field.newBuilder().setName( "feesDue" ).setNumber( newFeesDue ) )
+											.addField( Field.newBuilder().setName( "lastUpdateDate" ).setDate( new Date() ) )
+										
+										if(
+											enrollmentDocument.getOnlyField( "enrollTermNo" ).getNumber() == term.termNo &&
+											enrollmentDocument.getOnlyField( "enrollTermYear" ).getNumber() == term.year
+										)
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "enrollTermStartDate" ).setDate( term.startDate ) )
+										else
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "enrollTermStartDate" ).setDate( enrollmentDocument.getOnlyField( "enrollTermStartDate" ).getDate() ) )
+											
+										if(
+											enrollmentDocumentFieldNames.contains( "leaveTermNo" ) &&
+											enrollmentDocument.getOnlyField( "leaveTermNo" ).getNumber() == term.termNo &&
+											enrollmentDocument.getOnlyField( "leaveTermYear" ).getNumber() == term.year
+										)
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermEndDate" ).setDate( term.endDate ) )
+										else
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermEndDate" ).setDate( enrollmentDocument.getOnlyField( "leaveTermEndDate" ).getDate() ) )
+											
+										if( enrollmentDocumentFieldNames.contains( "lastName" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastName" ).setText( enrollmentDocument.getOnlyField( "lastName" ).getText() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "birthDate" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "birthDate" ).setDate( enrollmentDocument.getOnlyField( "birthDate" ).getDate() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "village" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "village" ).setText( enrollmentDocument.getOnlyField( "village" ).getText() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "genderCode" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "genderCode" ).setText( enrollmentDocument.getOnlyField( "genderCode" ).getText() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "specialInfo" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "specialInfo" ).setText( enrollmentDocument.getOnlyField( "specialInfo" ).getText() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "leaveTermYear" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermYear" ).setNumber( enrollmentDocument.getOnlyField( "leaveTermYear" ).getNumber() ) )
+												
+										if( enrollmentDocumentFieldNames.contains( "leaveTermNo" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermNo" ).setNumber( enrollmentDocument.getOnlyField( "leaveTermNo" ).getNumber() ) )
+											
+										if( enrollmentDocumentFieldNames.contains( "leaveReasonCategory" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReasonCategory" ).setText( enrollmentDocument.getOnlyField( "leaveReasonCategory" ).getText() ) )
+											
+										if( enrollmentDocumentFieldNames.contains( "leaveReason" ) )
+											enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReason" ).setText( enrollmentDocument.getOnlyField( "leaveReason" ).getText() ) )
+												
+										if( user != null )
+								            enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastUpdateUser" ).setText( user.getEmail() ) )
+								            
+								        enrollmentIndex.put( enrollmentDocBuilder.build() )
+								        
+								        Document studentDocument = StudentDocument.findByStudentId( it.studentId )
+										
+										Set<String> studentDocumentFieldNames = studentDocument.getFieldNames()
+										
+										if(
+											studentDocument.getOnlyField( "lastEnrollmentSchool" ).getText() == enrollmentDocument.getOnlyField( "schoolName" ).getText() &&
+											studentDocument.getOnlyField( "lastEnrollmentTermNo" ).getNumber() == enrollmentDocument.getOnlyField( "enrollTermNo" ).getNumber() &&
+											studentDocument.getOnlyField( "lastEnrollmentTermYear" ).getNumber() == enrollmentDocument.getOnlyField( "enrollTermYear" ).getNumber()
+										) {
+											
+											if( !studentDocumentBackups.containsKey( studentDocument.getId() ) )
+												studentDocumentBackups.put( studentDocument.getId(), studentDocument )
+												
+											/* Populate the StudentDocument fields. */
+											Document.Builder studentDocBuilder = Document.newBuilder()
+												
+											studentDocBuilder.setId( "" + studentDocument.getId() )
+												.addField( Field.newBuilder().setName( "studentId" ).setAtom( studentDocument.getOnlyField( "studentId" ).getAtom() ) )
+												.addField( Field.newBuilder().setName( "firstName" ).setText( studentDocument.getOnlyField( "firstName" ).getText() ) )
+												.addField( Field.newBuilder().setName( "lastEnrollmentSchool" ).setText( studentDocument.getOnlyField( "lastEnrollmentSchool" ).getText() ) )
+												.addField( Field.newBuilder().setName( "termsEnrolled" ).setText( studentDocument.getOnlyField( "termsEnrolled" ).getText() ) )
+												.addField( Field.newBuilder().setName( "lastEnrollmentTermYear" ).setNumber( studentDocument.getOnlyField( "lastEnrollmentTermYear" ).getNumber() ) )
+												.addField( Field.newBuilder().setName( "lastEnrollmentTermNo" ).setNumber( studentDocument.getOnlyField( "lastEnrollmentTermNo" ).getNumber() ) )
+												.addField( Field.newBuilder().setName( "classesAttended" ).setText( studentDocument.getOnlyField( "classesAttended" ).getText() ) )
+												.addField( Field.newBuilder().setName( "lastEnrollmentFirstClassAttended" ).setText( studentDocument.getOnlyField( "lastEnrollmentFirstClassAttended" ).getText() ) )
+												.addField( Field.newBuilder().setName( "lastEnrollmentLastClassAttended" ).setText( studentDocument.getOnlyField( "lastEnrollmentLastClassAttended" ).getText() ) )
+												.addField( Field.newBuilder().setName( "tuitionFees" ).setNumber( newTuitionFees ) )
+												.addField( Field.newBuilder().setName( "boardingFees" ).setNumber( newBoardingFees ) )
+												.addField( Field.newBuilder().setName( "otherFees" ).setNumber( studentDocument.getOnlyField( "otherFees" ).getNumber() ) )
+												.addField( Field.newBuilder().setName( "payments" ).setNumber( studentDocument.getOnlyField( "payments" ).getNumber() ) )
+												.addField( Field.newBuilder().setName( "feesDue" ).setNumber( newFeesDue ) )
+												.addField( Field.newBuilder().setName( "lastUpdateDate" ).setDate( new Date() ) )
+											
+											if(
+												studentDocument.getOnlyField( "lastEnrollmentTermNo" ).getNumber() == term.termNo &&
+												studentDocument.getOnlyField( "lastEnrollmentTermYear" ).getNumber() == term.year
+											)
+												studentDocBuilder.addField( Field.newBuilder().setName( "lastEnrollmentTermStartDate" ).setDate( term.startDate ) )
+											else
+												studentDocBuilder.addField( Field.newBuilder().setName( "lastEnrollmentTermStartDate" ).setDate( studentDocument.getOnlyField( "lastEnrollmentTermStartDate" ).getDate() ) )
+												
+											if( studentDocumentFieldNames.contains( "lastName" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "lastName" ).setText( studentDocument.getOnlyField( "lastName" ).getText() ) )
+													
+											if( studentDocumentFieldNames.contains( "birthDate" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "birthDate" ).setDate( studentDocument.getOnlyField( "birthDate" ).getDate() ) )
+													
+											if( studentDocumentFieldNames.contains( "village" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "village" ).setText( studentDocument.getOnlyField( "village" ).getText() ) )
+													
+											if( studentDocumentFieldNames.contains( "genderCode" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "genderCode" ).setText( studentDocument.getOnlyField( "genderCode" ).getText() ) )
+													
+											if( studentDocumentFieldNames.contains( "specialInfo" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "specialInfo" ).setText( studentDocument.getOnlyField( "specialInfo" ).getText() ) )
+													
+											if( studentDocumentFieldNames.contains( "lastEnrollmentLeaveTermYear" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "lastEnrollmentLeaveTermYear" ).setNumber( studentDocument.getOnlyField( "lastEnrollmentLeaveTermYear" ).getNumber() ) )
+													
+											if( studentDocumentFieldNames.contains( "lastEnrollmentLeaveTermNo" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "lastEnrollmentLeaveTermNo" ).setNumber( studentDocument.getOnlyField( "lastEnrollmentLeaveTermNo" ).getNumber() ) )
+												
+											if( studentDocumentFieldNames.contains( "leaveReasonCategory" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "leaveReasonCategory" ).setText( studentDocument.getOnlyField( "leaveReasonCategory" ).getText() ) )
+												
+											if( studentDocumentFieldNames.contains( "leaveReason" ) )
+												studentDocBuilder.addField( Field.newBuilder().setName( "leaveReason" ).setText( studentDocument.getOnlyField( "leaveReason" ).getText() ) )
+													
+											if( user != null )
+									            studentDocBuilder.addField( Field.newBuilder().setName( "lastUpdateUser" ).setText( user.getEmail() ) )
+									            
+									        studentIndex.put( studentDocBuilder.build() )
+										}
+									}
 								}
 							)
 						}
@@ -336,6 +529,14 @@ else {
 
                 /* Respond with the HTML code that is required to display the new Term entity within a table. */
                 println ListItemFormatter.getTermListItem( term )
+                
+                Term.deleteMemcache( term.termSchool )
+                
+                if( enrollmentDocumentBackups.size() > 0 )
+                	EnrollmentDocument.deleteMemcache()
+                
+                if( studentDocumentBackups.size() > 0 )
+                	StudentDocument.deleteMemcache()
             }
             catch( Exception e ) {
 				if( params.action == "save" ) {
@@ -359,6 +560,18 @@ else {
 					classesAttendedBackup.each(
 						{
 							try { it.save() } catch( Exception saveException ) {}
+						}
+					)
+					
+					enrollmentDocumentBackups.each(
+						{ enrollmentDocumentId, enrollmentDocument ->
+							enrollmentIndex.put( enrollmentDocument )
+						}
+					)
+					
+					studentDocumentBackups.each(
+						{ studentDocumentId, studentDocument ->
+							studentIndex.put( studentDocument )
 						}
 					)
 				}
