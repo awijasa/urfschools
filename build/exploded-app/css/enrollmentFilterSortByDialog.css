@@ -65,6 +65,15 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 	vertical-align: top;
 }
 
+.enrollment_filter_sortby_dialog_classes_attended_filter {
+	width: 175px;
+}
+
+.enrollment_filter_sortby_dialog_classes_attended_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
 .enrollment_filter_sortby_dialog_dsc_sort_direction_button {
 	display: none;
 	cursor: pointer;
@@ -101,7 +110,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 	left: 0px;
 	position: absolute;
 	top: 3px;
-	width: 345px;
+	width: 395px;
 }
 
 .enrollment_filter_sortby_dialog_filter_less_row {
@@ -118,7 +127,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 	left: 10px;
 	position: absolute;
 	top: 45px;
-	width: 330px;
+	width: 350px;
 }
 
 .enrollment_filter_sortby_dialog_first_name_filter {
@@ -163,6 +172,18 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 	position: absolute;
 	top: 15px;
 	vertical-align: top;
+}
+
+.enrollment_classes_attended_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.enrollment_classes_attended_filter_sortby_dialog .enrollment_filter_sortby_dialog_classes_attended_filter_row {
+	display: table-row;
+}
+
+.enrollment_classes_attended_filter_sortby_dialog .enrollment_filter_sortby_dialog_filter_more_row {
+	display: table-row;
 }
 
 .enrollment_fees_due_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {

@@ -56,6 +56,7 @@ class StudentDocument {
 					"studentId",
 					"firstName",
 					"lastName",
+					"classesAttended",
 					"lastEnrollmentFirstClassAttended",
 					"lastEnrollmentLastClassAttended",
 					"lastEnrollmentTermYear",
@@ -121,6 +122,18 @@ class StudentDocument {
 		// GString can not be used when dealing with Memcache.
 		String memcacheKey = "studentResults of " + urfUserSchools + " row " + ( offset + 1 ) + " to " + ( offset + limit )
 		int filterCount = 0
+		
+		if( session.getAttribute( "studentClassesAttendedFilter" ) != null && session.getAttribute( "studentClassesAttendedFilter" ) != "" ) {
+			String filter = "classesAttended = \"" + session.getAttribute( "studentClassesAttendedFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
 		
 		if(
 			session.getAttribute( "studentFeesDueFilter" ) != null &&
@@ -255,6 +268,7 @@ class StudentDocument {
 						"studentId",
 		            	"firstName",
 		            	"lastName",
+		            	"classesAttended",
 		            	"lastEnrollmentFirstClassAttended",
 		            	"lastEnrollmentLastClassAttended",
 		            	"lastEnrollmentTermYear",
@@ -377,6 +391,7 @@ class StudentDocument {
 					"studentId",
 					"firstName",
 					"lastName",
+					"classesAttended",
 					"lastEnrollmentFirstClassAttended",
 					"lastEnrollmentLastClassAttended",
 					"lastEnrollmentTermYear",
@@ -461,6 +476,18 @@ class StudentDocument {
 		// GString can not be used when dealing with Memcache.
 		String memcacheKey = "studentResults of " + urfUserSchools + " row " + ( offset + 1 ) + " to " + ( offset + limit )
 		int filterCount = 0
+		
+		if( session.getAttribute( "studentClassesAttendedFilter" ) != null && session.getAttribute( "studentClassesAttendedFilter" ) != "" ) {
+			String filter = "classesAttended = \"" + session.getAttribute( "studentClassesAttendedFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
 		
 		if(
 			session.getAttribute( "studentFeesDueFilter" ) != null &&
@@ -595,6 +622,7 @@ class StudentDocument {
 						"studentId",
 		            	"firstName",
 		            	"lastName",
+		            	"classesAttended",
 		            	"lastEnrollmentFirstClassAttended",
 		            	"lastEnrollmentLastClassAttended",
 		            	"lastEnrollmentTermYear",

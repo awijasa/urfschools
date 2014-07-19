@@ -24,10 +24,12 @@ else {
 		StringWriter writer = new StringWriter()
 		
 		new MarkupBuilder( writer ).attributes {
+			enrollmentClassesAttendedFilter( session.getAttribute( "enrollmentClassesAttendedFilter" ) )
 			enrollmentFeesDueFilter( session.getAttribute( "enrollmentFeesDueFilter" ) )
 			enrollmentFeesDueFilterOperator( session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			enrollmentFirstNameFilter( session.getAttribute( "enrollmentFirstNameFilter" ) )
 			enrollmentLastNameFilter( session.getAttribute( "enrollmentLastNameFilter" ) )
+			studentClassesAttendedFilter( session.getAttribute( "studentClassesAttendedFilter" ) )
 			studentFeesDueFilter( session.getAttribute( "studentFeesDueFilter" ) )
 			studentFeesDueFilterOperator( session.getAttribute( "studentFeesDueFilterOperator" ) )
 			studentFirstNameFilter( session.getAttribute( "studentFirstNameFilter" ) )
@@ -40,6 +42,17 @@ else {
 		DecimalFormat currencyFormat = new DecimalFormat( "#,##0.00" )
 		
 		if( params.kind == "Enrollment" ) {
+			if( params.classesAttended != null && params.classesAttended != "" ) {
+				try {
+					session.setAttribute( "enrollmentClassesAttendedFilter", params.classesAttended )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "enrollmentClassesAttendedFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "enrollmentClassesAttendedFilter" )
+				
 			if( params.feesDue != null && params.feesDue != "" ) {
 				try {
 					session.setAttribute( "enrollmentFeesDueFilter", currencyFormat.parse( params.feesDue ) )
@@ -79,6 +92,17 @@ else {
 				session.removeAttribute( "enrollmentLastNameFilter" )
 		}
 		else {
+			if( params.classesAttended != null && params.classesAttended != "" ) {
+				try {
+					session.setAttribute( "studentClassesAttendedFilter", params.classesAttended )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "studentClassesAttendedFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "studentClassesAttendedFilter" )
+			
 			if( params.feesDue != null && params.feesDue != "" ) {
 				try {
 					session.setAttribute( "studentFeesDueFilter", currencyFormat.parse( params.feesDue ) )

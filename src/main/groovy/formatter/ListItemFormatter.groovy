@@ -57,6 +57,7 @@ class ListItemFormatter {
 	                    mkp.yield( " - " )
 	                    span( class: "list_enrollment_last_class_attended", enrollmentDocument.getOnlyField( "lastClassAttended" ).getText() )
 	                }
+	                div( class: "list_enrollment_classes_attended_text", style: "display: none", enrollmentDocument.getOnlyField( "classesAttended" ).getText() )
 	                div( class: "list_enrollment_first_class_attended_required_ind", "*" )
 	                div( class: "list_enrollment_last_class_attended_required_ind", "*" )
 	                
@@ -296,7 +297,7 @@ class ListItemFormatter {
 					}
 	                
 	                /* Will contain Y if the client determines that this Enrollment record is stale due to changes in other records */
-					div( class: "list_enrollment_stale_ind" )
+					div( class: "list_enrollment_stale_ind", style: "display: none" )
 					
 					input( name: "id", type: "hidden", value: enrollmentDocument.getId() )
 	                input( name: "studentId", type: "hidden", value: enrollmentDocument.getOnlyField( "studentId" ).getAtom() )
@@ -895,6 +896,7 @@ class ListItemFormatter {
 	                    span( class: "list_student_last_class_attended", studentDocument.getOnlyField( "lastEnrollmentLastClassAttended" ).getText() )
 	                }
 	
+	                div( class: "list_student_classes_attended_text", style: "display: none", studentDocument.getOnlyField( "classesAttended" ).getText() )
 	                div( class: "list_student_first_class_attended_required_ind", "*" )
 	                div( class: "list_student_last_class_attended_required_ind", "*" )
 	
@@ -1152,7 +1154,7 @@ class ListItemFormatter {
 					}
 					
 					/* Will contain Y if the client determines that this Student record is stale due to changes in other records */
-					div( class: "list_student_stale_ind" )
+					div( class: "list_student_stale_ind", style: "display: none" )
 	                
 	                input( name: "id", type: "hidden", value: studentDocument.getId() )
 	                input( name: "studentId", type: "hidden", value: studentDocument.getOnlyField( "studentId" ).getAtom() )

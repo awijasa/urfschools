@@ -74,10 +74,12 @@ out.print("""
 	  
 	  body( onLoad: "initMain()" ) {
 		  div( class: "filters" ) {
+			div( class: "enrollment_classes_attended_filter", session.getAttribute( "enrollmentClassesAttendedFilter" ) )
 			div( class: "enrollment_fees_due_filter", session.getAttribute( "enrollmentFeesDueFilter" ) )
 			div( class: "enrollment_fees_due_filter_operator", session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			div( class: "enrollment_first_name_filter", session.getAttribute( "enrollmentFirstNameFilter" ) )
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
+			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
 			div( class: "student_fees_due_filter", session.getAttribute( "studentFeesDueFilter" ) )
 			div( class: "student_fees_due_filter_operator", session.getAttribute( "studentFeesDueFilterOperator" ) )
 			div( class: "student_first_name_filter", session.getAttribute( "studentFirstNameFilter" ) )
@@ -343,6 +345,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -464,6 +474,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -591,6 +609,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -712,6 +738,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -839,6 +873,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -960,6 +1002,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1087,6 +1137,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1208,6 +1266,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1335,6 +1401,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1456,6 +1530,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1583,6 +1665,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1704,6 +1794,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1831,6 +1929,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1952,6 +2058,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2079,6 +2193,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -2203,6 +2325,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -2324,6 +2454,14 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_last_name_filter ui-corner-all\" name=\"lastName\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentLastNameFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2455,6 +2593,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -2570,6 +2718,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -2691,6 +2849,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -2806,6 +2974,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -2927,6 +3105,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3042,6 +3230,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -3163,6 +3361,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3278,6 +3486,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -3399,6 +3617,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3514,6 +3742,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -3635,6 +3873,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3750,6 +3998,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -3871,6 +4129,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3986,6 +4254,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				
@@ -4107,6 +4385,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -4225,6 +4513,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -4340,6 +4638,16 @@ out.print("""
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_last_name_filter ui-corner-all", name: "lastName", type: "text", value: session.getAttribute( "enrollmentLastNameFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
 					}
 				}
 				

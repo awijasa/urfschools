@@ -29,6 +29,16 @@
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				

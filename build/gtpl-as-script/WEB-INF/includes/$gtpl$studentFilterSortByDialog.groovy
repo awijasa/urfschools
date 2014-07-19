@@ -24,6 +24,14 @@ package web_inf.includes;out.print("""<span class=\"student_filter_sortby_dialog
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>

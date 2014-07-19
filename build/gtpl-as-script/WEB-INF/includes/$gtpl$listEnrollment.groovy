@@ -116,15 +116,18 @@ out.print("""
   				}
   			)
   		, success: function( data ) {
+  				var enrollmentClassesAttendedFilter = jQuery( data ).find( \"enrollmentClassesAttendedFilter\" ).text();
   				var enrollmentFeesDueFilter = jQuery( data ).find( \"enrollmentFeesDueFilter\" ).text();
   				var enrollmentFeesDueFilterOperator = jQuery( data ).find( \"enrollmentFeesDueFilterOperator\" ).text();
   				var enrollmentFirstNameFilter = jQuery( data ).find( \"enrollmentFirstNameFilter\" ).text();
   				var enrollmentLastNameFilter = jQuery( data ).find( \"enrollmentLastNameFilter\" ).text();
   				
+  				jQuery( \".filters .enrollment_classes_attended_filter\" ).text( enrollmentClassesAttendedFilter );
   				jQuery( \".filters .enrollment_fees_due_filter\" ).text( enrollmentFeesDueFilter );
   				jQuery( \".filters .enrollment_fees_due_filter_operator\" ).text( enrollmentFeesDueFilterOperator );
   				jQuery( \".filters .enrollment_first_name_filter\" ).text( enrollmentFirstNameFilter );
   				jQuery( \".filters .enrollment_last_name_filter\" ).text( enrollmentLastNameFilter );
+  				jQuery( \".enrollment_filter_sortby_dialog_classes_attended_filter\" ).val( enrollmentClassesAttendedFilter );
   				jQuery( \".enrollment_filter_sortby_dialog_fees_due_filter\" ).val( enrollmentFeesDueFilter );
   				jQuery( \".enrollment_filter_sortby_dialog_fees_due_filter_operator option\" ).each(
   					function() {
