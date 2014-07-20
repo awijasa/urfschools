@@ -1402,7 +1402,7 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "420px"
+				width: "425px"
 			}
 			, function() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1436,7 +1436,7 @@ function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "420px"
+				width: "425px"
 			}
 			, function() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1451,7 +1451,7 @@ function showFullStudentFilterPanel( studentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "420px"
+				width: "425px"
 			}
 			, function() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1466,7 +1466,7 @@ function showStudentFilterPanel( studentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "420px"
+				width: "425px"
 			}
 			, function() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).fadeIn();
