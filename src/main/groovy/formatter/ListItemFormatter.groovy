@@ -117,6 +117,8 @@ class ListItemFormatter {
 	                    mkp.yield( " - " )
 	                    span( class: "list_enrollment_leave_term", "${ leaveTermYear == null? "now": leaveTermYear + " Term " + leaveTermNo }" )
 	                }
+					
+					div( class: "list_enrollment_terms", style: "display: none", enrollmentDocument.getOnlyField( "termsEnrolled" ).getText() )
 	            }
 	        }
 	        
@@ -955,6 +957,8 @@ class ListItemFormatter {
 	                    mkp.yield( " - " )
 	                    span( class: "list_student_leave_term", lastEnrollmentLeaveTermYear? "${ lastEnrollmentLeaveTermYear } Term ${ lastEnrollmentLeaveTermNo }": "now" )
 	                }
+					
+					div( class: "list_student_enrollment_terms", style: "display: none", studentDocument.getOnlyField( "termsEnrolled" ).getText() )
 	            }
 	        }
 	        

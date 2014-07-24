@@ -150,17 +150,20 @@ out.print("""
   			)
   		, success: function( data ) {
   				var studentClassesAttendedFilter = jQuery( data ).find( \"studentClassesAttendedFilter\" ).text();
+  				var studentEnrollmentPeriodFilter = jQuery( data ).find( \"studentEnrollmentPeriodFilter\" ).text();
   				var studentFeesDueFilter = jQuery( data ).find( \"studentFeesDueFilter\" ).text();
   				var studentFeesDueFilterOperator = jQuery( data ).find( \"studentFeesDueFilterOperator\" ).text();
   				var studentFirstNameFilter = jQuery( data ).find( \"studentFirstNameFilter\" ).text();
   				var studentLastNameFilter = jQuery( data ).find( \"studentLastNameFilter\" ).text();
   				
   				jQuery( \".filters .student_classes_attended_filter\" ).text( studentClassesAttendedFilter );
+  				jQuery( \".filters .student_enrollment_period_filter\" ).text( studentEnrollmentPeriodFilter );
   				jQuery( \".filters .student_fees_due_filter\" ).text( studentFeesDueFilter );
   				jQuery( \".filters .student_fees_due_filter_operator\" ).text( studentFeesDueFilterOperator );
   				jQuery( \".filters .student_first_name_filter\" ).text( studentFirstNameFilter );
   				jQuery( \".filters .student_last_name_filter\" ).text( studentLastNameFilter );
   				jQuery( \".student_filter_sortby_dialog_classes_attended_filter\" ).val( studentClassesAttendedFilter );
+  				jQuery( \".student_filter_sortby_dialog_enrollment_period_filter\" ).val( studentEnrollmentPeriodFilter );
   				jQuery( \".student_filter_sortby_dialog_fees_due_filter\" ).val( studentFeesDueFilter );
   				jQuery( \".student_filter_sortby_dialog_fees_due_filter_operator option\" ).each(
   					function() {

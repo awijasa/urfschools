@@ -30,12 +30,22 @@ package web_inf.includes;out.print("""""");
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				

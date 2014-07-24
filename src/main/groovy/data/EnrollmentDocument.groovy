@@ -59,6 +59,7 @@ class EnrollmentDocument {
 					"classesAttended",
 					"firstClassAttended",
 					"lastClassAttended",
+					"termsEnrolled",
 					"enrollTermYear",
 					"enrollTermNo",
 					"leaveTermYear",
@@ -177,6 +178,18 @@ class EnrollmentDocument {
 			filterCount++
 		}
 		
+		if( session.getAttribute( "enrollmentPeriodFilter" ) != null && session.getAttribute( "enrollmentPeriodFilter" ) != "" ) {
+			String filter = "termsEnrolled = \"" + session.getAttribute( "enrollmentPeriodFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
 		Map<Integer, SortOption> sortOptionMap = new LinkedHashMap()
 		
 		if( session.getAttribute( "enrollmentFirstNameSortDirection" ) != null ) {
@@ -271,6 +284,7 @@ class EnrollmentDocument {
 		            	"classesAttended",
 		            	"firstClassAttended",
 		            	"lastClassAttended",
+		            	"termsEnrolled",
 		            	"enrollTermYear",
 		            	"enrollTermNo",
 		            	"leaveTermYear",
@@ -395,6 +409,7 @@ class EnrollmentDocument {
 					"classesAttended",
 					"firstClassAttended",
 					"lastClassAttended",
+					"termsEnrolled",
 					"enrollTermYear",
 					"enrollTermNo",
 					"leaveTermYear",
@@ -532,6 +547,18 @@ class EnrollmentDocument {
 			filterCount++
 		}
 		
+		if( session.getAttribute( "enrollmentPeriodFilter" ) != null && session.getAttribute( "enrollmentPeriodFilter" ) != "" ) {
+			String filter = "termsEnrolled = \"" + session.getAttribute( "enrollmentPeriodFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
 		Map<Integer, SortOption> sortOptionMap = new LinkedHashMap()
 		
 		if( session.getAttribute( "enrollmentFirstNameSortDirection" ) != null ) {
@@ -626,6 +653,7 @@ class EnrollmentDocument {
 		            	"classesAttended",
 		            	"firstClassAttended",
 		            	"lastClassAttended",
+		            	"termsEnrolled",
 		            	"enrollTermYear",
 		            	"enrollTermNo",
 		            	"leaveTermYear",

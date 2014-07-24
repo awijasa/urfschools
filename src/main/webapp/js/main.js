@@ -508,6 +508,11 @@ function initMain() {
         , draggable: false
         , height: 58
         , hide: "blind"
+        , open: function() {
+	    		if( jQuery( this ).find( ".enrollment_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+	    			showEnrollmentFilterPanel( jQuery( this ) );
+	    		}
+	    	}
         , resizable: false
         , show: "blind"
         , width: 120
@@ -732,6 +737,11 @@ function initMain() {
         , draggable: false
         , height: 58
         , hide: "blind"
+        , open: function() {
+	    		if( jQuery( this ).find( ".student_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+	    			showStudentFilterPanel( jQuery( this ) );
+	    		}
+	    	}
         , resizable: false
         , show: "blind"
         , width: 120
@@ -1059,6 +1069,10 @@ function initMain() {
 					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_classes_attended_filter_row" ).fadeOut();
 				}
 				
+				if( !enrollmentFilterSortByDialog.hasClass( "enrollment_period_filter_sortby_dialog" ) ) {
+					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_enrollment_period_filter_row" ).fadeOut();
+				}
+				
 				if( !enrollmentFilterSortByDialog.hasClass( "enrollment_fees_due_filter_sortby_dialog" ) ) {
 					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_fees_due_filter_row" ).fadeOut();
 				}
@@ -1076,6 +1090,7 @@ function initMain() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_first_name_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_last_name_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_classes_attended_filter_row" ).fadeIn();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_enrollment_period_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_fees_due_filter_row" ).fadeIn();
 			}
 	);
@@ -1248,6 +1263,10 @@ function initMain() {
 					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_classes_attended_filter_row" ).fadeOut();
 				}
 				
+				if( !studentFilterSortByDialog.hasClass( "student_enrollment_period_filter_sortby_dialog" ) ) {
+					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_enrollment_period_filter_row" ).fadeOut();
+				}
+				
 				if( !studentFilterSortByDialog.hasClass( "student_fees_due_filter_sortby_dialog" ) ) {
 					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_fees_due_filter_row" ).fadeOut();
 				}
@@ -1265,6 +1284,7 @@ function initMain() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_first_name_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_last_name_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_classes_attended_filter_row" ).fadeIn();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_enrollment_period_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_fees_due_filter_row" ).fadeIn();
 			}
 	);
@@ -1402,7 +1422,7 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "425px"
+				width: "405px"
 			}
 			, function() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1432,11 +1452,11 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 	enrollmentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "280px"
+				height: "310px"
 			}
 	).parent().animate(
 			{
-				width: "425px"
+				width: "405px"
 			}
 			, function() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1447,11 +1467,11 @@ function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullStudentFilterPanel( studentFilterSortByDialog ) {
 	studentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "280px"
+				height: "310px"
 			}
 	).parent().animate(
 			{
-				width: "425px"
+				width: "405px"
 			}
 			, function() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).fadeIn();
@@ -1466,7 +1486,7 @@ function showStudentFilterPanel( studentFilterSortByDialog ) {
 			}
 	).parent().animate(
 			{
-				width: "425px"
+				width: "405px"
 			}
 			, function() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).fadeIn();

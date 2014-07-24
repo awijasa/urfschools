@@ -29,7 +29,9 @@ else {
 			enrollmentFeesDueFilterOperator( session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			enrollmentFirstNameFilter( session.getAttribute( "enrollmentFirstNameFilter" ) )
 			enrollmentLastNameFilter( session.getAttribute( "enrollmentLastNameFilter" ) )
+			enrollmentPeriodFilter( session.getAttribute( "enrollmentPeriodFilter" ) )
 			studentClassesAttendedFilter( session.getAttribute( "studentClassesAttendedFilter" ) )
+			studentEnrollmentPeriodFilter( session.getAttribute( "studentEnrollmentPeriodFilter" ) )
 			studentFeesDueFilter( session.getAttribute( "studentFeesDueFilter" ) )
 			studentFeesDueFilterOperator( session.getAttribute( "studentFeesDueFilterOperator" ) )
 			studentFirstNameFilter( session.getAttribute( "studentFirstNameFilter" ) )
@@ -52,6 +54,17 @@ else {
 			}
 			else
 				session.removeAttribute( "enrollmentClassesAttendedFilter" )
+				
+			if( params.enrollmentPeriod != null && params.enrollmentPeriod != "" ) {
+				try {
+					session.setAttribute( "enrollmentPeriodFilter", params.enrollmentPeriod )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "enrollmentPeriodFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "enrollmentPeriodFilter" )
 				
 			if( params.feesDue != null && params.feesDue != "" ) {
 				try {
@@ -102,6 +115,17 @@ else {
 			}
 			else
 				session.removeAttribute( "studentClassesAttendedFilter" )
+				
+			if( params.enrollmentPeriod != null && params.enrollmentPeriod != "" ) {
+				try {
+					session.setAttribute( "studentEnrollmentPeriodFilter", params.enrollmentPeriod )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "studentEnrollmentPeriodFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "studentEnrollmentPeriodFilter" )
 			
 			if( params.feesDue != null && params.feesDue != "" ) {
 				try {

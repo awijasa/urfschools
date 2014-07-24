@@ -59,6 +59,7 @@ class StudentDocument {
 					"classesAttended",
 					"lastEnrollmentFirstClassAttended",
 					"lastEnrollmentLastClassAttended",
+					"termsEnrolled",
 					"lastEnrollmentTermYear",
 					"lastEnrollmentTermNo",
 					"lastEnrollmentLeaveTermYear",
@@ -125,6 +126,18 @@ class StudentDocument {
 		
 		if( session.getAttribute( "studentClassesAttendedFilter" ) != null && session.getAttribute( "studentClassesAttendedFilter" ) != "" ) {
 			String filter = "classesAttended = \"" + session.getAttribute( "studentClassesAttendedFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
+		if( session.getAttribute( "studentEnrollmentPeriodFilter" ) != null && session.getAttribute( "studentEnrollmentPeriodFilter" ) != "" ) {
+			String filter = "termsEnrolled = \"" + session.getAttribute( "studentEnrollmentPeriodFilter" ) + "\""
 			searchQuery += " AND ${ filter }"
 			
 			if( filterCount == 0 )
@@ -271,6 +284,7 @@ class StudentDocument {
 		            	"classesAttended",
 		            	"lastEnrollmentFirstClassAttended",
 		            	"lastEnrollmentLastClassAttended",
+		            	"termsEnrolled",
 		            	"lastEnrollmentTermYear",
 		            	"lastEnrollmentTermNo",
 		            	"lastEnrollmentLeaveTermYear",
@@ -394,6 +408,7 @@ class StudentDocument {
 					"classesAttended",
 					"lastEnrollmentFirstClassAttended",
 					"lastEnrollmentLastClassAttended",
+					"termsEnrolled",
 					"lastEnrollmentTermYear",
 					"lastEnrollmentTermNo",
 					"lastEnrollmentLeaveTermYear",
@@ -479,6 +494,18 @@ class StudentDocument {
 		
 		if( session.getAttribute( "studentClassesAttendedFilter" ) != null && session.getAttribute( "studentClassesAttendedFilter" ) != "" ) {
 			String filter = "classesAttended = \"" + session.getAttribute( "studentClassesAttendedFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
+		if( session.getAttribute( "studentEnrollmentPeriodFilter" ) != null && session.getAttribute( "studentEnrollmentPeriodFilter" ) != "" ) {
+			String filter = "termsEnrolled = \"" + session.getAttribute( "studentEnrollmentPeriodFilter" ) + "\""
 			searchQuery += " AND ${ filter }"
 			
 			if( filterCount == 0 )
@@ -625,6 +652,7 @@ class StudentDocument {
 		            	"classesAttended",
 		            	"lastEnrollmentFirstClassAttended",
 		            	"lastEnrollmentLastClassAttended",
+		            	"termsEnrolled",
 		            	"lastEnrollmentTermYear",
 		            	"lastEnrollmentTermNo",
 		            	"lastEnrollmentLeaveTermYear",

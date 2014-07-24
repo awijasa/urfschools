@@ -79,7 +79,9 @@ out.print("""
 			div( class: "enrollment_fees_due_filter_operator", session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			div( class: "enrollment_first_name_filter", session.getAttribute( "enrollmentFirstNameFilter" ) )
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
+			div( class: "enrollment_period_filter", session.getAttribute( "enrollmentPeriodFilter" ) )
 			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
+			div( class: "student_enrollment_period_filter", session.getAttribute( "studentEnrollmentPeriodFilter" ) )
 			div( class: "student_fees_due_filter", session.getAttribute( "studentFeesDueFilter" ) )
 			div( class: "student_fees_due_filter_operator", session.getAttribute( "studentFeesDueFilterOperator" ) )
 			div( class: "student_first_name_filter", session.getAttribute( "studentFirstNameFilter" ) )
@@ -346,10 +348,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -478,10 +488,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -610,10 +628,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -742,10 +768,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -874,10 +908,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1006,10 +1048,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1138,10 +1188,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1270,10 +1328,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1402,10 +1468,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1534,10 +1608,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1666,10 +1748,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1798,10 +1888,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1930,10 +2028,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2062,10 +2168,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2194,10 +2308,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2326,10 +2448,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2458,10 +2588,18 @@ out.print("""<span class=\"student_filter_sortby_dialog_filter_button glyphicons
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2594,12 +2732,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -2722,12 +2870,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -2850,12 +3008,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -2978,12 +3146,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3106,12 +3284,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3234,12 +3422,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3362,12 +3560,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3490,12 +3698,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3618,12 +3836,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3746,12 +3974,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -3874,12 +4112,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4002,12 +4250,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4130,12 +4388,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4258,12 +4526,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4386,12 +4664,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4514,12 +4802,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				
@@ -4642,12 +4940,22 @@ out.print("""
 				}
 				
 				tr( class: "enrollment_filter_sortby_dialog_classes_attended_filter_row" ) {
-					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Classes Attended" )
+					td( class: "enrollment_filter_sortby_dialog_classes_attended_filter_label", "Class Attended" )
 				
 					td( ":" )
 				
 					td {
 						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_classes_attended_filter ui-corner-all", name: "classesAttended", type: "text", value: session.getAttribute( "enrollmentClassesAttendedFilter" )?: "" )
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_enrollment_period_filter_label", "Term Enrolled" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_enrollment_period_filter ui-corner-all", name: "enrollmentPeriod", type: "text", value: session.getAttribute( "enrollmentPeriodFilter" )?: "" )
 					}
 				}
 				

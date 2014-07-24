@@ -25,10 +25,18 @@ package web_inf.includes;out.print("""<span class=\"student_filter_sortby_dialog
 			</tr>
 			
 			<tr class=\"student_filter_sortby_dialog_classes_attended_filter_row\">
-				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Classes Attended</td>
+				<td class=\"student_filter_sortby_dialog_classes_attended_filter_label\">Class Attended</td>
 				<td>:</td>
 				<td>
 					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_classes_attended_filter ui-corner-all\" name=\"classesAttended\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentClassesAttendedFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_enrollment_period_filter_row\">
+				<td class=\"student_filter_sortby_dialog_enrollment_period_filter_label\">Term Enrolled</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_enrollment_period_filter ui-corner-all\" name=\"enrollmentPeriod\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentEnrollmentPeriodFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
