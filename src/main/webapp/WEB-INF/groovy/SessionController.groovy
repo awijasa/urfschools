@@ -24,12 +24,16 @@ else {
 		StringWriter writer = new StringWriter()
 		
 		new MarkupBuilder( writer ).attributes {
+			enrollmentBirthDateFilter( session.getAttribute( "enrollmentBirthDateFilter" ) )
+			enrollmentBirthDateFilterOperator( session.getAttribute( "enrollmentBirthDateFilterOperator" ) )
 			enrollmentClassesAttendedFilter( session.getAttribute( "enrollmentClassesAttendedFilter" ) )
 			enrollmentFeesDueFilter( session.getAttribute( "enrollmentFeesDueFilter" ) )
 			enrollmentFeesDueFilterOperator( session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			enrollmentFirstNameFilter( session.getAttribute( "enrollmentFirstNameFilter" ) )
 			enrollmentLastNameFilter( session.getAttribute( "enrollmentLastNameFilter" ) )
 			enrollmentPeriodFilter( session.getAttribute( "enrollmentPeriodFilter" ) )
+			studentBirthDateFilter( session.getAttribute( "studentBirthDateFilter" ) )
+			studentBirthDateFilterOperator( session.getAttribute( "studentBirthDateFilterOperator" ) )
 			studentClassesAttendedFilter( session.getAttribute( "studentClassesAttendedFilter" ) )
 			studentEnrollmentPeriodFilter( session.getAttribute( "studentEnrollmentPeriodFilter" ) )
 			studentFeesDueFilter( session.getAttribute( "studentFeesDueFilter" ) )
@@ -44,6 +48,22 @@ else {
 		DecimalFormat currencyFormat = new DecimalFormat( "#,##0.00" )
 		
 		if( params.kind == "Enrollment" ) {
+			if( params.birthDate != null && params.birthDate != "" ) {
+				try {
+					session.setAttribute( "enrollmentBirthDateFilter", params.birthDate )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "enrollmentBirthDateFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "enrollmentBirthDateFilter" )
+				
+			if( params.birthDateOperator != null && params.birthDateOperator != "" )
+				session.setAttribute( "enrollmentBirthDateFilterOperator", params.birthDateOperator )
+			else
+				session.removeAttribute( "enrollmentBirthDateFilterOperator" )
+				
 			if( params.classesAttended != null && params.classesAttended != "" ) {
 				try {
 					session.setAttribute( "enrollmentClassesAttendedFilter", params.classesAttended )
@@ -105,6 +125,22 @@ else {
 				session.removeAttribute( "enrollmentLastNameFilter" )
 		}
 		else {
+			if( params.birthDate != null && params.birthDate != "" ) {
+				try {
+					session.setAttribute( "studentBirthDateFilter", params.birthDate )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "studentBirthDateFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "studentBirthDateFilter" )
+				
+			if( params.birthDateOperator != null && params.birthDateOperator != "" )
+				session.setAttribute( "studentBirthDateFilterOperator", params.birthDateOperator )
+			else
+				session.removeAttribute( "studentBirthDateFilterOperator" )
+				
 			if( params.classesAttended != null && params.classesAttended != "" ) {
 				try {
 					session.setAttribute( "studentClassesAttendedFilter", params.classesAttended )

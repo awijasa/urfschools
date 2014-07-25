@@ -49,6 +49,39 @@
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_birth_date_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_birth_date_filter_label", "Birth Date" )
+				
+					td {
+						select( autocomplete: "off", class: "enrollment_filter_sortby_dialog_birth_date_filter_operator", name: "birthDateOperator" ) {
+							if( session.getAttribute( "enrollmentBirthDateFilterOperator" ) == "=" )
+								option( selected: "selected", "=" )
+							else
+								option( "=" )
+							
+							if( session.getAttribute( "enrollmentBirthDateFilterOperator" ) == ">" )
+								option( selected: "selected", ">" )
+							else
+								option( ">" )
+								
+							if( session.getAttribute( "enrollmentBirthDateFilterOperator" ) == "<" )
+								option( selected: "selected", "<" )
+							else
+								option( "<" )
+						}
+					}
+				
+					td {
+						table {
+							tr( valign: "middle" ) {
+								td {
+									input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_birth_date_filter ui-corner-all", name: "birthDate", type: "text", value: session.getAttribute( "enrollmentBirthDateFilter" )?: "" )
+								}
+							}
+						}
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				

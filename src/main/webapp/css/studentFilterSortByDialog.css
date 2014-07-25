@@ -65,6 +65,15 @@ a.student_filter_sortby_dialog_filter_more:hover {
 	vertical-align: top;
 }
 
+.student_filter_sortby_dialog_birth_date_filter {
+	width: 172px;
+}
+
+.student_filter_sortby_dialog_birth_date_filter_row {
+	display: none;
+	vertical-align: middle;
+}
+
 .student_filter_sortby_dialog_classes_attended_filter {
 	width: 175px;
 }
@@ -181,6 +190,18 @@ a.student_filter_sortby_dialog_filter_more:hover {
 	position: absolute;
 	top: 15px;
 	vertical-align: top;
+}
+
+.student_birth_date_filter_sortby_dialog a.student_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.student_birth_date_filter_sortby_dialog .student_filter_sortby_dialog_birth_date_filter_row {
+	display: table-row;
+}
+
+.student_birth_date_filter_sortby_dialog .student_filter_sortby_dialog_filter_more_row {
+	display: table-row;
 }
 
 .student_classes_attended_filter_sortby_dialog a.student_filter_sortby_dialog_filter_apply {

@@ -1,4 +1,4 @@
-<!-- Indices written at Wed, 23 Jul 2014 21:15:06 CDT -->
+<!-- Indices written at Thu, 24 Jul 2014 22:37:48 CDT -->
 
 <datastore-indexes>
 
@@ -20,7 +20,7 @@
         <property name="schoolName" direction="asc"/>
     </datastore-index>
 
-    <!-- Used 5 times in query history -->
+    <!-- Used 1 time in query history -->
     <datastore-index kind="AnonymousParentalRelationship" ancestor="true" source="auto">
         <property name="parentalRelationship" direction="asc"/>
     </datastore-index>

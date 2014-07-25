@@ -72,12 +72,16 @@
 	  
 	  body( onLoad: "initMain()" ) {
 		  div( class: "filters" ) {
+			div( class: "enrollment_birth_date_filter", session.getAttribute( "enrollmentBirthDateFilter" ) )
+			div( class: "enrollment_birth_date_filter_operator", session.getAttribute( "enrollmentBirthDateFilterOperator" ) )
 			div( class: "enrollment_classes_attended_filter", session.getAttribute( "enrollmentClassesAttendedFilter" ) )
 			div( class: "enrollment_fees_due_filter", session.getAttribute( "enrollmentFeesDueFilter" ) )
 			div( class: "enrollment_fees_due_filter_operator", session.getAttribute( "enrollmentFeesDueFilterOperator" ) )
 			div( class: "enrollment_first_name_filter", session.getAttribute( "enrollmentFirstNameFilter" ) )
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
 			div( class: "enrollment_period_filter", session.getAttribute( "enrollmentPeriodFilter" ) )
+			div( class: "student_birth_date_filter", session.getAttribute( "studentBirthDateFilter" ) )
+			div( class: "student_birth_date_filter_operator", session.getAttribute( "studentBirthDateFilterOperator" ) )
 			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
 			div( class: "student_enrollment_period_filter", session.getAttribute( "studentEnrollmentPeriodFilter" ) )
 			div( class: "student_fees_due_filter", session.getAttribute( "studentFeesDueFilter" ) )

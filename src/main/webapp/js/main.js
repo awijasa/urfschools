@@ -467,6 +467,11 @@ function initMain() {
         , draggable: false
         , height: 58
         , hide: "blind"
+        , open: function() {
+	    		if( jQuery( this ).find( ".enrollment_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+	    			showEnrollmentFilterPanel( jQuery( this ) );
+	    		}
+	    	}
         , resizable: false
         , show: "blind"
         , width: 120
@@ -696,6 +701,11 @@ function initMain() {
         , draggable: false
         , height: 58
         , hide: "blind"
+        , open: function() {
+	    		if( jQuery( this ).find( ".student_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+	    			showStudentFilterPanel( jQuery( this ) );
+	    		}
+	    	}
         , resizable: false
         , show: "blind"
         , width: 120
@@ -1073,6 +1083,10 @@ function initMain() {
 					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_enrollment_period_filter_row" ).fadeOut();
 				}
 				
+				if( !enrollmentFilterSortByDialog.hasClass( "enrollment_birth_date_filter_sortby_dialog" ) ) {
+					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter_row" ).fadeOut();
+				}
+				
 				if( !enrollmentFilterSortByDialog.hasClass( "enrollment_fees_due_filter_sortby_dialog" ) ) {
 					enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_fees_due_filter_row" ).fadeOut();
 				}
@@ -1091,6 +1105,7 @@ function initMain() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_last_name_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_classes_attended_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_enrollment_period_filter_row" ).fadeIn();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter_row" ).fadeIn();
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_fees_due_filter_row" ).fadeIn();
 			}
 	);
@@ -1267,6 +1282,10 @@ function initMain() {
 					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_enrollment_period_filter_row" ).fadeOut();
 				}
 				
+				if( !studentFilterSortByDialog.hasClass( "student_birth_date_filter_sortby_dialog" ) ) {
+					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter_row" ).fadeOut();
+				}
+				
 				if( !studentFilterSortByDialog.hasClass( "student_fees_due_filter_sortby_dialog" ) ) {
 					studentFilterSortByDialog.find( ".student_filter_sortby_dialog_fees_due_filter_row" ).fadeOut();
 				}
@@ -1285,6 +1304,7 @@ function initMain() {
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_last_name_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_classes_attended_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_enrollment_period_filter_row" ).fadeIn();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter_row" ).fadeIn();
 				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_fees_due_filter_row" ).fadeIn();
 			}
 	);
@@ -1445,6 +1465,26 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 						enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_more" ).click();
 					}
 				}
+				
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter" ).datepicker(
+				    {
+				        changeMonth: true
+				        , changeYear: true
+				        , dateFormat: "M d yy"
+				        , maxDate: "+1Y"
+				        , onSelect: function( dateText, inst ) {
+    				          jQuery( this ).css( "color", "#000000" );
+    				          jQuery( this ).css( "font-style", "normal" );
+    				        }
+				        , yearRange: "-40:+0"
+				    }
+    			);
+				
+				jQuery( ".ui-datepicker" ).off( "click" ).click(
+					function( event ) {
+						event.stopPropagation();
+					}
+				);
 			}
 	);
 }
@@ -1452,7 +1492,7 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 	enrollmentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "310px"
+				height: "360px"
 			}
 	).parent().animate(
 			{
@@ -1467,7 +1507,7 @@ function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullStudentFilterPanel( studentFilterSortByDialog ) {
 	studentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "310px"
+				height: "360px"
 			}
 	).parent().animate(
 			{
@@ -1509,6 +1549,26 @@ function showStudentFilterPanel( studentFilterSortByDialog ) {
 						studentFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_more" ).click();
 					}
 				}
+				
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter" ).datepicker(
+				    {
+				        changeMonth: true
+				        , changeYear: true
+				        , dateFormat: "M d yy"
+				        , maxDate: "+1Y"
+				        , onSelect: function( dateText, inst ) {
+    				          jQuery( this ).css( "color", "#000000" );
+    				          jQuery( this ).css( "font-style", "normal" );
+    				        }
+				        , yearRange: "-40:+0"
+				    }
+    			);
+				
+				jQuery( ".ui-datepicker" ).off( "click" ).click(
+					function( event ) {
+						event.stopPropagation();
+					}
+				);
 			}
 	);
 }

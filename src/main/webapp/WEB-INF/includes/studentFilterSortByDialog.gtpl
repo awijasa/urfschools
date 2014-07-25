@@ -40,6 +40,43 @@
 				</td>
 			</tr>
 			
+			<tr class="student_filter_sortby_dialog_birth_date_filter_row">
+				<td class="student_filter_sortby_dialog_birth_date_filter_label">Birth Date</td>
+				<td>
+					<select autocomplete="off" class="student_filter_sortby_dialog_birth_date_filter_operator" name="birthDateOperator">
+					<%
+						if( session.getAttribute( "studentBirthDateFilterOperator" ) == "=" ) { %>
+							<option selected="selected">=</option>
+					<%	}
+						else { %>
+							<option>=</option>
+					<%	}
+						if( session.getAttribute( "studentBirthDateFilterOperator" ) == ">" ) { %>
+							<option selected="selected">&gt;</option>
+					<%	}
+						else { %>
+							<option>&gt;</option>
+					<%	}
+						if( session.getAttribute( "studentBirthDateFilterOperator" ) == "<" ) { %>
+							<option selected="selected">&lt;</option>
+					<%	}
+						else { %>
+							<option>&lt;</option>
+					<%	} %>
+					</select>
+				</td>
+			
+				<td>
+					<table>
+						<tr valign="middle">
+							<td>
+								<input autocomplete="off" class="student_filter_sortby_dialog_birth_date_filter ui-corner-all" name="birthDate" type="text" value="${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentBirthDateFilter" )?: "" ) }" />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
 			<tr class="student_filter_sortby_dialog_fees_due_filter_row">
 				<td class="student_filter_sortby_dialog_fees_due_filter_label">Fees Due</td>
 				<td>

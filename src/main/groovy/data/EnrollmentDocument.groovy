@@ -125,6 +125,23 @@ class EnrollmentDocument {
 		String memcacheKey = "enrollmentResults of " + urfUserSchools + " row " + ( offset + 1 ) + " to " + ( offset + limit )
 		int filterCount = 0
 		
+		if(
+			session.getAttribute( "enrollmentBirthDateFilter" ) != null &&
+			session.getAttribute( "enrollmentBirthDateFilter" ) != "" &&
+			session.getAttribute( "enrollmentBirthDateFilterOperator" ) != null &&
+			session.getAttribute( "enrollmentBirthDateFilterOperator" ) != ""
+		) {
+			String filter = "birthDate " + session.getAttribute( "enrollmentBirthDateFilterOperator" ) + " " + Date.parse( "MMM d yy", session.getAttribute( "enrollmentBirthDateFilter" ) ).format( "yyyy-M-d" )  
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
 		if( session.getAttribute( "enrollmentClassesAttendedFilter" ) != null && session.getAttribute( "enrollmentClassesAttendedFilter" ) != "" ) {
 			String filter = "classesAttended = \"" + session.getAttribute( "enrollmentClassesAttendedFilter" ) + "\""
 			searchQuery += " AND ${ filter }"
@@ -493,6 +510,23 @@ class EnrollmentDocument {
 		// GString can not be used when dealing with Memcache.
 		String memcacheKey = "enrollmentResults of " + urfUserSchools + " row " + ( offset + 1 ) + " to " + ( offset + limit )
 		int filterCount = 0
+		
+		if(
+			session.getAttribute( "enrollmentBirthDateFilter" ) != null &&
+			session.getAttribute( "enrollmentBirthDateFilter" ) != "" &&
+			session.getAttribute( "enrollmentBirthDateFilterOperator" ) != null &&
+			session.getAttribute( "enrollmentBirthDateFilterOperator" ) != ""
+		) {
+			String filter = "birthDate " + session.getAttribute( "enrollmentBirthDateFilterOperator" ) + " " + Date.parse( "MMM d yy", session.getAttribute( "enrollmentBirthDateFilter" ) ).format( "yyyy-M-d" )  
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
 		
 		if( session.getAttribute( "enrollmentClassesAttendedFilter" ) != null && session.getAttribute( "enrollmentClassesAttendedFilter" ) != "" ) {
 			String filter = "classesAttended = \"" + session.getAttribute( "enrollmentClassesAttendedFilter" ) + "\""
