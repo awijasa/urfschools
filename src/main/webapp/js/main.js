@@ -1512,7 +1512,7 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 	enrollmentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "401px"
+				height: "405px"
 			}
 	).parent().animate(
 			{
@@ -1527,7 +1527,7 @@ function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 function showFullStudentFilterPanel( studentFilterSortByDialog ) {
 	studentFilterSortByDialog.css( "overflow", "hidden" ).animate(
 			{
-				height: "401px"
+				height: "405px"
 			}
 	).parent().animate(
 			{
