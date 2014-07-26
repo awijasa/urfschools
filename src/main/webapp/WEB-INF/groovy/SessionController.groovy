@@ -32,6 +32,7 @@ else {
 			enrollmentFirstNameFilter( session.getAttribute( "enrollmentFirstNameFilter" ) )
 			enrollmentLastNameFilter( session.getAttribute( "enrollmentLastNameFilter" ) )
 			enrollmentPeriodFilter( session.getAttribute( "enrollmentPeriodFilter" ) )
+			enrollmentVillageFilter( session.getAttribute( "enrollmentVillageFilter" ) )
 			studentBirthDateFilter( session.getAttribute( "studentBirthDateFilter" ) )
 			studentBirthDateFilterOperator( session.getAttribute( "studentBirthDateFilterOperator" ) )
 			studentClassesAttendedFilter( session.getAttribute( "studentClassesAttendedFilter" ) )
@@ -40,6 +41,7 @@ else {
 			studentFeesDueFilterOperator( session.getAttribute( "studentFeesDueFilterOperator" ) )
 			studentFirstNameFilter( session.getAttribute( "studentFirstNameFilter" ) )
 			studentLastNameFilter( session.getAttribute( "studentLastNameFilter" ) )
+			studentVillageFilter( session.getAttribute( "studentVillageFilter" ) )
 		}
 		
 		println writer.toString()
@@ -123,6 +125,17 @@ else {
 			}
 			else
 				session.removeAttribute( "enrollmentLastNameFilter" )
+				
+			if( params.village != null && params.village != "" ) {
+				try {
+					session.setAttribute( "enrollmentVillageFilter", params.village )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "enrollmentVillageFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "enrollmentVillageFilter" )
 		}
 		else {
 			if( params.birthDate != null && params.birthDate != "" ) {
@@ -200,6 +213,17 @@ else {
 			}
 			else
 				session.removeAttribute( "studentLastNameFilter" )
+				
+			if( params.village != null && params.village != "" ) {
+				try {
+					session.setAttribute( "studentVillageFilter", params.village )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "studentVillageFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "studentVillageFilter" )
 		}
 	}
 }

@@ -71,6 +71,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_birth_date_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -80,6 +81,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_classes_attended_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -99,6 +101,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_enrollment_period_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -108,6 +111,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_fees_due_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -154,6 +158,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_first_name_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -163,6 +168,7 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_filter_sortby_dialog_last_name_filter_row {
 	display: none;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -190,6 +196,16 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 	position: absolute;
 	top: 15px;
 	vertical-align: top;
+}
+
+.enrollment_filter_sortby_dialog_village_filter {
+	width: 175px;
+}
+
+.enrollment_filter_sortby_dialog_village_filter_row {
+	display: none;
+	height: 41px;
+	vertical-align: middle;
 }
 
 .enrollment_birth_date_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
@@ -274,4 +290,16 @@ a.enrollment_filter_sortby_dialog_filter_more:hover {
 
 .enrollment_tuition_fees_filter_sortby_dialog .enrollment_filter_sortby_dialog_lookup_button {
 	display: block;
+}
+
+.enrollment_village_filter_sortby_dialog a.enrollment_filter_sortby_dialog_filter_apply {
+	display: inline-block;
+}
+
+.enrollment_village_filter_sortby_dialog .enrollment_filter_sortby_dialog_village_filter_row {
+	display: table-row;
+}
+
+.enrollment_village_filter_sortby_dialog .enrollment_filter_sortby_dialog_filter_more_row {
+	display: table-row;
 }

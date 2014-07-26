@@ -82,6 +82,7 @@ out.print("""
 			div( class: "enrollment_first_name_filter", session.getAttribute( "enrollmentFirstNameFilter" ) )
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
 			div( class: "enrollment_period_filter", session.getAttribute( "enrollmentPeriodFilter" ) )
+			div( class: "enrollment_village_filter", session.getAttribute( "enrollmentVillageFilter" ) )
 			div( class: "student_birth_date_filter", session.getAttribute( "studentBirthDateFilter" ) )
 			div( class: "student_birth_date_filter_operator", session.getAttribute( "studentBirthDateFilterOperator" ) )
 			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
@@ -90,6 +91,7 @@ out.print("""
 			div( class: "student_fees_due_filter_operator", session.getAttribute( "studentFeesDueFilterOperator" ) )
 			div( class: "student_first_name_filter", session.getAttribute( "studentFirstNameFilter" ) )
 			div( class: "student_last_name_filter", session.getAttribute( "studentLastNameFilter" ) )
+			div( class: "student_village_filter", session.getAttribute( "studentVillageFilter" ) )
 		  }
     
 		  div( class: "sort_options" ) {
@@ -411,6 +413,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -592,6 +602,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -779,6 +797,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -960,6 +986,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1147,6 +1181,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1328,6 +1370,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1515,6 +1565,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -1696,6 +1754,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -1883,6 +1949,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -2064,6 +2138,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2251,6 +2333,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -2432,6 +2522,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2619,6 +2717,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -2800,6 +2906,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -2987,6 +3101,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -3168,6 +3290,14 @@ out.print("""
 							</td>
 						</tr>
 					</table>
+				</td>
+			</tr>
+			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
 				</td>
 			</tr>
 			
@@ -3355,6 +3485,14 @@ out.print("""
 				</td>
 			</tr>
 			
+			<tr class=\"student_filter_sortby_dialog_village_filter_row\">
+				<td class=\"student_filter_sortby_dialog_village_filter_label\">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete=\"off\" class=\"student_filter_sortby_dialog_village_filter ui-corner-all\" name=\"village\" type=\"text\" value=\"${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }\" />
+				</td>
+			</tr>
+			
 			<tr class=\"student_filter_sortby_dialog_fees_due_filter_row\">
 				<td class=\"student_filter_sortby_dialog_fees_due_filter_label\">Fees Due</td>
 				<td>
@@ -3536,6 +3674,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -3704,6 +3852,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -3878,6 +4036,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -4046,6 +4214,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -4220,6 +4398,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -4388,6 +4576,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -4562,6 +4760,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -4730,6 +4938,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -4904,6 +5122,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -5072,6 +5300,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -5246,6 +5484,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -5414,6 +5662,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -5588,6 +5846,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -5756,6 +6024,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				
@@ -5930,6 +6208,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -6101,6 +6389,16 @@ out.print("""
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				
@@ -6269,6 +6567,16 @@ out.print("""
 								}
 							}
 						}
+					}
+				}
+				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
 					}
 				}
 				

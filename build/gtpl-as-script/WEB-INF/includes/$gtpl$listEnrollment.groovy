@@ -124,6 +124,7 @@ out.print("""
   				var enrollmentFirstNameFilter = jQuery( data ).find( \"enrollmentFirstNameFilter\" ).text();
   				var enrollmentLastNameFilter = jQuery( data ).find( \"enrollmentLastNameFilter\" ).text();
   				var enrollmentPeriodFilter = jQuery( data ).find( \"enrollmentPeriodFilter\" ).text();
+  				var enrollmentVillageFilter = jQuery( data ).find( \"enrollmentVillageFilter\" ).text();
   				
   				jQuery( \".filters .enrollment_birth_date_filter\" ).text( enrollmentBirthDateFilter );
   				jQuery( \".filters .enrollment_birth_date_filter_operator\" ).text( enrollmentBirthDateFilterOperator );
@@ -133,6 +134,7 @@ out.print("""
   				jQuery( \".filters .enrollment_first_name_filter\" ).text( enrollmentFirstNameFilter );
   				jQuery( \".filters .enrollment_last_name_filter\" ).text( enrollmentLastNameFilter );
   				jQuery( \".filters .enrollment_period_filter\" ).text( enrollmentPeriodFilter );
+  				jQuery( \".filters .enrollment_village_filter\" ).text( enrollmentVillageFilter );
   				jQuery( \".enrollment_filter_sortby_dialog_birth_date_filter\" ).val( enrollmentBirthDateFilter );
   				jQuery( \".enrollment_filter_sortby_dialog_birth_date_filter_operator option\" ).each(
   	  					function() {
@@ -159,6 +161,7 @@ out.print("""
   				);
   				jQuery( \".enrollment_filter_sortby_dialog_first_name_filter\" ).val( enrollmentFirstNameFilter );
   				jQuery( \".enrollment_filter_sortby_dialog_last_name_filter\" ).val( enrollmentLastNameFilter );
+  				jQuery( \".enrollment_filter_sortby_dialog_village_filter\" ).val( enrollmentVillageFilter );
   			}
   		, error: function( jqXHR, textStatus, errorThrown ) {
   				alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );

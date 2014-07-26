@@ -80,6 +80,7 @@
 			div( class: "enrollment_first_name_filter", session.getAttribute( "enrollmentFirstNameFilter" ) )
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
 			div( class: "enrollment_period_filter", session.getAttribute( "enrollmentPeriodFilter" ) )
+			div( class: "enrollment_village_filter", session.getAttribute( "enrollmentVillageFilter" ) )
 			div( class: "student_birth_date_filter", session.getAttribute( "studentBirthDateFilter" ) )
 			div( class: "student_birth_date_filter_operator", session.getAttribute( "studentBirthDateFilterOperator" ) )
 			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
@@ -88,6 +89,7 @@
 			div( class: "student_fees_due_filter_operator", session.getAttribute( "studentFeesDueFilterOperator" ) )
 			div( class: "student_first_name_filter", session.getAttribute( "studentFirstNameFilter" ) )
 			div( class: "student_last_name_filter", session.getAttribute( "studentLastNameFilter" ) )
+			div( class: "student_village_filter", session.getAttribute( "studentVillageFilter" ) )
 		  }
     
 		  div( class: "sort_options" ) {

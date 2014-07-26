@@ -206,6 +206,18 @@ class StudentDocument {
 			filterCount++
 		}
 		
+		if( session.getAttribute( "studentVillageFilter" ) != null && session.getAttribute( "studentVillageFilter" ) != "" ) {
+			String filter = "village = \"" + session.getAttribute( "studentVillageFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
 		Map<Integer, SortOption> sortOptionMap = new LinkedHashMap()
 		
 		if( session.getAttribute( "studentFirstNameSortDirection" ) != null ) {
@@ -581,6 +593,18 @@ class StudentDocument {
 		
 		if( session.getAttribute( "studentLastNameFilter" ) != null && session.getAttribute( "studentLastNameFilter" ) != "" ) {
 			String filter = "lastName = \"" + session.getAttribute( "studentLastNameFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
+		if( session.getAttribute( "studentVillageFilter" ) != null && session.getAttribute( "studentVillageFilter" ) != "" ) {
+			String filter = "village = \"" + session.getAttribute( "studentVillageFilter" ) + "\""
 			searchQuery += " AND ${ filter }"
 			
 			if( filterCount == 0 )

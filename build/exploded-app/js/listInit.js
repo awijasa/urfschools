@@ -5330,6 +5330,20 @@ function saveEditedStudent( studentListItemHeader, studentListItemDetails ) {
 							}
 						}
 						
+						var studentEnrollmentPeriodFilter = jQuery( ".filters .student_enrollment_period_filter" );
+						
+						if( listStudentStaleInd.text() != "Y" && studentEnrollmentPeriodFilter.text() != "" ) {
+							
+							if( jQuery( data ).find( ".list_student_enrollment_terms" ).text().indexOf( studentEnrollmentPeriodFilter.text() ) < 0 ) {
+								var listStudentNextTwentyOffset = studentListItemDetails.parent().parent().find( ".list_student_next_twenty_offset" );
+								listStudentNextTwentyOffset.text( parseInt( listStudentNextTwentyOffset.text() ) - 1 );
+								
+								listStudentStaleInd.text( "Y" );
+								
+								reloadStudentDialogs( true, true, true );
+							}
+						}
+						
 						var studentFeesDueFilter = jQuery( ".filters .student_fees_due_filter" );
 						
 						if( listStudentStaleInd.text() != "Y" && studentFeesDueFilter.text() != "" ) {
@@ -5377,11 +5391,10 @@ function saveEditedStudent( studentListItemHeader, studentListItemDetails ) {
 							}
 						}
 						
-						var studentEnrollmentPeriodFilter = jQuery( ".filters .student_enrollment_period_filter" );
+						var studentVillageFilter = jQuery( ".filters .student_village_filter" );
 						
-						if( listStudentStaleInd.text() != "Y" && studentEnrollmentPeriodFilter.text() != "" ) {
-							
-							if( jQuery( data ).find( ".list_student_enrollment_terms" ).text().indexOf( studentEnrollmentPeriodFilter.text() ) < 0 ) {
+						if( listStudentStaleInd.text() != "Y" && studentVillageFilter.text() != "" ) {
+							if( studentVillageFilter.text() != jQuery( data ).find( "div.list_student_village" ).text() ) {
 								var listStudentNextTwentyOffset = studentListItemDetails.parent().parent().find( ".list_student_next_twenty_offset" );
 								listStudentNextTwentyOffset.text( parseInt( listStudentNextTwentyOffset.text() ) - 1 );
 								
@@ -6000,6 +6013,38 @@ function updateNextTwentyOffsetsAffectedByStudent( data ) {
 	if( enrollmentPeriodFilter.text() != "" ) {
 		
 		if( jQuery( data ).find( ".list_student_enrollment_terms" ).text().indexOf( enrollmentPeriodFilter.text() ) < 0 ) {
+			jQuery( ".enrollment_list" ).each(
+				function() {
+					var enrollmentList = jQuery( this );
+					
+					jQuery( this ).find( ".list_enrollment_details" ).each(
+						function() {
+							var listEnrollmentStaleInd = jQuery( this ).find( ".list_enrollment_stale_ind" );
+							
+							if(
+								listEnrollmentStaleInd.text() != "Y" &&
+								jQuery( this ).find( ".list_enrollment_student_id" ).text().substring( 2 ) == jQuery( data ).find( ".list_student_id" ).text().substring( 2 ) &&
+								jQuery( this ).prev().find( ".list_enrollment_term" ).text() == jQuery( data ).find( ".list_student_enrollment_term" ).text()
+							) {
+								var listEnrollmentNextTwentyOffset = enrollmentList.parent().find( ".list_enrollment_next_twenty_offset" );
+								listEnrollmentNextTwentyOffset.text( parseInt( listEnrollmentNextTwentyOffset.text() ) - 1 );
+								
+								listEnrollmentStaleInd.text( "Y" );
+								
+								reloadEnrollmentDialogs( true, true );
+							}
+						}
+					);
+				}
+			)
+		}
+	}
+	
+	var enrollmentVillageFilter = jQuery( ".filters .enrollment_village_filter" );
+	
+	if( enrollmentVillageFilter.text() != "" ) {
+		
+		if( enrollmentVillageFilter.text() != jQuery( data ).find( "div.list_student_village" ).text() ) {
 			jQuery( ".enrollment_list" ).each(
 				function() {
 					var enrollmentList = jQuery( this );

@@ -82,6 +82,16 @@ package web_inf.includes;out.print("""""");
 					}
 				}
 				
+				tr( class: "enrollment_filter_sortby_dialog_village_filter_row" ) {
+					td( class: "enrollment_filter_sortby_dialog_village_filter_label", "Village" )
+				
+					td( ":" )
+				
+					td {
+						input( autocomplete: "off", class: "enrollment_filter_sortby_dialog_village_filter ui-corner-all", name: "village", type: "text", value: session.getAttribute( "enrollmentVillageFilter" )?: "" )
+					}
+				}
+				
 				tr( class: "enrollment_filter_sortby_dialog_fees_due_filter_row" ) {
 					td( class: "enrollment_filter_sortby_dialog_fees_due_filter_label", "Fees Due" )
 				

@@ -77,6 +77,14 @@
 				</td>
 			</tr>
 			
+			<tr class="student_filter_sortby_dialog_village_filter_row">
+				<td class="student_filter_sortby_dialog_village_filter_label">Village</td>
+				<td>:</td>
+				<td>
+					<input autocomplete="off" class="student_filter_sortby_dialog_village_filter ui-corner-all" name="village" type="text" value="${ org.apache.commons.lang3.StringEscapeUtils.escapeHtml4( session.getAttribute( "studentVillageFilter" )?: "" ) }" />
+				</td>
+			</tr>
+			
 			<tr class="student_filter_sortby_dialog_fees_due_filter_row">
 				<td class="student_filter_sortby_dialog_fees_due_filter_label">Fees Due</td>
 				<td>

@@ -156,6 +156,7 @@
   				var studentFeesDueFilterOperator = jQuery( data ).find( "studentFeesDueFilterOperator" ).text();
   				var studentFirstNameFilter = jQuery( data ).find( "studentFirstNameFilter" ).text();
   				var studentLastNameFilter = jQuery( data ).find( "studentLastNameFilter" ).text();
+  				var studentVillageFilter = jQuery( data ).find( "studentVillageFilter" ).text();
   				
   				jQuery( ".filters .student_birth_date_filter" ).text( studentBirthDateFilter );
   				jQuery( ".filters .student_birth_date_filter_operator" ).text( studentBirthDateFilterOperator );
@@ -165,6 +166,7 @@
   				jQuery( ".filters .student_fees_due_filter_operator" ).text( studentFeesDueFilterOperator );
   				jQuery( ".filters .student_first_name_filter" ).text( studentFirstNameFilter );
   				jQuery( ".filters .student_last_name_filter" ).text( studentLastNameFilter );
+  				jQuery( ".filters .student_village_filter" ).text( studentVillageFilter );
   				jQuery( ".student_filter_sortby_dialog_birth_date_filter" ).val( studentBirthDateFilter );
   				jQuery( ".student_filter_sortby_dialog_birth_date_filter_operator option" ).each(
   					function() {
@@ -191,6 +193,7 @@
   				);
   				jQuery( ".student_filter_sortby_dialog_first_name_filter" ).val( studentFirstNameFilter );
   				jQuery( ".student_filter_sortby_dialog_last_name_filter" ).val( studentLastNameFilter );
+  				jQuery( ".student_filter_sortby_dialog_village_filter" ).val( studentVillageFilter );
   			}
   		, error: function( jqXHR, textStatus, errorThrown ) {
   				alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );

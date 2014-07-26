@@ -207,6 +207,18 @@ class EnrollmentDocument {
 			filterCount++
 		}
 		
+		if( session.getAttribute( "enrollmentVillageFilter" ) != null && session.getAttribute( "enrollmentVillageFilter" ) != "" ) {
+			String filter = "village = \"" + session.getAttribute( "enrollmentVillageFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
 		Map<Integer, SortOption> sortOptionMap = new LinkedHashMap()
 		
 		if( session.getAttribute( "enrollmentFirstNameSortDirection" ) != null ) {
@@ -583,6 +595,18 @@ class EnrollmentDocument {
 		
 		if( session.getAttribute( "enrollmentPeriodFilter" ) != null && session.getAttribute( "enrollmentPeriodFilter" ) != "" ) {
 			String filter = "termsEnrolled = \"" + session.getAttribute( "enrollmentPeriodFilter" ) + "\""
+			searchQuery += " AND ${ filter }"
+			
+			if( filterCount == 0 )
+				memcacheKey += " where " + filter
+			else
+				memcacheKey += " AND " + filter
+				
+			filterCount++
+		}
+		
+		if( session.getAttribute( "enrollmentVillageFilter" ) != null && session.getAttribute( "enrollmentVillageFilter" ) != "" ) {
+			String filter = "village = \"" + session.getAttribute( "enrollmentVillageFilter" ) + "\""
 			searchQuery += " AND ${ filter }"
 			
 			if( filterCount == 0 )
