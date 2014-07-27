@@ -1505,6 +1505,14 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 						event.stopPropagation();
 					}
 				);
+				
+				/* Prevent iOS7 browser input focus bug */
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_first_name_filter:visible" ).focus().blur();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_last_name_filter:visible" ).focus().blur();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_classes_attended_filter:visible" ).focus().blur();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_enrollment_period_filter:visible" ).focus().blur();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_village_filter:visible" ).focus().blur();
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_fees_due_filter:visible" ).focus().blur();
 			}
 	);
 }
@@ -1589,6 +1597,14 @@ function showStudentFilterPanel( studentFilterSortByDialog ) {
 						event.stopPropagation();
 					}
 				);
+				
+				/* Prevent iOS7 browser input focus bug */
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_first_name_filter:visible" ).focus().blur();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_last_name_filter:visible" ).focus().blur();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_classes_attended_filter:visible" ).focus().blur();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_enrollment_period_filter:visible" ).focus().blur();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_village_filter:visible" ).focus().blur();
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_fees_due_filter:visible" ).focus().blur();
 			}
 	);
 }
