@@ -82,7 +82,7 @@ class EnrollmentDocument {
 				)
 			.build();
 		
-		Query query = Query.newBuilder().setOptions( options ).build( "schoolName: ${ schoolName }" );
+		Query query = Query.newBuilder().setOptions( options ).build( "schoolName: \"${ schoolName }\"" );
 		
 		SearchServiceFactory.getSearchService().getIndex( IndexSpec.newBuilder().setName( "Enrollment" ).build() ).search( query );
 	}
@@ -800,7 +800,7 @@ class EnrollmentDocument {
 				)
             .build();
         
-        Query query = Query.newBuilder().setOptions( options ).build( "studentId: ${ studentId }" );
+        Query query = Query.newBuilder().setOptions( options ).build( "studentId: \"${ studentId }\"" );
         
         return SearchServiceFactory.getSearchService().getIndex( IndexSpec.newBuilder().setName( "Enrollment" ).build() ).search( query );
     }
@@ -957,7 +957,7 @@ class EnrollmentDocument {
 			
 		QueryOptions options = optionsBuilder.build()
 		
-		Query query = Query.newBuilder().setOptions( options ).build( "studentId: ${ studentId }" );
+		Query query = Query.newBuilder().setOptions( options ).build( "studentId: \"${ studentId }\"" );
 		
 		Results<ScoredDocument> enrollmentResults = SearchServiceFactory.getSearchService().getIndex( IndexSpec.newBuilder().setName( "Enrollment" ).build() ).search( query );
 		

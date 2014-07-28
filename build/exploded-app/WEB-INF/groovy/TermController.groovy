@@ -539,7 +539,7 @@ else {
                 	StudentDocument.deleteMemcache()
             }
             catch( Exception e ) {
-				if( params.action == "save" ) {
+            	if( params.action == "save" ) {
 					try { term?.delete() } catch( Exception deleteException ) {}
 					
 					newClassFees.each(

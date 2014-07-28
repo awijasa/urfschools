@@ -81,7 +81,7 @@ class StudentDocument {
 				)
 			.build();
 		
-		Query query = Query.newBuilder().setOptions( options ).build( "lastEnrollmentSchool: ${ lastEnrollmentSchool }" );
+		Query query = Query.newBuilder().setOptions( options ).build( "lastEnrollmentSchool: \"${ lastEnrollmentSchool }\"" );
 		
 		SearchServiceFactory.getSearchService().getIndex( IndexSpec.newBuilder().setName( "Student" ).build() ).search( query );
 	}
@@ -792,7 +792,7 @@ class StudentDocument {
 				)
             .build();
         
-        Query query = Query.newBuilder().setOptions( options ).build( "studentId: ${ studentId }" );
+        Query query = Query.newBuilder().setOptions( options ).build( "studentId: \"${ studentId }\"" );
         
         Results<ScoredDocument> studentResults = SearchServiceFactory.getSearchService().getIndex( IndexSpec.newBuilder().setName( "Student" ).build() ).search( query );
 		
