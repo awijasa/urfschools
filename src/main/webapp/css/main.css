@@ -539,6 +539,42 @@ body {
     z-index: 1;
 }
 
+.parent_deceased_ind_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_email_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_first_name_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_id_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_last_name_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_primary_phone_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_profession_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_secondary_phone_filter_sortby_dialog {
+	display: none;
+}
+
+.parent_village_filter_sortby_dialog {
+	display: none;
+}
+
 .progress_bar {
 	display: none;
 	height: 15px;

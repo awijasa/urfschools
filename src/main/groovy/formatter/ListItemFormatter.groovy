@@ -681,6 +681,9 @@ class ListItemFormatter {
 	                input( class: "list_parent_last_update_user", name: "lastUpdateUser", type: "hidden", value: parent.lastUpdateUser?: "" )
 				}
                 
+                /* Will contain Y if the client determines that this Parent record is stale due to changes in other records */
+				div( class: "list_parent_stale_ind", style: "display: none" )
+                
                 input( name: "id", type: "hidden", value: parent.getKey().getId() )
                 
 				if( urfUser != null ) {

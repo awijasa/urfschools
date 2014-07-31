@@ -1819,6 +1819,34 @@ function initParentList() {
 			}
 	);
 	
+	jQuery( ".list_parent_deceased_label" ).off( "click" ).click(
+			function( event ) {
+				var parentDeceasedIndFilterSortByDialog = jQuery( ".parent_deceased_ind_filter_sortby_dialog" );
+				
+				if( parentDeceasedIndFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentDeceasedIndFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentDeceasedIndFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentDeceasedIndFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-45 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentDeceasedIndFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentDeceasedIndFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
 	var listParentDelete = jQuery( ".list_parent_delete" ).button(
 			{
 				icons: {
@@ -1918,6 +1946,204 @@ function initParentList() {
 					parentListItemDetails.find( "input.list_parent_profession" ).val( parentListItemDetails.find( "div.list_parent_profession" ).text() );
 	
 					jQuery( this ).parents( ".parent_list" ).accordion( "option", "collapsible", false );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_email_label" ).off( "click" ).click(
+			function( event ) {
+				var parentEmailFilterSortByDialog = jQuery( ".parent_email_filter_sortby_dialog" );
+				
+				if( parentEmailFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentEmailFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentEmailFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentEmailFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-25 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentEmailFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentEmailFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_first_name_label" ).off( "click" ).click(
+			function( event ) {
+				var parentFirstNameFilterSortByDialog = jQuery( ".parent_first_name_filter_sortby_dialog" );
+				
+				if( parentFirstNameFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentFirstNameFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentFirstNameFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentFirstNameFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-45 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentFirstNameFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					if( jQuery( ".sort_options .parent_first_name_sort_direction" ).text() == "asc" ) {
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).show();
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).hide();
+					}
+					else if( jQuery( ".sort_options .parent_first_name_sort_direction" ).text() == "dsc" ) {
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).hide();
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).show();
+					}
+					else {
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).hide();
+						parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).hide();
+					}
+					
+					parentFirstNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_sort_order" ).text( jQuery( ".sort_options .parent_first_name_sort_order" ).text() );
+					
+					parentFirstNameFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_id_label" ).off( "click" ).click(
+			function( event ) {
+				var parentIdFilterSortByDialog = jQuery( ".parent_id_filter_sortby_dialog" );
+				
+				if( parentIdFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentIdFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentIdFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentIdFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-15 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentIdFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentIdFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_last_name_label" ).off( "click" ).click(
+			function( event ) {
+				var parentLastNameFilterSortByDialog = jQuery( ".parent_last_name_filter_sortby_dialog" );
+				
+				if( parentLastNameFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentLastNameFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentLastNameFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentLastNameFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-45 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentLastNameFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					if( jQuery( ".sort_options .parent_last_name_sort_direction" ).text() == "asc" ) {
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).show();
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).hide();
+					}
+					else if( jQuery( ".sort_options .parent_last_name_sort_direction" ).text() == "dsc" ) {
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).hide();
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).show();
+					}
+					else {
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).hide();
+						parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).hide();
+					}
+					
+					parentLastNameFilterSortByDialog.find( ".parent_filter_sortby_dialog_sort_order" ).text( jQuery( ".sort_options .parent_last_name_sort_order" ).text() );
+					
+					parentLastNameFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_primary_phone_label" ).off( "click" ).click(
+			function( event ) {
+				var parentPrimaryPhoneFilterSortByDialog = jQuery( ".parent_primary_phone_filter_sortby_dialog" );
+				
+				if( parentPrimaryPhoneFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentPrimaryPhoneFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentPrimaryPhoneFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentPrimaryPhoneFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-65 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentPrimaryPhoneFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentPrimaryPhoneFilterSortByDialog.dialog( "open" );
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_profession_label" ).off( "click" ).click(
+			function( event ) {
+				var parentProfessionFilterSortByDialog = jQuery( ".parent_profession_filter_sortby_dialog" );
+				
+				if( parentProfessionFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentProfessionFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentProfessionFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentProfessionFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-45 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentProfessionFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentProfessionFilterSortByDialog.dialog( "open" );
 				}
 			}
 	);
@@ -2027,6 +2253,115 @@ function initParentList() {
 											/* Toggle the editable elements with display elements. */
 											parentListItemDetails.find( ".list_parent_save_wait" ).hide();
 											toggleParentListItemElements( parentListItemHeader, parentListItemDetails );
+											
+											var listParentStaleInd = parentListItemDetails.find( ".list_parent_stale_ind" );
+											var parentDeceasedIndFilter = jQuery( ".filters .parent_deceased_ind_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentDeceasedIndFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( ".list_parent_deceased" ).text() != parentDeceasedIndFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentEmailFilter = jQuery( ".filters .parent_email_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentEmailFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_email" ).text() != parentEmailFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentFirstNameFilter = jQuery( ".filters .parent_first_name_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentFirstNameFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_first_name" ).text() != parentFirstNameFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentIdFilter = jQuery( ".filters .parent_id_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentIdFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( ".list_parent_id" ).text() != parentIdFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentLastNameFilter = jQuery( ".filters .parent_last_name_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentLastNameFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_last_name" ).text() != parentLastNameFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentPrimaryPhoneFilter = jQuery( ".filters .parent_primary_phone_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentPrimaryPhoneFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_primary_phone" ).text() != parentPrimaryPhoneFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentProfessionFilter = jQuery( ".filters .parent_profession_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentProfessionFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_profession" ).text() != parentProfessionFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentSecondaryPhoneFilter = jQuery( ".filters .parent_secondary_phone_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentSecondaryPhoneFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_secondary_phone" ).text() != parentSecondaryPhoneFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
+											
+											var parentVillageFilter = jQuery( ".filters .parent_village_filter" );
+											
+											if( listParentStaleInd.text() != "Y" && parentVillageFilter.text() != "" ) {
+												
+												if( jQuery( data ).find( "div.list_parent_village" ).text() != parentVillageFilter.text() ) {
+													var listParentNextTwentyOffset = parentListItemDetails.parent().parent().find( ".list_parent_next_twenty_offset" );
+													listParentNextTwentyOffset.text( parseInt( listParentNextTwentyOffset.text() ) - 1 );
+													
+													listParentStaleInd.text( "Y" );
+												}
+											}
 										}
 							, error: function( jqXHR, textStatus, errorThrown ) {
 								parentListItemDetails.find( ".list_parent_save" ).toggle();
@@ -2036,6 +2371,34 @@ function initParentList() {
 							}
 							}
 					);
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_secondary_phone_label" ).off( "click" ).click(
+			function( event ) {
+				var parentSecondaryPhoneFilterSortByDialog = jQuery( ".parent_secondary_phone_filter_sortby_dialog" );
+				
+				if( parentSecondaryPhoneFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentSecondaryPhoneFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentSecondaryPhoneFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentSecondaryPhoneFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-83 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentSecondaryPhoneFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentSecondaryPhoneFilterSortByDialog.dialog( "open" );
 				}
 			}
 	);
@@ -2058,6 +2421,34 @@ function initParentList() {
 						}
 						, "slow"
 					);
+				}
+			}
+	);
+	
+	jQuery( ".list_parent_village_label" ).off( "click" ).click(
+			function( event ) {
+				var parentVillageFilterSortByDialog = jQuery( ".parent_village_filter_sortby_dialog" );
+				
+				if( parentVillageFilterSortByDialog.dialog( "isOpen" ) ) {
+					parentVillageFilterSortByDialog.dialog( "close" );
+				}
+				else {
+					parentVillageFilterSortByDialog.parent().find( ".ui-dialog-titlebar" ).hide();
+					parentVillageFilterSortByDialog.dialog( "option", "position",
+						{
+							my: "left-30 top+15"
+							, of: jQuery( this )
+							, collision: "fit"
+						}
+					);
+					
+					parentVillageFilterSortByDialog.click(
+						function( event ) {
+							event.stopPropagation();
+						}
+					);
+					
+					parentVillageFilterSortByDialog.dialog( "open" );
 				}
 			}
 	);
@@ -5467,7 +5858,7 @@ function toggleParentListItemElements( parentListItemHeader, parentListItemDetai
 	parentListItemDetails.find( ".list_parent_edit" ).toggle();
 	parentListItemDetails.find( ".list_parent_delete" ).toggle();
 
-	parentListItemHeader.find( "div" ).toggle();
+	parentListItemHeader.find( "div" ).not( ".list_parent_stale_ind" ).toggle();
 	parentListItemHeader.find( "input" ).toggle();
 	parentListItemHeader.find( "label" ).toggle();
 

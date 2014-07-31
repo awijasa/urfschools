@@ -33,6 +33,15 @@ else {
 			enrollmentLastNameFilter( session.getAttribute( "enrollmentLastNameFilter" ) )
 			enrollmentPeriodFilter( session.getAttribute( "enrollmentPeriodFilter" ) )
 			enrollmentVillageFilter( session.getAttribute( "enrollmentVillageFilter" ) )
+			parentDeceasedIndFilter( session.getAttribute( "parentDeceasedIndFilter" ) )
+			parentEmailFilter( session.getAttribute( "parentEmailFilter" ) )
+			parentFirstNameFilter( session.getAttribute( "parentFirstNameFilter" ) )
+			parentIdFilter( session.getAttribute( "parentIdFilter" ) )
+			parentLastNameFilter( session.getAttribute( "parentLastNameFilter" ) )
+			parentPrimaryPhoneFilter( session.getAttribute( "parentPrimaryPhoneFilter" ) )
+			parentProfessionFilter( session.getAttribute( "parentProfessionFilter" ) )
+			parentSecondaryPhoneFilter( session.getAttribute( "parentSecondaryPhoneFilter" ) )
+			parentVillageFilter( session.getAttribute( "parentVillageFilter" ) )
 			studentBirthDateFilter( session.getAttribute( "studentBirthDateFilter" ) )
 			studentBirthDateFilterOperator( session.getAttribute( "studentBirthDateFilterOperator" ) )
 			studentClassesAttendedFilter( session.getAttribute( "studentClassesAttendedFilter" ) )
@@ -136,6 +145,106 @@ else {
 			}
 			else
 				session.removeAttribute( "enrollmentVillageFilter" )
+		}
+		else if( params.kind == "Parent" ) {
+			if( params.deceasedInd != null && params.deceasedInd != "" ) {
+				try {
+					session.setAttribute( "parentDeceasedIndFilter", params.deceasedInd )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentDeceasedIndFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentDeceasedIndFilter" )
+				
+			if( params.email != null && params.email != "" ) {
+				try {
+					session.setAttribute( "parentEmailFilter", params.email )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentEmailFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentEmailFilter" )
+			
+			if( params.firstName != null && params.firstName != "" ) {
+				try {
+					session.setAttribute( "parentFirstNameFilter", params.firstName )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentFirstNameFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentFirstNameFilter" )
+				
+			if( params.lastName != null && params.lastName != "" ) {
+				try {
+					session.setAttribute( "parentLastNameFilter", params.lastName )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentLastNameFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentLastNameFilter" )
+				
+			if( params.parentId != null && params.parentId != "" ) {
+				try {
+					session.setAttribute( "parentIdFilter", params.parentId )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentIdFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentIdFilter" )
+				
+			if( params.primaryPhone != null && params.primaryPhone != "" ) {
+				try {
+					session.setAttribute( "parentPrimaryPhoneFilter", params.primaryPhone )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentPrimaryPhoneFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentPrimaryPhoneFilter" )
+				
+			if( params.profession != null && params.profession != "" ) {
+				try {
+					session.setAttribute( "parentProfessionFilter", params.profession )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentProfessionFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentProfessionFilter" )
+				
+			if( params.secondaryPhone != null && params.secondaryPhone != "" ) {
+				try {
+					session.setAttribute( "parentSecondaryPhoneFilter", params.secondaryPhone )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentSecondaryPhoneFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentSecondaryPhoneFilter" )
+				
+			if( params.village != null && params.village != "" ) {
+				try {
+					session.setAttribute( "parentVillageFilter", params.village )
+				}
+				catch( Exception e ) {
+					session.removeAttribute( "parentVillageFilter" )
+				}
+			}
+			else
+				session.removeAttribute( "parentVillageFilter" )
 		}
 		else {
 			if( params.birthDate != null && params.birthDate != "" ) {

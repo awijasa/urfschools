@@ -21,7 +21,7 @@
 	    List<com.google.appengine.api.datastore.Entity> parentList
 	    
 	    if( params.studentId == null || params.studentId == "" )
-	    	parentList = data.Parent.findByLimitAndOffset( limit, offset )
+	    	parentList = data.Parent.findByLimitAndOffset( limit, offset, session )
 	    else {
 	    	parentList = new ArrayList()
 	    	
@@ -52,7 +52,7 @@
 	      offset += limit
 	
 	      if( params.studentId == null || params.studentId == "" )
-	      	parentList = data.Parent.findByLimitAndOffset( limit, offset )
+	      	parentList = data.Parent.findByLimitAndOffset( limit, offset, session )
 	      else {
 	      	parentList = new ArrayList()
 	      	
@@ -94,7 +94,7 @@
 				)
 			}
 			else {
-				parentList = data.Parent.findByLimitAndOffset( limit, offset )
+				parentList = data.Parent.findByLimitAndOffset( limit, offset, session )
 				parentList.eachWithIndex(
 					{ obj, i ->
 						if( i < limit )
@@ -130,6 +130,60 @@
 %>
 <script type="text/javascript">
   initParentList();
+  
+  jQuery.ajax(
+  	{
+  		url: "SessionController.groovy"
+  		, type: "GET"
+  		, data: jQuery.param(
+  				{
+  					action: "getAttributes"
+  				}
+  			)
+  		, success: function( data ) {
+  				var parentDeceasedIndFilter = jQuery( data ).find( "parentDeceasedIndFilter" ).text();
+  				var parentEmailFilter = jQuery( data ).find( "parentEmailFilter" ).text();
+  				var parentFirstNameFilter = jQuery( data ).find( "parentFirstNameFilter" ).text();
+  				var parentIdFilter = jQuery( data ).find( "parentIdFilter" ).text();
+  				var parentLastNameFilter = jQuery( data ).find( "parentLastNameFilter" ).text();
+  				var parentPrimaryPhoneFilter = jQuery( data ).find( "parentPrimaryPhoneFilter" ).text();
+  				var parentProfessionFilter = jQuery( data ).find( "parentProfessionFilter" ).text();
+  				var parentSecondaryPhoneFilter = jQuery( data ).find( "parentSecondaryPhoneFilter" ).text();
+  				var parentVillageFilter = jQuery( data ).find( "parentVillageFilter" ).text();
+  				
+  				jQuery( ".filters .parent_deceased_ind_filter" ).text( parentDeceasedIndFilter );
+  				jQuery( ".filters .parent_email_filter" ).text( parentEmailFilter );
+  				jQuery( ".filters .parent_first_name_filter" ).text( parentFirstNameFilter );
+  				jQuery( ".filters .parent_id_filter" ).text( parentIdFilter );
+  				jQuery( ".filters .parent_last_name_filter" ).text( parentLastNameFilter );
+  				jQuery( ".filters .parent_primary_phone_filter" ).text( parentPrimaryPhoneFilter );
+  				jQuery( ".filters .parent_profession_filter" ).text( parentProfessionFilter );
+  				jQuery( ".filters .parent_secondary_phone_filter" ).text( parentSecondaryPhoneFilter );
+  				jQuery( ".filters .parent_village_filter" ).text( parentVillageFilter );
+  				jQuery( ".parent_filter_sortby_dialog_deceased_ind_filter_operator option" ).each(
+  	  					function() {
+  	  						if( jQuery( this ).text() == parentDeceasedIndFilter ) {
+  	  							jQuery( this ).prop( "selected", true );
+  							}
+  							else {
+  								jQuery( this ).prop( "selected", false )
+  							}
+  						}
+  	  				);
+  				jQuery( ".parent_filter_sortby_dialog_email_filter" ).val( parentEmailFilter );
+  				jQuery( ".parent_filter_sortby_dialog_first_name_filter" ).val( parentFirstNameFilter );
+  				jQuery( ".parent_filter_sortby_dialog_last_name_filter" ).val( parentLastNameFilter );
+  				jQuery( ".parent_filter_sortby_dialog_parent_id_filter" ).val( parentIdFilter );
+  				jQuery( ".parent_filter_sortby_dialog_primary_phone_filter" ).val( parentPrimaryPhoneFilter );
+  				jQuery( ".parent_filter_sortby_dialog_profession_filter" ).val( parentProfessionFilter );
+  				jQuery( ".parent_filter_sortby_dialog_secondary_phone_filter" ).val( parentSecondaryPhoneFilter );
+  				jQuery( ".parent_filter_sortby_dialog_village_filter" ).val( parentVillageFilter );
+  			}
+  		, error: function( jqXHR, textStatus, errorThrown ) {
+  				alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+  			}
+  	}
+  );
   
   var parentTabListRecordForm = jQuery( "#parent_tab .list_record_form" );
   
@@ -256,6 +310,81 @@
                   else {
                     parentList.css( "overflow", "hidden" );
                   }
+                  
+                  var activeListParentDetailsSeqNo = parentList.accordion( "option", "active" );
+                  var listParentDetails = parentList.find( ".list_parent_details" );
+                  
+                  var parentEmailFilterSortByDialog = jQuery( ".parent_email_filter_sortby_dialog" );
+					
+					if( parentEmailFilterSortByDialog.dialog( "isOpen" ) ) {
+						
+						if( parentEmailFilterSortByDialog.offset().top <= parentList.offset().top ) {
+							parentEmailFilterSortByDialog.dialog( "close" );
+						}
+						else {
+							parentEmailFilterSortByDialog.dialog( "option", "position",
+								{
+									my: "left-25 top+15"
+									, of: listParentDetails.eq( activeListParentDetailsSeqNo ).find( ".list_parent_email_label" )
+									, collision: "fit"
+								}
+							);
+						}
+					}
+					
+					var parentIdFilterSortByDialog = jQuery( ".parent_id_filter_sortby_dialog" );
+					
+					if( parentIdFilterSortByDialog.dialog( "isOpen" ) ) {
+						
+						if( parentIdFilterSortByDialog.offset().top <= parentList.offset().top ) {
+							parentIdFilterSortByDialog.dialog( "close" );
+						}
+						else {
+							parentIdFilterSortByDialog.dialog( "option", "position",
+								{
+									my: "left-15 top+15"
+									, of: listParentDetails.eq( activeListParentDetailsSeqNo ).find( ".list_parent_id_label" )
+									, collision: "fit"
+								}
+							);
+						}
+					}
+					
+					var parentProfessionFilterSortByDialog = jQuery( ".parent_profession_filter_sortby_dialog" );
+					
+					if( parentProfessionFilterSortByDialog.dialog( "isOpen" ) ) {
+						
+						if( parentProfessionFilterSortByDialog.offset().top <= parentList.offset().top ) {
+							parentProfessionFilterSortByDialog.dialog( "close" );
+						}
+						else {
+							parentProfessionFilterSortByDialog.dialog( "option", "position",
+								{
+									my: "left-45 top+15"
+									, of: listParentDetails.eq( activeListParentDetailsSeqNo ).find( ".list_parent_profession_label" )
+									, collision: "fit"
+								}
+							);
+						}
+					}
+					
+					var parentSecondaryPhoneFilterSortByDialog = jQuery( ".parent_secondary_phone_filter_sortby_dialog" );
+					
+					if( parentSecondaryPhoneFilterSortByDialog.dialog( "isOpen" ) ) {
+						
+						if( parentSecondaryPhoneFilterSortByDialog.offset().top <= parentList.offset().top ) {
+							parentSecondaryPhoneFilterSortByDialog.dialog( "close" );
+						}
+						else {
+							parentSecondaryPhoneFilterSortByDialog.dialog( "option", "position",
+								{
+									my: "left-83 top+15"
+									, of: listParentDetails.eq( activeListParentDetailsSeqNo ).find( ".list_parent_secondary_phone_label" )
+									, collision: "fit"
+								}
+							);
+						}
+					}
                 }
               );
 

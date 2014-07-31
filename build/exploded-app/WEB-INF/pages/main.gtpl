@@ -39,7 +39,8 @@
 	    link( rel: "stylesheet", type: "text/css", href: "/css/listTerm.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/listURFUser.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/main.css" )
-	    link( rel: "stylesheet", type: "text/css", href: "/css/enrollmentFilterSortByDialog.css" )   
+	    link( rel: "stylesheet", type: "text/css", href: "/css/enrollmentFilterSortByDialog.css" )
+	    link( rel: "stylesheet", type: "text/css", href: "/css/parentFilterSortByDialog.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/studentFilterSortByDialog.css" )   
 	    script( type: "text/javascript", src: "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" )
 %>
@@ -81,6 +82,15 @@
 			div( class: "enrollment_last_name_filter", session.getAttribute( "enrollmentLastNameFilter" ) )
 			div( class: "enrollment_period_filter", session.getAttribute( "enrollmentPeriodFilter" ) )
 			div( class: "enrollment_village_filter", session.getAttribute( "enrollmentVillageFilter" ) )
+			div( class: "parent_deceased_ind_filter", session.getAttribute( "parentDeceasedIndFilter" ) )
+			div( class: "parent_email_filter", session.getAttribute( "parentEmailFilter" ) )
+			div( class: "parent_first_name_filter", session.getAttribute( "parentFirstNameFilter" ) )
+			div( class: "parent_id_filter", session.getAttribute( "parentIdFilter" ) )
+			div( class: "parent_last_name_filter", session.getAttribute( "parentLastNameFilter" ) )
+			div( class: "parent_primary_phone_filter", session.getAttribute( "parentPrimaryPhoneFilter" ) )
+			div( class: "parent_profession_filter", session.getAttribute( "parentProfessionFilter" ) )
+			div( class: "parent_secondary_phone_filter", session.getAttribute( "parentSecondaryPhoneFilter" ) )
+			div( class: "parent_village_filter", session.getAttribute( "parentVillageFilter" ) )
 			div( class: "student_birth_date_filter", session.getAttribute( "studentBirthDateFilter" ) )
 			div( class: "student_birth_date_filter_operator", session.getAttribute( "studentBirthDateFilterOperator" ) )
 			div( class: "student_classes_attended_filter", session.getAttribute( "studentClassesAttendedFilter" ) )
@@ -108,6 +118,11 @@
 			    	div( class: "enrollment_last_name_sort_direction", "asc" )
 			    	div( class: "enrollment_last_name_sort_order", 3 )
 			    	
+			    	div( class: "parent_first_name_sort_direction", "asc" )
+			    	div( class: "parent_first_name_sort_order", 1 )
+			    	div( class: "parent_last_name_sort_direction", "asc" )
+			    	div( class: "parent_last_name_sort_order", 2 )
+			    	
 			    	session.setAttribute( "studentEnrollmentPeriodSortDirection", "dsc" )
 			    	session.setAttribute( "studentEnrollmentPeriodSortOrder", 1 )
 			    	session.setAttribute( "studentFirstNameSortDirection", "asc" )
@@ -121,6 +136,11 @@
 			    	session.setAttribute( "enrollmentFirstNameSortOrder", 2 )
 			    	session.setAttribute( "enrollmentLastNameSortDirection", "asc" )
 			    	session.setAttribute( "enrollmentLastNameSortOrder", 3 )
+			    	
+			    	session.setAttribute( "parentFirstNameSortDirection", "asc" )
+			    	session.setAttribute( "parentFirstNameSortOrder", 1 )
+			    	session.setAttribute( "parentLastNameSortDirection", "asc" )
+			    	session.setAttribute( "parentLastNameSortOrder", 2 )
 			    	
 			    	session.setAttribute( "areSortOptionsSet", "Y" )
 			    	session.setMaxInactiveInterval( -1 )
@@ -161,6 +181,18 @@
 		    			
 		    		if( session.getAttribute( "enrollmentLastNameSortOrder" ) != null )
 		    			div( class: "enrollment_last_name_sort_order", session.getAttribute( "enrollmentLastNameSortOrder" ) )
+		    			
+		    		if( session.getAttribute( "parentFirstNameSortDirection" ) != null )
+		    			div( class: "parent_first_name_sort_direction", session.getAttribute( "parentFirstNameSortDirection" ) )
+		    			
+		    		if( session.getAttribute( "parentFirstNameSortOrder" ) != null )
+		    			div( class: "parent_first_name_sort_order", session.getAttribute( "parentFirstNameSortOrder" ) )
+		    			
+		    		if( session.getAttribute( "parentLastNameSortDirection" ) != null )
+		    			div( class: "parent_last_name_sort_direction", session.getAttribute( "parentLastNameSortDirection" ) )
+		    			
+		    		if( session.getAttribute( "parentLastNameSortOrder" ) != null )
+		    			div( class: "parent_last_name_sort_order", session.getAttribute( "parentLastNameSortOrder" ) )
 		    	}
 		    }
 		    
@@ -455,6 +487,42 @@
 			
 			<div class="enrollment_village_filter_sortby_dialog">
 				<% include '/WEB-INF/includes/enrollmentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_deceased_ind_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_email_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_first_name_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_id_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_last_name_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_primary_phone_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_profession_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_secondary_phone_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
+			</div>
+			
+			<div class="parent_village_filter_sortby_dialog">
+				<% include '/WEB-INF/includes/parentFilterSortByDialog.gtpl' %>
 			</div>
 <%
 	  }

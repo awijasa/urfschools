@@ -700,6 +700,159 @@ function initMain() {
       }
     );
     
+    var parentDeceasedIndFilterSortByDialog = jQuery( ".parent_deceased_ind_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentEmailFilterSortByDialog = jQuery( ".parent_email_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentFirstNameFilterSortByDialog = jQuery( ".parent_first_name_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentIdFilterSortByDialog = jQuery( ".parent_id_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentLastNameFilterSortByDialog = jQuery( ".parent_last_name_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentPrimaryPhoneFilterSortByDialog = jQuery( ".parent_primary_phone_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentProfessionFilterSortByDialog = jQuery( ".parent_profession_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentSecondaryPhoneFilterSortByDialog = jQuery( ".parent_secondary_phone_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
+    var parentVillageFilterSortByDialog = jQuery( ".parent_village_filter_sortby_dialog" ).dialog(
+      {
+        autoOpen: false
+        , draggable: false
+        , height: 58
+        , hide: "blind"
+        , open: function() {
+        		if( jQuery( this ).find( ".parent_filter_sortby_dialog_filter_panel:visible" ).length == 1 ) {
+        			showParentFilterPanel( jQuery( this ) );
+        		}
+        	}
+        , resizable: false
+        , show: "blind"
+        , width: 120
+      }
+    );
+    
     var studentBirthDateFilterSortByDialog = jQuery( ".student_birth_date_filter_sortby_dialog" ).dialog(
       {
         autoOpen: false
@@ -1142,6 +1295,218 @@ function initMain() {
 				jQuery( this ).removeClass( "glyphicons_pale" ).addClass( "glyphicons" );
 			}
 	);
+	
+	jQuery( ".parent_filter_sortby_dialog_asc_sort_direction_button" ).off( "hover" ).hover(
+			function() {
+				jQuery( this ).removeClass( "glyphicons" ).addClass( "glyphicons_pale" );
+			}
+			, function() {
+				jQuery( this ).removeClass( "glyphicons_pale" ).addClass( "glyphicons" );
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_dsc_sort_direction_button" ).off( "hover" ).hover(
+			function() {
+				jQuery( this ).removeClass( "glyphicons" ).addClass( "glyphicons_pale" );
+			}
+			, function() {
+				jQuery( this ).removeClass( "glyphicons_pale" ).addClass( "glyphicons" );
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_filter_apply" ).off( "click" ).click(
+			function() {
+				jQuery( this ).parent().submit();
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_filter_button" ).off( "click" ).click(
+			function() {
+				if( jQuery( this ).hasClass( "glyphicons_blue" ) ) {
+					jQuery( this ).removeClass( "glyphicons_blue" ).addClass( "glyphicons_pale" );
+					
+					var parentFilterSortByDialog = jQuery( this ).parent();
+					
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_panel" ).fadeOut();
+					
+					jQuery( this ).parent().animate(
+							{
+								height: "31px"
+							}
+					).parent().animate(
+							{
+								width: "150px"
+							}
+					);
+				}
+				else {
+					jQuery( this ).removeClass( "glyphicons" ).removeClass( "glyphicons_pale" ).addClass( "glyphicons_blue" );
+					
+					showParentFilterPanel( jQuery( this ).parent() );
+				}
+			}
+	).off( "hover" ).hover(
+			function() {
+				if( !jQuery( this ).hasClass( "glyphicons_blue" ) ) {
+					jQuery( this ).removeClass( "glyphicons" ).addClass( "glyphicons_pale" );
+				}
+			}
+			, function() {
+				if( !jQuery( this ).hasClass( "glyphicons_blue" ) ) {
+					jQuery( this ).removeClass( "glyphicons_pale" ).addClass( "glyphicons" );
+				}
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_filter_form" ).off( "submit" ).submit(
+			function( event ) {
+				event.preventDefault();
+				
+				var parentFilterSortByDialogFilterForm = jQuery( this );
+				
+				jQuery.ajax(
+						{
+							url: "SessionController.groovy"
+							, type: "POST"
+							, data: parentFilterSortByDialogFilterForm.serialize()
+							, beforeSend: function() {
+									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply" ).hide();
+									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply_wait" ).show();
+								}
+							, success: function() {
+									var parentFilterSortByDialog = parentFilterSortByDialogFilterForm.parent().parent();
+									var listParentLabel = parentFilterSortByDialog.dialog( "option", "position" ).of;
+									var listParent;
+									
+									if( listParentLabel.parent().attr( "name" ) == "parent_details_form" ) {
+										listParent = listParentLabel.parent().parent().parent().parent();
+									}
+									else {
+										listParent = listParentLabel.parent();
+									}
+									
+									jQuery.ajax(
+											{
+												url: "/listParent.gtpl"
+												, type: "GET"
+												, data: jQuery.param(
+														{
+															limit: listParent.find( ".list_parent_next_twenty_limit" ).text()
+															, offset: 0
+														}
+													)
+												, complete: function() {
+														parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply" ).show();
+														parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply_wait" ).hide();
+														parentFilterSortByDialog.dialog( "close" );
+													}
+												, success: function( data ) {
+														listParent.toggle();
+														listParent.children().remove();
+														listParent.append( data );
+														listParent.toggle();
+													}
+												, error: function( jqXHR, textStatus, errorThrown ) {
+														alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+													}
+											}
+									);
+								}
+							, error: function( jqXHR, textStatus, errorThrown ) {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									
+									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply" ).show();
+									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply_wait" ).hide();
+								}
+						}
+				);
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_filter_less" ).off( "click" ).click(
+			function() {
+				var parentFilterSortByDialog = jQuery( this ).parents( ".parent_filter_sortby_dialog_filter_panel" ).parent();
+				
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_less_row" ).hide();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_more_row" ).fadeIn();
+				
+				showParentFilterPanel( parentFilterSortByDialog );
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_first_name_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_first_name_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_last_name_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_last_name_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_deceased_ind_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_deceased_ind_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_village_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_village_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_primary_phone_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_primary_phone_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_email_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_email_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_secondary_phone_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_secondary_phone_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_profession_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_profession_filter_row" ).fadeOut();
+				}
+				
+				if( !parentFilterSortByDialog.hasClass( "parent_id_filter_sortby_dialog" ) ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_parent_id_filter_row" ).fadeOut();
+				}
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_filter_more" ).off( "click" ).click(
+			function() {
+				var parentFilterSortByDialog = jQuery( this ).parents( ".parent_filter_sortby_dialog_filter_panel" ).parent();
+				
+				showFullParentFilterPanel( parentFilterSortByDialog );
+				
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_more_row" ).hide();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_less_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_first_name_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_last_name_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_deceased_ind_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_village_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_primary_phone_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_email_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_secondary_phone_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_profession_filter_row" ).fadeIn();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_parent_id_filter_row" ).fadeIn();
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_lookup_button" ).off( "hover" ).hover(
+			function() {
+				jQuery( this ).removeClass( "ui-icon" ).addClass( "ui-icon-pale" );
+			}
+			, function() {
+				jQuery( this ).removeClass( "ui-icon-pale" ).addClass( "ui-icon" );
+			}
+	);
+	
+	jQuery( ".parent_filter_sortby_dialog_sort_button" ).off( "hover" ).hover(
+			function() {
+				jQuery( this ).removeClass( "glyphicons" ).addClass( "glyphicons_pale" );
+			}
+			, function() {
+				jQuery( this ).removeClass( "glyphicons_pale" ).addClass( "glyphicons" );
+			}
+	);
     
     jQuery( ".student_filter_sortby_dialog_asc_sort_direction_button" ).off( "hover" ).hover(
 			function() {
@@ -1400,6 +1765,33 @@ function initMain() {
     		if( event.target.className != "list_enrollment_village_label" && enrollmentVillageFilterSortByDialog.dialog( "isOpen" ) ) {
     			enrollmentVillageFilterSortByDialog.dialog( "close" );
     		}
+    		if( event.target.className != "list_parent_deceased_label" && parentDeceasedIndFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentDeceasedIndFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_email_label" && parentEmailFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentEmailFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_first_name_label" && parentFirstNameFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentFirstNameFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_id_label" && parentIdFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentIdFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_last_name_label" && parentLastNameFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentLastNameFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_primary_phone_label" && parentPrimaryPhoneFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentPrimaryPhoneFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_profession_label" && parentProfessionFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentProfessionFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_secondary_phone_label" && parentSecondaryPhoneFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentSecondaryPhoneFilterSortByDialog.dialog( "close" );
+    		}
+    		if( event.target.className != "list_parent_village_label" && parentVillageFilterSortByDialog.dialog( "isOpen" ) ) {
+    			parentVillageFilterSortByDialog.dialog( "close" );
+    		}
     		if( event.target.className != "list_student_birth_date_label" && studentBirthDateFilterSortByDialog.dialog( "isOpen" ) ) {
     			studentBirthDateFilterSortByDialog.dialog( "close" );
     		}
@@ -1528,6 +1920,66 @@ function showFullEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 			}
 			, function() {
 				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).fadeIn();
+			}
+	);
+}
+
+function showFullParentFilterPanel( parentFilterSortByDialog ) {
+	parentFilterSortByDialog.css( "overflow", "hidden" ).animate(
+			{
+				height: "495px"
+			}
+	).parent().animate(
+			{
+				width: "405px"
+			}
+			, function() {
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_panel" ).fadeIn();
+			}
+	);
+}
+
+function showParentFilterPanel( parentFilterSortByDialog ) {
+	parentFilterSortByDialog.css( "overflow", "hidden" ).animate(
+			{
+				height: "140px"
+			}
+	).parent().animate(
+			{
+				width: "405px"
+			}
+			, function() {
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_panel" ).fadeIn();
+				
+				if( parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_more_row:visible" ).length == 0 ) {
+					showFullParentFilterPanel( parentFilterSortByDialog );
+				}
+				else {
+					var hiddenPopulatedSearchFieldCount = 0;
+					
+					parentFilterSortByDialog.find( "input[type='text']:hidden" ).each(
+						function() {
+							if( jQuery( this ).val() != "" ) {
+								hiddenPopulatedSearchFieldCount++;
+							}
+						}
+					);
+					
+					if( hiddenPopulatedSearchFieldCount > 0 ) {
+						parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_filter_more" ).click();
+					}
+				}
+				
+				/* Prevent iOS7 browser input focus bug */
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_first_name_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_last_name_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_deceased_ind_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_village_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_primary_phone_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_email_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_secondary_phone_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_profession_filter:visible" ).focus().blur();
+				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_parent_id_filter:visible" ).focus().blur();
 			}
 	);
 }
