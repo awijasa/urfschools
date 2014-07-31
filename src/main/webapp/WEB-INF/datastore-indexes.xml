@@ -71,8 +71,7 @@
     <!-- Used 10 times in query history -->
     <datastore-index kind="Term" ancestor="false" source="auto">
         <property name="termSchool" direction="asc"/>
-        <property name="year" direction="desc"/>
-        <property name="termNo" direction="desc"/>
+        <property name="startDate" direction="desc"/>
     </datastore-index>
     
     <datastore-index kind="Term" ancestor="false">

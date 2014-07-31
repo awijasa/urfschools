@@ -48,7 +48,7 @@ else {
                 throw new StaleRecordException( params.action, "Parent" )
 			
 			if( ( params.studentId?: "" ) == "" ) {
-				Parent.findByLimitAndOffset( 0, Integer.parseInt( params.nextTwentyOffset ) ).each(
+				Parent.findByLimitAndOffset( 0, Integer.parseInt( params.nextTwentyOffset ), session ).each(
 					{
 						/*
 						 * Respond with the HTML code that is required to display the Parent entity that can fill the empty space that resulted

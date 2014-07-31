@@ -93,8 +93,7 @@ class Term {
             }
             
             q.addSort( "termSchool", SortDirection.ASCENDING )
-            q.addSort( "year", SortDirection.DESCENDING )
-            q.addSort( "termNo", SortDirection.DESCENDING )
+            q.addSort( "startDate", SortDirection.DESCENDING )
             termList = datastore.prepare( q ).asList( FetchOptions.Builder.withLimit( limit + 1 ).offset( offset ) )
             
             syncCache.put( memcacheKey, termList )
@@ -126,8 +125,7 @@ class Term {
             DatastoreService datastore = DatastoreServiceFactory.getDatastoreService()
             Query q = new Query( "Term" )
             q.addFilter( "termSchool", FilterOperator.EQUAL, termSchool )
-            q.addSort( "year", SortDirection.DESCENDING )
-            q.addSort( "termNo", SortDirection.DESCENDING )
+            q.addSort( "startDate", SortDirection.DESCENDING )
             schoolTerms = datastore.prepare( q ).asList( FetchOptions.Builder.withDefaults() )
             
             syncCache.put( termSchool + " Terms", schoolTerms )

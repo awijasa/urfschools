@@ -99,8 +99,10 @@ class EnrollmentDocument {
 		User user = UserServiceFactory.getUserService().getCurrentUser()
 		Entity urfUser = URFUser.findByEmail( user?.getEmail() )
 		
-		if( urfUser == null )
+		if( urfUser == null ) {
 			urfUserSchools = "[Test]"
+			searchQuery = "schoolName = \"Test\""
+		}
 		else {
 			searchQuery = "schoolName = ( "
 			urfUserSchoolList = UserPrivilege.findByUserEmail( urfUser.email )
@@ -497,8 +499,10 @@ class EnrollmentDocument {
 		User user = UserServiceFactory.getUserService().getCurrentUser()
 		Entity urfUser = URFUser.findByEmail( urfUserEmail )
 		
-		if( urfUser == null )
+		if( urfUser == null ) {
 			urfUserSchools = "[Test]"
+			searchQuery = "schoolName = \"Test\""
+		}
 		else {
 			searchQuery = "schoolName = ( "
 			urfUserSchoolList = UserPrivilege.findByUserEmail( urfUser.email )

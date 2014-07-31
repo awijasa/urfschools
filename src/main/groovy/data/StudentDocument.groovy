@@ -98,8 +98,10 @@ class StudentDocument {
 		User user = UserServiceFactory.getUserService().getCurrentUser()
 		Entity urfUser = URFUser.findByEmail( user?.getEmail() )
 		
-		if( urfUser == null )
+		if( urfUser == null ) {
 			urfUserSchools = "[Test]"
+			searchQuery = "lastEnrollmentSchool = \"Test\""
+		}
 		else {
 			searchQuery = "lastEnrollmentSchool = ( "
 			urfUserSchoolList = UserPrivilege.findByUserEmail( urfUser.email )
@@ -495,8 +497,10 @@ class StudentDocument {
 		User user = UserServiceFactory.getUserService().getCurrentUser()
 		Entity urfUser = URFUser.findByEmail( urfUserEmail )
 		
-		if( urfUser == null )
+		if( urfUser == null ) {
 			urfUserSchools = "[Test]"
+			searchQuery = "lastEnrollmentSchool = \"Test\""
+		}
 		else {
 			searchQuery = "lastEnrollmentSchool = ( "
 			urfUserSchoolList = UserPrivilege.findByUserEmail( urfUser.email )

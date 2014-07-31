@@ -122,6 +122,7 @@ out.print("""
   
   var addStudentMatchingListStudent = jQuery( \".add_student_matching_list_student\" );
   var addStudentSchool = jQuery( \".add_student_school\" );
+  var addStudentEnrollmentTerm = jQuery( \"#add_student_enrollment_term_school\" + addStudentSchool.prop( \"selectedIndex\" ) );
   var listStudentFirstNameParam = addStudentMatchingListStudent.find( \".list_student_first_name_param\" );
   
   if(
@@ -131,9 +132,22 @@ out.print("""
   	addStudentMatchingListStudent.find( \".list_student_details\" ).each(
   		function() {
   			if( addStudentSchool.val() == jQuery( this ).find( \".list_student_school\" ).text() ) {
-  				jQuery( this ).find( \".list_student_edit\" ).show();
-  				jQuery( this ).find( \".list_student_delete\" ).show();
-  				jQuery( this ).find( \".list_student_select\" ).hide();
+  				var listStudentDetails = jQuery( this );
+  				var listStudentEnrollmentTermIndex = 0
+  				
+  				addStudentEnrollmentTerm.find( \"option\" ).each(
+  					function( index ) {
+  						if( jQuery( this ).text() == listStudentDetails.prev().find( \".list_student_enrollment_term\" ).text() ) {
+  							listStudentEnrollmentTermIndex = index;
+  						}
+  					}
+  				);
+  				
+  				if( addStudentEnrollmentTerm.prop( \"selectedIndex\" ) <= listStudentEnrollmentTermIndex ) {
+	  				jQuery( this ).find( \".list_student_edit\" ).show();
+	  				jQuery( this ).find( \".list_student_delete\" ).show();
+	  				jQuery( this ).find( \".list_student_select\" ).hide();
+  				}
   			}
   		}
   	);
