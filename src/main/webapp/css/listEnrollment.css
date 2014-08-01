@@ -1,14 +1,10 @@
 a.list_enrollment_birth_date_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_enrollment_birth_date_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
@@ -40,18 +36,12 @@ a.list_enrollment_boarding_fees_label:hover {
 
 a.list_enrollment_classes_attended_label:link {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_classes_attended_label:visited {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_classes_attended_label:hover {
@@ -61,18 +51,12 @@ a.list_enrollment_classes_attended_label:hover {
 
 a.list_enrollment_fees_due_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 401px;
 }
 
 a.list_enrollment_fees_due_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 401px;
 }
 
 a.list_enrollment_fees_due_label:hover {
@@ -82,18 +66,12 @@ a.list_enrollment_fees_due_label:hover {
 
 a.list_enrollment_first_name_label:link {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_first_name_label:visited {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_first_name_label:hover {
@@ -103,18 +81,12 @@ a.list_enrollment_first_name_label:hover {
 
 a.list_enrollment_gender_label:link {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_enrollment_gender_label:visited {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_enrollment_gender_label:hover {
@@ -124,18 +96,12 @@ a.list_enrollment_gender_label:hover {
 
 a.list_enrollment_last_name_label:link {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_last_name_label:visited {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_last_name_label:hover {
@@ -145,18 +111,12 @@ a.list_enrollment_last_name_label:hover {
 
 a.list_enrollment_leave_reason_label:link {
     color: #122ed9;
-    left: 616px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_enrollment_leave_reason_label:visited {
     color: #122ed9;
-    left: 616px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_enrollment_leave_reason_label:hover {
@@ -208,18 +168,12 @@ a.list_enrollment_payments_label:hover {
 
 a.list_enrollment_period_label:link {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_period_label:visited {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_period_label:hover {
@@ -252,18 +206,12 @@ a.list_enrollment_prev_twenty:hover {
 
 a.list_enrollment_school_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_enrollment_school_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_enrollment_school_label:hover {
@@ -294,18 +242,12 @@ a.list_enrollment_select:hover {
 
 a.list_enrollment_special_info_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_enrollment_special_info_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_enrollment_special_info_label:hover {
@@ -315,18 +257,12 @@ a.list_enrollment_special_info_label:hover {
 
 a.list_enrollment_sponsored_label:link {
     color: #122ed9;
-    left: 365px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_sponsored_label:visited {
     color: #122ed9;
-    left: 365px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_enrollment_sponsored_label:hover {
@@ -336,15 +272,11 @@ a.list_enrollment_sponsored_label:hover {
 
 a.list_enrollment_student_id_label:link {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_enrollment_student_id_label:visited {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
 }
 
@@ -376,14 +308,11 @@ a.list_enrollment_tuition_fees_label:hover {
 
 a.list_enrollment_village_label:link {
     color: #122ed9;
-    left: 356px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_enrollment_village_label:visited {
     color: #122ed9;
-    left: 356px;
     text-decoration: none;
 }
 
@@ -398,12 +327,69 @@ a.list_enrollment_village_label:hover {
     top: 35px;
 }
 
+div.list_enrollment_birth_date_label {
+	display: none;
+}
+
+div.list_enrollment_classes_attended_label {
+	display: none;
+}
+
+div.list_enrollment_fees_due_label {
+	display: none;
+}
+
+div.list_enrollment_first_name_label {
+	display: none;
+}
+
+div.list_enrollment_gender_label {
+	display: none;
+}
+
+div.list_enrollment_last_name_label {
+	display: none;
+}
+
+div.list_enrollment_leave_reason_label {
+	display: none;
+}
+
+div.list_enrollment_period_label {
+	display: none;
+}
+
+div.list_enrollment_school_label {
+	display: none;
+}
+
+div.list_enrollment_special_info_label {
+	display: none;
+}
+
+div.list_enrollment_sponsored_label {
+	display: none;
+}
+
+div.list_enrollment_student_id_label {
+	display: none;
+}
+
+div.list_enrollment_village_label {
+	display: none;
+}
+
 .enrollment_list h3 {
 	height: 22px;
 }
 
 .list_enrollment_birth_date {
     left: 120px;
+    position: absolute;
+}
+
+.list_enrollment_birth_date_label {
+	left: 16px;
     position: absolute;
 }
 
@@ -436,6 +422,12 @@ a.list_enrollment_village_label:hover {
     top: 8px;
 }
 
+.list_enrollment_classes_attended_label {
+	left: 490px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_enrollment_delete {
     height: 30px;
     left: 930px;
@@ -466,6 +458,12 @@ a.list_enrollment_village_label:hover {
     width: 179px;
 }
 
+.list_enrollment_fees_due_label {
+	left: 16px;
+    position: absolute;
+    top: 401px;
+}
+
 .list_enrollment_first_class_attended_required_ind {
     color: #dc1d38;
     display: none;
@@ -481,8 +479,20 @@ a.list_enrollment_village_label:hover {
     top: 8px;
 }
 
+.list_enrollment_first_name_label {
+	left: 25px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_enrollment_gender {
     left: 740px;
+    position: absolute;
+    top: 51px;
+}
+
+.list_enrollment_gender_label {
+	left: 662px;
     position: absolute;
     top: 51px;
 }
@@ -510,6 +520,12 @@ a.list_enrollment_village_label:hover {
     left: 187px;
     position: absolute;
     top: 8px;
+}
+
+.list_enrollment_last_name_label {
+	left: 195px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_enrollment_last_update_by {
@@ -555,6 +571,12 @@ a.list_enrollment_village_label:hover {
     position: absolute;
     top: 296px;
     width: 365px;
+}
+
+.list_enrollment_leave_reason_label {
+	left: 616px;
+    position: absolute;
+    top: 226px;
 }
 
 .list_enrollment_next_twenty_wait {
@@ -690,6 +712,12 @@ a.list_enrollment_village_label:hover {
     top: 11px;
 }
 
+.list_enrollment_period_label {
+	left: 670px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_enrollment_period_lookup {
 	display: none;
 	height: 30px;
@@ -733,6 +761,12 @@ a.list_enrollment_village_label:hover {
     top: 226px;
 }
 
+.list_enrollment_school_label {
+	left: 16px;
+    position: absolute;
+    top: 226px;
+}
+
 .list_enrollment_special_info {
     height: 100px;
     left: 16px;
@@ -742,14 +776,31 @@ a.list_enrollment_village_label:hover {
     width: 330px;
 }
 
+.list_enrollment_special_info_label {
+	left: 16px;
+    position: absolute;
+    top: 51px;
+}
+
 .list_enrollment_sponsored {
     left: 357px;
     position: absolute;
     top: 8px;
 }
 
+.list_enrollment_sponsored_label {
+	left: 365px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_enrollment_student_id {
     left: 683px;
+    position: absolute;
+}
+
+.list_enrollment_student_id_label {
+	left: 662px;
     position: absolute;
 }
 
@@ -763,6 +814,11 @@ a.list_enrollment_village_label:hover {
 
 .list_enrollment_village {
     left: 428px;
+    position: absolute;
+}
+
+.list_enrollment_village_label {
+	left: 356px;
     position: absolute;
 }
 

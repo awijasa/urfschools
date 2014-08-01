@@ -127,14 +127,17 @@ class ListItemFormatter {
 	                
 	                /* Birth Date */
 	                a( class: "list_enrollment_birth_date_label", href: "javascript:void( 0 )", "Birth Date:" )
+	                div( class: "list_enrollment_birth_date_label", "Birth Date:" )
 	                div( class: "list_enrollment_birth_date", enrollmentDocumentFieldNames.contains( "birthDate" )? enrollmentDocument.getOnlyField( "birthDate" ).getDate().format( "MMM d yyyy" ): "" )
 	                
 	                /* Village */
 	                a( class: "list_enrollment_village_label", href: "javascript:void( 0 )", "Village:" )
+	                div( class: "list_enrollment_village_label", "Village:" )
 	                div( class: "list_enrollment_village", enrollmentDocumentFieldNames.contains( "village" )? enrollmentDocument.getOnlyField( "village" ).getText(): "" )
 	                
 	                /* ID */
 	                a( class: "list_enrollment_student_id_label", href: "javascript:void( 0 )", "ID" )
+	                div( class: "list_enrollment_student_id_label", "ID" )
 	                div( class: "list_enrollment_student_id", ": ${ enrollmentDocument.getOnlyField( "studentId" ).getAtom() }" )
 	                
 	                /* Parent/Guardians Table */
@@ -231,10 +234,12 @@ class ListItemFormatter {
 	                
 	                /* Gender Code */
 	                a( class: "list_enrollment_gender_label", href: "javascript:void( 0 )", "Gender:" )
+	                div( class: "list_enrollment_gender_label", "Gender:" )
 	                div( class: "list_enrollment_gender", enrollmentDocumentFieldNames.contains( "genderCode" )? enrollmentDocument.getOnlyField( "genderCode" ).getText(): "" )
 	                
 	                /* Special Info/Condition */
 	                a( class: "list_enrollment_special_info_label", href: "javascript:void( 0 )", "Special Info/Condition:" )
+	                div( class: "list_enrollment_special_info_label", "Special Info/Condition:" )
 	                div( class: "list_enrollment_special_info" ) {
 						mkp.yieldUnescaped( StringEscapeUtils.escapeHtml4( enrollmentDocumentFieldNames.contains( "specialInfo" )? enrollmentDocument.getOnlyField( "specialInfo" ).getText(): "" ).replaceAll( "\n", "<br>" ) )
 	                }
@@ -243,10 +248,12 @@ class ListItemFormatter {
 	                
 	                /* School List Box */
 	                a( class: "list_enrollment_school_label", href: "javascript:void( 0 )", "School:" )
+	                div( class: "list_enrollment_school_label", "School:" )
 	                div( class: "list_enrollment_school", enrollmentDocument.getOnlyField( "schoolName" ).getText() )
 	                
 	                /* Leave Reason Category List Box */
 	                a( class: "list_enrollment_leave_reason_label", href: "javascript:void( 0 )", "Leave Reason:" )
+	                div( class: "list_enrollment_leave_reason_label", "Leave Reason:" )
 	                div( class: "list_enrollment_leave_reason_category", enrollmentDocumentFieldNames.contains( "leaveReasonCategory" )? enrollmentDocument.getOnlyField( "leaveReasonCategory" ).getText(): "" )
 	                select( autocomplete: "off", class: "list_enrollment_leave_reason_category", name: "leaveReasonCategory" ) {
 	                    option( value: "Leave Reason Category" )
@@ -284,6 +291,7 @@ class ListItemFormatter {
 					
 					/* Fees Due */
 					a( class: "list_enrollment_fees_due_label", href: "javascript:void( 0 )", "Fees Due" )
+					div( class: "list_enrollment_fees_due_label", "Fees Due" )
 					div( class: "list_enrollment_fees_due", currencyFormat.format( enrollmentDocument.getOnlyField( "feesDue" ).getNumber() ) )
 	                
 	                /* Last Update */
@@ -557,6 +565,7 @@ class ListItemFormatter {
     	new MarkupBuilder( writer ).div( class: "list_parent_details" ) {
     		form( action: "javascript:void( 0 )", name: "parent_details_form" ) {
     			a( class: "list_parent_email_label", href: "javascript:void( 0 )", "Email" )
+    			div( class: "list_parent_email_label", "Email" )
     			div( class: "list_parent_email_colon", ":" )
     			
 				if( urfUser != null ) {
@@ -565,6 +574,7 @@ class ListItemFormatter {
 				}
     			
     			a( class: "list_parent_secondary_phone_label", href: "javascript:void( 0 )", "Secondary Phone:" )
+    			div( class: "list_parent_secondary_phone_label", "Secondary Phone:" )
     			
 				if( urfUser != null ) {
 					div( class: "list_parent_secondary_phone", parent.secondaryPhone )
@@ -572,11 +582,13 @@ class ListItemFormatter {
 				}
     			
     			a( class: "list_parent_id_label", href: "javascript:void( 0 )", "ID:" )
+    			div( class: "list_parent_id_label", "ID:" )
     			
 				if( urfUser != null )
 					div( class: "list_parent_id", parent.parentId )
     			
     			a( class: "list_parent_profession_label", href: "javascript:void( 0 )", "Profession" )
+    			div( class: "list_parent_profession_label", "Profession" )
     			div( class: "list_parent_profession_colon", ":" )
     			
 				if( urfUser != null ) {
@@ -970,16 +982,19 @@ class ListItemFormatter {
 	                
 	                /* Birth Date Text Field */
 	                a( class: "list_student_birth_date_label", href: "javascript:void( 0 )", "Birth Date:" )
+	                div( class: "list_student_birth_date_label", "Birth Date:" )
 	                div( class: "list_student_birth_date", "${ studentDocumentFieldNames.contains( "birthDate" )? studentDocument.getOnlyField( "birthDate" ).getDate().format( "MMM d yyyy" ): "" }" )
 	                input( autocomplete: "off", class: "list_student_birth_date ui-corner-all", name: "birthDate", type: "text" )
 	                
 	                /* Village Text Field */
 	                a( class: "list_student_village_label", href: "javascript:void( 0 )", "Village:" )
+	                div( class: "list_student_village_label", "Village:" )
 	                div( class: "list_student_village", studentDocumentFieldNames.contains( "village" )? studentDocument.getOnlyField( "village" ).getText(): "" )
 	                input( autocomplete: "off", class: "list_student_village ui-corner-all", name: "village", type: "text" )
 	                
 	                /* ID Text Field */
 	                a( class: "list_student_id_label", href: "javascript:void( 0 )", "ID" )
+	                div( class: "list_student_id_label", "ID" )
 	                div( class: "list_student_id", ": ${ studentDocument.getOnlyField( "studentId" ).getAtom() }" )
 	                
 	                /* Parent/Guardians Table */
@@ -1080,6 +1095,7 @@ class ListItemFormatter {
 	                
 	                /* Gender Code List Box */
 	                a( class: "list_student_gender_label", href: "javascript:void( 0 )", "Gender:" )
+	                div( class: "list_student_gender_label", "Gender:" )
 	                div( class: "list_student_gender", studentDocumentFieldNames.contains( "genderCode" )? studentDocument.getOnlyField( "genderCode" ).getText(): "" )
 	                
 	                select( autocomplete: "off", class: "list_student_gender", name: "genderCode" ) {
@@ -1094,6 +1110,7 @@ class ListItemFormatter {
 	                
 	                /* Special Info/Condition Text Area */
 	                a( class: "list_student_special_info_label", href: "javascript:void( 0 )", "Special Info/Condition:" )
+	                div( class: "list_student_special_info_label", "Special Info/Condition:" )
 	                div( class: "list_student_special_info" ) {
 						mkp.yieldUnescaped( StringEscapeUtils.escapeHtml4( studentDocumentFieldNames.contains( "specialInfo" )? studentDocument.getOnlyField( "specialInfo" ).getText(): "" ).replaceAll( "\n", "<br>" ) )
 	                }
@@ -1103,10 +1120,12 @@ class ListItemFormatter {
 	                
 	                /* Last Enrollment School List Box */
 	                a( class: "list_student_school_label", href: "javascript:void( 0 )", "School:" )
+	                div( class: "list_student_school_label", "School:" )
 	                div( class: "list_student_school", studentDocument.getOnlyField( "lastEnrollmentSchool" ).getText() )
 	                
 	                /* Last Enrollment Leave Reason Category List Box */
 	                a( class: "list_student_leave_reason_label", href: "javascript:void( 0 )", "Leave Reason:" )
+	                div( class: "list_student_leave_reason_label", "Leave Reason:" )
 	                div( class: "list_student_leave_reason_category", studentDocumentFieldNames.contains( "lastEnrollmentLeaveReasonCategory" )? studentDocument.getOnlyField( "lastEnrollmentLeaveReasonCategory" ).getText(): "" )
 	                
 	                select( autocomplete: "off", class: "list_student_leave_reason_category", name: "enrollmentLeaveReasonCategory" ) {

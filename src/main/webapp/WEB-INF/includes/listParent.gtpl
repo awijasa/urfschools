@@ -2,10 +2,15 @@
   if( user == null ) redirect "/index.gtpl"
   else {
 	  html.a( class: "list_parent_first_name_label", href: "javascript:void( 0 )", "First Name" )
+	  html.div( class: "list_parent_first_name_label", "First Name" )
 	  html.a( class: "list_parent_last_name_label", href: "javascript:void( 0 )", "Last Name" )
+	  html.div( class: "list_parent_last_name_label", "Last Name" )
 	  html.a( class: "list_parent_deceased_label", href: "javascript:void( 0 )", "Deceased" )
+	  html.div( class: "list_parent_deceased_label", "Deceased" )
 	  html.a( class: "list_parent_village_label", href: "javascript:void( 0 )", "Village" )
+	  html.div( class: "list_parent_village_label", "Village" )
 	  html.a( class: "list_parent_primary_phone_label", href: "javascript:void( 0 )", "Primary Phone" )
+	  html.div( class: "list_parent_primary_phone_label", "Primary Phone" )
 	  html.div( class: "actions_label", "Actions" )
 	
 	  int activeSeqNo = 0

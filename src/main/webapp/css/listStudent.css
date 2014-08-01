@@ -1,14 +1,10 @@
 a.list_student_birth_date_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_student_birth_date_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
@@ -40,18 +36,12 @@ a.list_student_boarding_fees_label:hover {
 
 a.list_student_classes_attended_label:link {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_classes_attended_label:visited {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_classes_attended_label:hover {
@@ -76,18 +66,12 @@ a.list_student_create_link:hover {
 
 a.list_student_enrollment_period_label:link {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_enrollment_period_label:visited {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_enrollment_period_label:hover {
@@ -97,18 +81,12 @@ a.list_student_enrollment_period_label:hover {
 
 a.list_student_fees_due_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 401px;
 }
 
 a.list_student_fees_due_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 401px;
 }
 
 a.list_student_fees_due_label:hover {
@@ -118,18 +96,12 @@ a.list_student_fees_due_label:hover {
 
 a.list_student_first_name_label:link {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_first_name_label:visited {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_first_name_label:hover {
@@ -139,18 +111,12 @@ a.list_student_first_name_label:hover {
 
 a.list_student_gender_label:link {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_student_gender_label:visited {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_student_gender_label:hover {
@@ -160,15 +126,11 @@ a.list_student_gender_label:hover {
 
 a.list_student_id_label:link {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_student_id_label:visited {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
 }
 
@@ -179,18 +141,12 @@ a.list_student_id_label:hover {
 
 a.list_student_last_name_label:link {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_last_name_label:visited {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_last_name_label:hover {
@@ -200,18 +156,12 @@ a.list_student_last_name_label:hover {
 
 a.list_student_leave_reason_label:link {
     color: #122ed9;
-    left: 616px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_student_leave_reason_label:visited {
     color: #122ed9;
-    left: 616px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_student_leave_reason_label:hover {
@@ -286,18 +236,12 @@ a.list_student_prev_twenty:hover {
 
 a.list_student_school_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_student_school_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 226px;
 }
 
 a.list_student_school_label:hover {
@@ -328,18 +272,12 @@ a.list_student_select:hover {
 
 a.list_student_special_info_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_student_special_info_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_student_special_info_label:hover {
@@ -349,18 +287,12 @@ a.list_student_special_info_label:hover {
 
 a.list_student_sponsored_label:link {
     color: #122ed9;
-    left: 365px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_sponsored_label:visited {
     color: #122ed9;
-    left: 365px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_student_sponsored_label:hover {
@@ -391,14 +323,11 @@ a.list_student_tuition_fees_label:hover {
 
 a.list_student_village_label:link {
     color: #122ed9;
-    left: 356px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_student_village_label:visited {
     color: #122ed9;
-    left: 356px;
     text-decoration: none;
 }
 
@@ -413,11 +342,56 @@ a.list_student_village_label:hover {
     top: 35px;
 }
 
+div.list_student_birth_date_label {
+	display: none;
+}
+
+div.list_student_classes_attended_label {
+	display: none;
+}
+
+div.list_student_enrollment_period_label {
+	display: none;
+}
+
 div.list_student_fees_due_label {
     display: none;
-    left: 16px;
-    position: absolute;
-    top: 401px;
+}
+
+div.list_student_first_name_label {
+    display: none;
+}
+
+div.list_student_gender_label {
+    display: none;
+}
+
+div.list_student_id_label {
+    display: none;
+}
+
+div.list_student_last_name_label {
+    display: none;
+}
+
+div.list_student_leave_reason_label {
+    display: none;
+}
+
+div.list_student_school_label {
+    display: none;
+}
+
+div.list_student_special_info_label {
+    display: none;
+}
+
+div.list_student_sponsored_label {
+    display: none;
+}
+
+div.list_student_village_label {
+    display: none;
 }
 
 input.list_student_birth_date {
@@ -509,6 +483,11 @@ input.list_student_village {
     position: absolute;
 }
 
+.list_student_birth_date_label {
+	left: 16px;
+    position: absolute;
+}
+
 .list_student_boarding_fees {
     left: 175px;
     position: absolute;
@@ -529,6 +508,12 @@ input.list_student_village {
     left: 472px;
     position: absolute;
     top: 8px;
+}
+
+.list_student_classes_attended_label {
+	left: 490px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_student_classes_attended_hyphen {
@@ -581,6 +566,12 @@ input.list_student_village {
     top: 8px;
 }
 
+.list_student_enrollment_period_label {
+	left: 670px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_student_enrollment_period_lookup {
 	display: none;
 	height: 30px;
@@ -607,6 +598,12 @@ input.list_student_village {
     width: 179px;
 }
 
+.list_student_fees_due_label {
+	left: 16px;
+    position: absolute;
+    top: 401px;
+}
+
 .list_student_first_class_attended_required_ind {
     color: #dc1d38;
     display: none;
@@ -620,6 +617,12 @@ input.list_student_village {
     left: 30px;
     position: absolute;
     top: 8px;
+}
+
+.list_student_first_name_label {
+	left: 25px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_student_first_name_required_ind {
@@ -637,8 +640,19 @@ input.list_student_village {
     top: 51px;
 }
 
+.list_student_gender_label {
+	left: 662px;
+    position: absolute;
+    top: 51px;
+}
+
 .list_student_id {
     left: 683px;
+    position: absolute;
+}
+
+.list_student_id_label {
+	left: 662px;
     position: absolute;
 }
 
@@ -655,6 +669,12 @@ input.list_student_village {
     left: 187px;
     position: absolute;
     top: 8px;
+}
+
+.list_student_last_name_label {
+	left: 195px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_student_last_update_by {
@@ -700,6 +720,12 @@ input.list_student_village {
     position: absolute;
     top: 296px;
     width: 365px;
+}
+
+.list_student_leave_reason_label {
+	left: 616px;
+    position: absolute;
+    top: 226px;
 }
 
 .list_student_other_fees {
@@ -854,6 +880,12 @@ input.list_student_village {
     top: 226px;
 }
 
+.list_student_school_label {
+	left: 16px;
+    position: absolute;
+    top: 226px;
+}
+
 .list_student_special_info {
     height: 100px;
     left: 16px;
@@ -863,10 +895,22 @@ input.list_student_village {
     width: 330px;
 }
 
+.list_student_special_info_label {
+	left: 16px;
+    position: absolute;
+    top: 51px;
+}
+
 .list_student_sponsored {
     left: 357px;
     position: absolute;
     top: 8px;
+}
+
+.list_student_sponsored_label {
+	left: 365px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_student_stale_ind {
@@ -883,6 +927,11 @@ input.list_student_village {
 
 .list_student_village {
     left: 428px;
+    position: absolute;
+}
+
+.list_student_village_label {
+	left: 356px;
     position: absolute;
 }
 

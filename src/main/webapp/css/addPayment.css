@@ -265,6 +265,26 @@ a.add_payment_term_selector:hover {
     display: none;
 }
 
+.add_payment_list_funding_source a.list_parent_deceased_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_email_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_first_name_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_id_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_last_name_label {
+	display: none;
+}
+
 .add_payment_list_funding_source a.list_parent_next_twenty:link {
     color: #122ed9;
     font-size: 0.8em;
@@ -309,6 +329,58 @@ a.add_payment_term_selector:hover {
 .add_payment_list_funding_source a.list_parent_prev_twenty:hover {
     color: #122ed9;
     text-decoration: underline;
+}
+
+.add_payment_list_funding_source a.list_parent_primary_phone_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_profession_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_secondary_phone_label {
+	display: none;
+}
+
+.add_payment_list_funding_source a.list_parent_village_label {
+	display: none;
+}
+
+.add_payment_list_funding_source div.list_parent_deceased_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_email_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_first_name_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_id_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_last_name_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_primary_phone_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_profession_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_secondary_phone_label {
+	display: block;
+}
+
+.add_payment_list_funding_source div.list_parent_village_label {
+	display: block;
 }
 
 .add_payment_list_funding_source .list_funding_source_school {

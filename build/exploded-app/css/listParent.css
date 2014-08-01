@@ -74,15 +74,11 @@ a.list_parent_deceased_label:hover {
 
 a.list_parent_email_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_parent_email_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
 }
 
@@ -93,18 +89,12 @@ a.list_parent_email_label:hover {
 
 a.list_parent_first_name_label:link {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_first_name_label:visited {
     color: #122ed9;
-    left: 25px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_first_name_label:hover {
@@ -114,18 +104,12 @@ a.list_parent_first_name_label:hover {
 
 a.list_parent_id_label:link {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_parent_id_label:visited {
     color: #122ed9;
-    left: 662px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_parent_id_label:hover {
@@ -135,18 +119,12 @@ a.list_parent_id_label:hover {
 
 a.list_parent_last_name_label:link {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_last_name_label:visited {
     color: #122ed9;
-    left: 195px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_last_name_label:hover {
@@ -179,18 +157,12 @@ a.list_parent_prev_twenty:hover {
 
 a.list_parent_primary_phone_label:link {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_primary_phone_label:visited {
     color: #122ed9;
-    left: 670px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_primary_phone_label:hover {
@@ -200,18 +172,12 @@ a.list_parent_primary_phone_label:hover {
 
 a.list_parent_profession_label:link {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_parent_profession_label:visited {
     color: #122ed9;
-    left: 16px;
-    position: absolute;
     text-decoration: none;
-    top: 51px;
 }
 
 a.list_parent_profession_label:hover {
@@ -244,14 +210,11 @@ a.list_parent_relative_selector:hover {
 
 a.list_parent_secondary_phone_label:link {
     color: #122ed9;
-    left: 356px;
-    position: absolute;
     text-decoration: none;
 }
 
 a.list_parent_secondary_phone_label:visited {
     color: #122ed9;
-    left: 356px;
     text-decoration: none;
 }
 
@@ -283,18 +246,12 @@ a.list_parent_select:hover {
 
 a.list_parent_village_label:link {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_village_label:visited {
     color: #122ed9;
-    left: 490px;
-    position: absolute;
     text-decoration: none;
-    top: 35px;
 }
 
 a.list_parent_village_label:hover {
@@ -306,6 +263,45 @@ a.list_parent_village_label:hover {
     left: 915px;
     position: absolute;
     top: 35px;
+}
+
+div.list_parent_deceased_label {
+    display: none;
+    left: 365px;
+    position: absolute;
+    top: 35px;
+}
+
+div.list_parent_email_label {
+    display: none;
+}
+
+div.list_parent_first_name_label {
+    display: none;
+}
+
+div.list_parent_id_label {
+    display: none;
+}
+
+div.list_parent_last_name_label {
+    display: none;
+}
+
+div.list_parent_primary_phone_label {
+    display: none;
+}
+
+div.list_parent_profession_label {
+    display: none;
+}
+
+div.list_parent_secondary_phone_label {
+    display: none;
+}
+
+div.list_parent_village_label {
+    display: none;
 }
 
 input.list_parent_email {
@@ -542,10 +538,21 @@ label.list_parent_deceased_label input {
 	position: absolute;
 }
 
+.list_parent_email_label {
+	left: 16px;
+    position: absolute;
+}
+
 .list_parent_first_name {
     left: 30px;
     position: absolute;
     top: 8px;
+}
+
+.list_parent_first_name_label {
+	left: 25px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_parent_first_name_required_ind {
@@ -573,10 +580,22 @@ label.list_parent_deceased_label input {
     top: 51px;
 }
 
+.list_parent_id_label {
+	left: 662px;
+    position: absolute;
+    top: 51px;
+}
+
 .list_parent_last_name {
     left: 187px;
     position: absolute;
     top: 8px;
+}
+
+.list_parent_last_name_label {
+	left: 195px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_parent_last_update_by {
@@ -639,6 +658,12 @@ label.list_parent_deceased_label input {
     top: 8px;
 }
 
+.list_parent_primary_phone_label {
+	left: 670px;
+    position: absolute;
+    top: 35px;
+}
+
 .list_parent_profession {
     left: 140px;
     position: absolute;
@@ -648,6 +673,12 @@ label.list_parent_deceased_label input {
 .list_parent_profession_colon {
 	color: #122ed9;
     left: 130px;
+    position: absolute;
+    top: 51px;
+}
+
+.list_parent_profession_label {
+	left: 16px;
     position: absolute;
     top: 51px;
 }
@@ -814,10 +845,21 @@ label.list_parent_deceased_label input {
     position: absolute;
 }
 
+.list_parent_secondary_phone_label {
+	left: 356px;
+    position: absolute;
+}
+
 .list_parent_village {
     left: 472px;
     position: absolute;
     top: 8px;
+}
+
+.list_parent_village_label {
+	left: 490px;
+    position: absolute;
+    top: 35px;
 }
 
 .list_record_form a.list_parent_next_twenty:link {

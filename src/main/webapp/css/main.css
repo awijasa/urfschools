@@ -30,6 +30,110 @@ body {
     display: none;
 }
 
+.dialog_enrollment_lookup a.list_enrollment_birth_date_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_classes_attended_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_fees_due_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_first_name_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_gender_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_last_name_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_leave_reason_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_period_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_school_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_special_info_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_sponsored_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_student_id_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup a.list_enrollment_village_label {
+	display: none;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_birth_date_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_classes_attended_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_fees_due_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_first_name_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_gender_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_last_name_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_leave_reason_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_period_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_school_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_special_info_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_sponsored_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_student_id_label {
+	display: block;
+}
+
+.dialog_enrollment_lookup div.list_enrollment_village_label {
+	display: block;
+}
+
 .dialog_enrollment_lookup .list_enrollment_delete {
     display: none;
 }
@@ -116,6 +220,26 @@ body {
     display: none;
 }
 
+.dialog_list_parent a.list_parent_deceased_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_email_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_first_name_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_id_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_last_name_label {
+	display: none;
+}
+
 .dialog_list_parent a.list_parent_next_twenty:link {
     color: #122ed9;
     font-size: 0.8em;
@@ -137,6 +261,58 @@ body {
 .dialog_list_parent a.list_parent_next_twenty:hover {
     color: #122ed9;
     text-decoration: underline;
+}
+
+.dialog_list_parent a.list_parent_primary_phone_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_profession_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_secondary_phone_label {
+	display: none;
+}
+
+.dialog_list_parent a.list_parent_village_label {
+	display: none;
+}
+
+.dialog_list_parent div.list_parent_deceased_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_email_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_first_name_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_id_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_last_name_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_primary_phone_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_profession_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_secondary_phone_label {
+	display: block;
+}
+
+.dialog_list_parent div.list_parent_village_label {
+	display: block;
 }
 
 .dialog_list_parent .list_funding_source_school {
@@ -228,6 +404,78 @@ body {
     display: none;
 }
 
+.dialog_parent_lookup a.list_parent_deceased_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_email_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_first_name_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_id_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_last_name_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_primary_phone_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_profession_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_secondary_phone_label {
+	display: none;
+}
+
+.dialog_parent_lookup a.list_parent_village_label {
+	display: none;
+}
+
+.dialog_parent_lookup div.list_parent_deceased_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_email_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_first_name_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_id_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_last_name_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_primary_phone_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_profession_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_secondary_phone_label {
+	display: block;
+}
+
+.dialog_parent_lookup div.list_parent_village_label {
+	display: block;
+}
+
 .dialog_parent_lookup .list_funding_source_school {
 	display: none;
 }
@@ -269,11 +517,107 @@ body {
     display: none;
 }
 
+.dialog_student_lookup a.list_student_birth_date_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_classes_attended_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_enrollment_period_label {
+	display: none;
+}
+
 .dialog_student_lookup a.list_student_fees_due_label {
 	display: none;
 }
 
+.dialog_student_lookup a.list_student_first_name_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_gender_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_id_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_last_name_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_leave_reason_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_school_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_special_info_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_sponsored_label {
+	display: none;
+}
+
+.dialog_student_lookup a.list_student_village_label {
+	display: none;
+}
+
+.dialog_student_lookup div.list_student_birth_date_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_classes_attended_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_enrollment_period_label {
+	display: block;
+}
+
 .dialog_student_lookup div.list_student_fees_due_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_first_name_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_gender_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_id_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_last_name_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_leave_reason_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_school_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_special_info_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_sponsored_label {
+	display: block;
+}
+
+.dialog_student_lookup div.list_student_village_label {
 	display: block;
 }
 

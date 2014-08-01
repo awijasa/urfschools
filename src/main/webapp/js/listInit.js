@@ -506,7 +506,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_birth_date_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_birth_date_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentBirthDateFilterSortByDialog = jQuery( ".enrollment_birth_date_filter_sortby_dialog" );
 				
@@ -573,12 +573,37 @@ function initEnrollmentList() {
 							}
 					);
 					
-					enrollmentBoardingFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".dialog_enrollment_lookup" ).length == 0 ) {	
+						enrollmentBoardingFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).show();
+						enrollmentBoardingFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).show();
+						enrollmentBoardingFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var enrollmentFilterSortByDialogFilterButton = enrollmentBoardingFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).hide();
+						enrollmentBoardingFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( enrollmentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							enrollmentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							enrollmentBoardingFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						enrollmentBoardingFeesFilterSortByDialog.dialog( "open" );
+							
+						enrollmentBoardingFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_enrollment_classes_attended_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_classes_attended_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentClassesAttendedFilterSortByDialog = jQuery( ".enrollment_classes_attended_filter_sortby_dialog" );
 				
@@ -606,7 +631,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_period_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_period_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentPeriodFilterSortByDialog = jQuery( ".enrollment_period_filter_sortby_dialog" );
 				
@@ -677,7 +702,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_first_name_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_first_name_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentFirstNameFilterSortByDialog = jQuery( ".enrollment_first_name_filter_sortby_dialog" );
 				
@@ -720,7 +745,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_gender_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_gender_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentGenderFilterSortByDialog = jQuery( ".enrollment_gender_filter_sortby_dialog" );
 				
@@ -748,7 +773,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_student_id_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_student_id_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentStudentIdFilterSortByDialog = jQuery( ".enrollment_student_id_filter_sortby_dialog" );
 				
@@ -776,7 +801,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_last_name_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_last_name_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentLastNameFilterSortByDialog = jQuery( ".enrollment_last_name_filter_sortby_dialog" );
 				
@@ -819,7 +844,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_leave_reason_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_leave_reason_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentLeaveReasonFilterSortByDialog = jQuery( ".enrollment_leave_reason_filter_sortby_dialog" );
 				
@@ -917,7 +942,32 @@ function initEnrollmentList() {
 							}
 					);
 					
-					enrollmentOtherFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".dialog_enrollment_lookup" ).length == 0 ) {	
+						enrollmentOtherFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).show();
+						enrollmentOtherFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).show();
+						enrollmentOtherFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var enrollmentFilterSortByDialogFilterButton = enrollmentOtherFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).hide();
+						enrollmentOtherFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( enrollmentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							enrollmentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							enrollmentOtherFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						enrollmentOtherFeesFilterSortByDialog.dialog( "open" );
+							
+						enrollmentOtherFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
@@ -992,12 +1042,37 @@ function initEnrollmentList() {
 							}
 					);
 					
-					enrollmentPaymentsFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".dialog_enrollment_lookup" ).length == 0 ) {	
+						enrollmentPaymentsFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).show();
+						enrollmentPaymentsFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).show();
+						enrollmentPaymentsFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var enrollmentFilterSortByDialogFilterButton = enrollmentPaymentsFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).hide();
+						enrollmentPaymentsFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( enrollmentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							enrollmentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							enrollmentPaymentsFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						enrollmentPaymentsFilterSortByDialog.dialog( "open" );
+							
+						enrollmentPaymentsFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_enrollment_school_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_school_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentSchoolFilterSortByDialog = jQuery( ".enrollment_school_filter_sortby_dialog" );
 				
@@ -1025,7 +1100,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_special_info_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_special_info_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentSpecialInfoFilterSortByDialog = jQuery( ".enrollment_special_info_filter_sortby_dialog" );
 				
@@ -1053,7 +1128,7 @@ function initEnrollmentList() {
 			}
 	);
 	
-	jQuery( ".list_enrollment_sponsored_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_sponsored_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentSponsoredFilterSortByDialog = jQuery( ".enrollment_sponsored_filter_sortby_dialog" );
 				
@@ -1120,12 +1195,37 @@ function initEnrollmentList() {
 							}
 					);
 					
-					enrollmentTuitionFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".dialog_enrollment_lookup" ).length == 0 ) {	
+						enrollmentTuitionFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).show();
+						enrollmentTuitionFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).show();
+						enrollmentTuitionFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var enrollmentFilterSortByDialogFilterButton = enrollmentTuitionFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_button" ).hide();
+						enrollmentTuitionFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( enrollmentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							enrollmentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							enrollmentTuitionFeesFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						enrollmentTuitionFeesFilterSortByDialog.dialog( "open" );
+							
+						enrollmentTuitionFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_enrollment_village_label" ).off( "click" ).click(
+	jQuery( "a.list_enrollment_village_label" ).off( "click" ).click(
 			function( event ) {
 				var enrollmentVillageFilterSortByDialog = jQuery( ".enrollment_village_filter_sortby_dialog" );
 				
@@ -1819,7 +1919,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_deceased_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_deceased_label" ).off( "click" ).click(
 			function( event ) {
 				var parentDeceasedIndFilterSortByDialog = jQuery( ".parent_deceased_ind_filter_sortby_dialog" );
 				
@@ -1950,7 +2050,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_email_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_email_label" ).off( "click" ).click(
 			function( event ) {
 				var parentEmailFilterSortByDialog = jQuery( ".parent_email_filter_sortby_dialog" );
 				
@@ -1978,7 +2078,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_first_name_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_first_name_label" ).off( "click" ).click(
 			function( event ) {
 				var parentFirstNameFilterSortByDialog = jQuery( ".parent_first_name_filter_sortby_dialog" );
 				
@@ -2021,7 +2121,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_id_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_id_label" ).off( "click" ).click(
 			function( event ) {
 				var parentIdFilterSortByDialog = jQuery( ".parent_id_filter_sortby_dialog" );
 				
@@ -2049,7 +2149,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_last_name_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_last_name_label" ).off( "click" ).click(
 			function( event ) {
 				var parentLastNameFilterSortByDialog = jQuery( ".parent_last_name_filter_sortby_dialog" );
 				
@@ -2092,7 +2192,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_primary_phone_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_primary_phone_label" ).off( "click" ).click(
 			function( event ) {
 				var parentPrimaryPhoneFilterSortByDialog = jQuery( ".parent_primary_phone_filter_sortby_dialog" );
 				
@@ -2120,7 +2220,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_profession_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_profession_label" ).off( "click" ).click(
 			function( event ) {
 				var parentProfessionFilterSortByDialog = jQuery( ".parent_profession_filter_sortby_dialog" );
 				
@@ -2375,7 +2475,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_secondary_phone_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_secondary_phone_label" ).off( "click" ).click(
 			function( event ) {
 				var parentSecondaryPhoneFilterSortByDialog = jQuery( ".parent_secondary_phone_filter_sortby_dialog" );
 				
@@ -2425,7 +2525,7 @@ function initParentList() {
 			}
 	);
 	
-	jQuery( ".list_parent_village_label" ).off( "click" ).click(
+	jQuery( "a.list_parent_village_label" ).off( "click" ).click(
 			function( event ) {
 				var parentVillageFilterSortByDialog = jQuery( ".parent_village_filter_sortby_dialog" );
 				
@@ -4150,7 +4250,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_birth_date_label" ).off( "click" ).click(
+	jQuery( "a.list_student_birth_date_label" ).off( "click" ).click(
 			function( event ) {
 				var studentBirthDateFilterSortByDialog = jQuery( ".student_birth_date_filter_sortby_dialog" );
 				
@@ -4217,12 +4317,37 @@ function initStudentList() {
 							}
 					);
 					
-					studentBoardingFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".add_student_matching_list_student, .dialog_student_lookup" ).length == 0 ) {	
+						studentBoardingFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).show();
+						studentBoardingFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).show();
+						studentBoardingFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var studentFilterSortByDialogFilterButton = studentBoardingFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).hide();
+						studentBoardingFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( studentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							studentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							studentBoardingFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						studentBoardingFeesFilterSortByDialog.dialog( "open" );
+							
+						studentBoardingFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_student_classes_attended_label" ).off( "click" ).click(
+	jQuery( "a.list_student_classes_attended_label" ).off( "click" ).click(
 			function( event ) {
 				var studentClassesAttendedFilterSortByDialog = jQuery( ".student_classes_attended_filter_sortby_dialog" );
 				
@@ -4250,7 +4375,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_enrollment_period_label" ).off( "click" ).click(
+	jQuery( "a.list_student_enrollment_period_label" ).off( "click" ).click(
 			function( event ) {
 				var studentEnrollmentPeriodFilterSortByDialog = jQuery( ".student_enrollment_period_filter_sortby_dialog" );
 				
@@ -4321,7 +4446,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_first_name_label" ).off( "click" ).click(
+	jQuery( "a.list_student_first_name_label" ).off( "click" ).click(
 			function( event ) {
 				var studentFirstNameFilterSortByDialog = jQuery( ".student_first_name_filter_sortby_dialog" );
 				
@@ -4364,7 +4489,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_gender_label" ).off( "click" ).click(
+	jQuery( "a.list_student_gender_label" ).off( "click" ).click(
 			function( event ) {
 				var studentGenderFilterSortByDialog = jQuery( ".student_gender_filter_sortby_dialog" );
 				
@@ -4392,7 +4517,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_id_label" ).off( "click" ).click(
+	jQuery( "a.list_student_id_label" ).off( "click" ).click(
 			function( event ) {
 				var studentIdFilterSortByDialog = jQuery( ".student_id_filter_sortby_dialog" );
 				
@@ -4420,7 +4545,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_last_name_label" ).off( "click" ).click(
+	jQuery( "a.list_student_last_name_label" ).off( "click" ).click(
 			function( event ) {
 				var studentLastNameFilterSortByDialog = jQuery( ".student_last_name_filter_sortby_dialog" );
 				
@@ -4463,7 +4588,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_leave_reason_label" ).off( "click" ).click(
+	jQuery( "a.list_student_leave_reason_label" ).off( "click" ).click(
 			function( event ) {
 				var studentLeaveReasonFilterSortByDialog = jQuery( ".student_leave_reason_filter_sortby_dialog" );
 				
@@ -4561,7 +4686,32 @@ function initStudentList() {
 							}
 					);
 					
-					studentOtherFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".add_student_matching_list_student, .dialog_student_lookup" ).length == 0 ) {	
+						studentOtherFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).show();
+						studentOtherFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).show();
+						studentOtherFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var studentFilterSortByDialogFilterButton = studentOtherFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).hide();
+						studentOtherFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( studentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							studentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							studentOtherFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						studentOtherFeesFilterSortByDialog.dialog( "open" );
+							
+						studentOtherFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
@@ -4636,12 +4786,37 @@ function initStudentList() {
 							}
 					);
 					
-					studentPaymentsFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".add_student_matching_list_student, .dialog_student_lookup" ).length == 0 ) {	
+						studentPaymentsFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).show();
+						studentPaymentsFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).show();
+						studentPaymentsFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var studentFilterSortByDialogFilterButton = studentPaymentsFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).hide();
+						studentPaymentsFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( studentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							studentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							studentPaymentsFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						studentPaymentsFilterSortByDialog.dialog( "open" );
+							
+						studentPaymentsFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_student_school_label" ).off( "click" ).click(
+	jQuery( "a.list_student_school_label" ).off( "click" ).click(
 			function( event ) {
 				var studentSchoolFilterSortByDialog = jQuery( ".student_school_filter_sortby_dialog" );
 				
@@ -4669,7 +4844,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_special_info_label" ).off( "click" ).click(
+	jQuery( "a.list_student_special_info_label" ).off( "click" ).click(
 			function( event ) {
 				var studentSpecialInfoFilterSortByDialog = jQuery( ".student_special_info_filter_sortby_dialog" );
 				
@@ -4697,7 +4872,7 @@ function initStudentList() {
 			}
 	);
 	
-	jQuery( ".list_student_sponsored_label" ).off( "click" ).click(
+	jQuery( "a.list_student_sponsored_label" ).off( "click" ).click(
 			function( event ) {
 				var studentSponsoredFilterSortByDialog = jQuery( ".student_sponsored_filter_sortby_dialog" );
 				
@@ -4764,12 +4939,37 @@ function initStudentList() {
 							}
 					);
 					
-					studentTuitionFeesFilterSortByDialog.dialog( "open" );
+					if( jQuery( this ).parents( ".add_student_matching_list_student, .dialog_student_lookup" ).length == 0 ) {	
+						studentTuitionFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).show();
+						studentTuitionFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).show();
+						studentTuitionFeesFilterSortByDialog.dialog( "open" );
+					}
+					else {
+						var studentFilterSortByDialogFilterButton = studentTuitionFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_button" ).hide();
+						studentTuitionFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_sort_button" ).hide();
+						
+						if( studentFilterSortByDialogFilterButton.hasClass( "glyphicons_blue" ) ) {
+							studentFilterSortByDialogFilterButton.removeClass( "glyphicons_blue" ).addClass( "glyphicons" );
+							studentTuitionFeesFilterSortByDialog.find( ".student_filter_sortby_dialog_filter_panel" ).hide();
+						}
+							
+						studentTuitionFeesFilterSortByDialog.dialog( "open" );
+							
+						studentTuitionFeesFilterSortByDialog.animate(
+								{
+									height: "31px"
+								}
+						).parent().animate(
+								{
+									width: "150px"
+								}
+						);
+					}
 				}
 			}
 	);
 	
-	jQuery( ".list_student_village_label" ).off( "click" ).click(
+	jQuery( "a.list_student_village_label" ).off( "click" ).click(
 			function( event ) {
 				var studentVillageFilterSortByDialog = jQuery( ".student_village_filter_sortby_dialog" );
 				
@@ -4916,7 +5116,7 @@ function initStudentList() {
 					
 					var tabs = jQuery( "#tabs" );
 					
-					if( jQuery( "#ui-tabs-2" ).children().length == 0 ) {
+					if( jQuery( "#enrollment_tab" ).length == 0 ) {
 						tabs.on(
 							"tabsload"
 							, function( event, ui ) {
@@ -5821,7 +6021,6 @@ function toggleEnrollmentListItemElements( enrollmentListItemHeader, enrollmentL
 		", .list_enrollment_last_name" +
 		", .list_enrollment_period" +
 		", .list_enrollment_sponsored" +
-		", .list_enrollment_stale_ind" +
 		", .list_enrollment_terms"
 	).toggle();
 	
@@ -5913,8 +6112,7 @@ function toggleStudentListItemElements( studentListItemHeader, studentListItemDe
 		".list_student_classes_attended_text" +
 		", .list_student_enrollment_period" +
 		", .list_student_enrollment_terms" +
-		", .list_student_sponsored" +
-		", .list_student_stale_ind"
+		", .list_student_sponsored"
 	).toggle();
 	
 	studentListItemHeader.find( "span.list_student_leave_term" ).toggle();

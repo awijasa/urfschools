@@ -2,10 +2,15 @@ package web_inf.includes;out.print("""""");
   if( user == null ) redirect "/index.gtpl"
   else {
 	html.a( class: "list_student_first_name_label", href: "javascript:void( 0 )", "First Name" )
+	html.div( class: "list_student_first_name_label", "First Name" )
 	html.a( class: "list_student_last_name_label", href: "javascript:void( 0 )", "Last Name" )
+	html.div( class: "list_student_last_name_label", "Last Name" )
 	html.a( class: "list_student_sponsored_label", href: "javascript:void( 0 )", "Sponsored" )
+	html.div( class: "list_student_sponsored_label", "Sponsored" )
 	html.a( class: "list_student_classes_attended_label", href: "javascript:void( 0 )", "Classes Attended" )
+	html.div( class: "list_student_classes_attended_label", "Classes Attended" )
 	html.a( class: "list_student_enrollment_period_label", href: "javascript:void( 0 )", "Enrollment Period" )
+	html.div( class: "list_student_enrollment_period_label", "Enrollment Period" )
 	html.div( class: "actions_label", "Actions" )
 
 	  int activeSeqNo = 0

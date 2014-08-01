@@ -1878,7 +1878,9 @@ function showEnrollmentFilterPanel( enrollmentFilterSortByDialog ) {
 					}
 				}
 				
-				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter" ).datepicker(
+				enrollmentFilterSortByDialogBirthDateFilter = enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter" ).datepicker( "destroy" );
+				enrollmentFilterSortByDialog.find( ".enrollment_filter_sortby_dialog_birth_date_filter:visible" ).focus().blur()
+				enrollmentFilterSortByDialogBirthDateFilter.datepicker(
 				    {
 				        changeMonth: true
 				        , changeYear: true
@@ -2030,7 +2032,9 @@ function showStudentFilterPanel( studentFilterSortByDialog ) {
 					}
 				}
 				
-				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter" ).datepicker(
+				studentFilterSortByDialogBirthDateFilter = studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter" ).datepicker( "destroy" );
+				studentFilterSortByDialog.find( ".student_filter_sortby_dialog_birth_date_filter:visible" ).focus().blur();
+				studentFilterSortByDialogBirthDateFilter.datepicker(
 				    {
 				        changeMonth: true
 				        , changeYear: true

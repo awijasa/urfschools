@@ -201,7 +201,39 @@ a.add_student_link:hover {
 	display: none;
 }
 
+.add_student_matching_list_student a.list_student_birth_date_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_classes_attended_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_enrollment_period_label {
+	display: none;
+}
+
 .add_student_matching_list_student a.list_student_fees_due_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_first_name_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_gender_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_id_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_last_name_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_leave_reason_label {
 	display: none;
 }
 
@@ -228,7 +260,71 @@ a.add_student_link:hover {
     text-decoration: underline;
 }
 
+.add_student_matching_list_student a.list_student_school_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_special_info_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_sponsored_label {
+	display: none;
+}
+
+.add_student_matching_list_student a.list_student_village_label {
+	display: none;
+}
+
+.add_student_matching_list_student div.list_student_birth_date_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_classes_attended_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_enrollment_period_label {
+	display: block;
+}
+
 .add_student_matching_list_student div.list_student_fees_due_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_first_name_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_gender_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_id_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_last_name_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_leave_reason_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_school_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_special_info_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_sponsored_label {
+	display: block;
+}
+
+.add_student_matching_list_student div.list_student_village_label {
 	display: block;
 }
 
