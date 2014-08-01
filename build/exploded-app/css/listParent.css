@@ -266,6 +266,7 @@ a.list_parent_village_label:hover {
 }
 
 div.list_parent_deceased_label {
+	color: #aaaaaa;
     display: none;
     left: 365px;
     position: absolute;
@@ -273,34 +274,42 @@ div.list_parent_deceased_label {
 }
 
 div.list_parent_email_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_first_name_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_id_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_last_name_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_primary_phone_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_profession_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_secondary_phone_label {
+	color: #aaaaaa;
     display: none;
 }
 
 div.list_parent_village_label {
+	color: #aaaaaa;
     display: none;
 }
 
