@@ -1205,13 +1205,23 @@ function initMain() {
 														listEnrollment.toggle();
 													}
 												, error: function( jqXHR, textStatus, errorThrown ) {
-														alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+															alert( "We're sorry. The servers did not respond on time. Please try again" );
+														}
+														else {
+															alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														}
 													}
 											}
 									);
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 									
 									enrollmentFilterSortByDialogFilterForm.find( ".enrollment_filter_sortby_dialog_filter_apply" ).show();
 									enrollmentFilterSortByDialogFilterForm.find( ".enrollment_filter_sortby_dialog_filter_apply_wait" ).hide();
@@ -1407,13 +1417,23 @@ function initMain() {
 														listParent.toggle();
 													}
 												, error: function( jqXHR, textStatus, errorThrown ) {
-														alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+															alert( "We're sorry. The servers did not respond on time. Please try again" );
+														}
+														else {
+															alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														}
 													}
 											}
 									);
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 									
 									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply" ).show();
 									parentFilterSortByDialogFilterForm.find( ".parent_filter_sortby_dialog_filter_apply_wait" ).hide();
@@ -1621,13 +1641,23 @@ function initMain() {
 														listStudent.toggle();
 													}
 												, error: function( jqXHR, textStatus, errorThrown ) {
-														alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+															alert( "We're sorry. The servers did not respond on time. Please try again" );
+														}
+														else {
+															alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+														}
 													}
 											}
 									);
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 									
 									studentFilterSortByDialogFilterForm.find( ".student_filter_sortby_dialog_filter_apply" ).show();
 									studentFilterSortByDialogFilterForm.find( ".student_filter_sortby_dialog_filter_apply_wait" ).hide();
