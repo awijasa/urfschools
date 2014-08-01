@@ -2012,15 +2012,19 @@ function showParentFilterPanel( parentFilterSortByDialog ) {
 				}
 				
 				/* Prevent iOS7 browser input focus bug */
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_first_name_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_last_name_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_deceased_ind_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_village_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_primary_phone_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_email_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_secondary_phone_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_profession_filter:visible" ).focus().blur();
-				parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_parent_id_filter:visible" ).focus().blur();
+				var isIOS = navigator.userAgent.match( /(iPad)|(iPhone)|(iPod)/i );
+				
+				if( isIOS ) {
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_first_name_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_last_name_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_deceased_ind_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_village_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_primary_phone_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_email_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_secondary_phone_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_profession_filter:visible" ).focus().blur();
+					parentFilterSortByDialog.find( ".parent_filter_sortby_dialog_parent_id_filter:visible" ).focus().blur();
+				}
 			}
 	);
 }
