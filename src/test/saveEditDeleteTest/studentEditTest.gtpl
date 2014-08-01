@@ -975,6 +975,22 @@
       
       assert ClassAttended.findByStudentIdAndSchoolNameAndEnrollTermNoAndEnrollTermYear( "0202aoey", "Saint John's College MN", 1, 1902 ).size() == 2, "User was able to edit a Student using an invalid lastUpdateDate parameter"
       
+	  /* Enter an additional Enrollment to test if a Student edit will also edit Student data in enrollments that are not the last */
+      urlFetch.fetch( new URIBuilder( "http://localhost:8080/EnrollmentController.groovy" )
+      	.addQueryParam( "action", "save" )
+      	.addQueryParam( "studentId", "0202aoey" )
+      	.addQueryParam( "schoolName", "Saint John's College MN" )
+        .addQueryParam( "leaveReasonCategory", "Becoming a Millionaire" )
+        .addQueryParam( "leaveReason", "Won a lottery" )
+        .addQueryParam( "enrollTermSchool1", "1901 Term 2" )
+        .addQueryParam( "leaveTermSchool1", "1901 Term 2" )
+        .addQueryParam( "firstClassAttendedSchool1", "Freshman" )
+        .addQueryParam( "lastClassAttendedSchool1", "Freshman" )
+        .addQueryParam( "classAttended1901 Term 2", "Freshman" )
+        .addQueryParam( "boardingInd1901 Term 2", true ).toURL() )
+        
+      enrollmentMetaData = Enrollment.findMetaDataBySchoolName( "Saint John's College MN" )
+      
       /* Student Edit Test. */
       urlFetch.fetch( new URIBuilder( "http://localhost:8080/StudentController.groovy" )
         .addQueryParam( "action", "edit" )
@@ -1055,6 +1071,26 @@
       assert enrollmentDocument.getOnlyField( "otherFees" ).getNumber() == 12345.67, "User was unable to edit a Student"
       assert enrollmentDocument.getOnlyField( "payments" ).getNumber() == 12345.67, "User was unable to edit a Student"
       assert enrollmentDocument.getOnlyField( "feesDue" ).getNumber() == 280000, "User was unable to edit a Student"
+      
+	  enrollmentDocument = EnrollmentDocument.findByStudentIdAndEnrollTermNoAndEnrollTermYear( "0202aoey", 2, 1901 )
+      
+      assert enrollmentDocument.getOnlyField( "firstName" ).getText() == "Grace", "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "lastName" ).getText() == "Wijasa", "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "birthDate" ).getDate() == Date.parse( "MMM d yy", "Oct 10 1900" ), "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "village" ).getText() == "Bugonzi", "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "genderCode" ).getText() == "Y", "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "specialInfo" ).getText() == "Luke's sister", "User was unable to edit Student info in an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "leaveReasonCategory" ).getText() == "Becoming a Millionaire", "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "leaveReason" ).getText() == "Won a lottery", "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "termsEnrolled" ).getText().contains( "1901 Term 2" ), "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "enrollTermYear" ).getNumber() == 1901, "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "enrollTermNo" ).getNumber() == 2, "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "leaveTermYear" ).getNumber() == 1901, "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "leaveTermNo" ).getNumber() == 2, "User was able to edit an Enrollment that is not the last"
+	  assert enrollmentDocument.getOnlyField( "leaveTermEndDate" ).getDate() == Date.parse( "MMM d yyyy", "Jul 31 1901" ), "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "classesAttended" ).getText().contains( "Freshman" ), "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "firstClassAttended" ).getText() == "Freshman", "User was able to edit an Enrollment that is not the last"
+      assert enrollmentDocument.getOnlyField( "lastClassAttended" ).getText() == "Freshman", "User was able to edit an Enrollment that is not the last"
       
       student = Student.findByStudentId( "0202aoey")
       
@@ -1139,6 +1175,16 @@
       assert classAttended.tuitionFee == 60000, "User was unable to edit a Student"
       assert classAttended.boardingFee == 100000, "User was unable to edit a Student"
       assert classAttended.boardingInd == "N", "User was unable to edit a Student"
+      
+	  /* Delete the Enrollment record created just to test if StudentController can edit an Enrollment that is not last */
+      urlFetch.fetch( new URIBuilder( "http://localhost:8080/EnrollmentController.groovy" )
+        .addQueryParam( "action", "delete" )
+        .addQueryParam( "id", enrollmentDocument.getId() )
+        .addQueryParam( "studentId", "0202aoey" )
+        .addQueryParam( "nextTwentyOffset", 20 )
+        .addQueryParam( "lastUpdateDate", enrollmentDocument.getOnlyField( "lastUpdateDate" ).getDate().format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
+        
+      enrollmentMetaData = Enrollment.findMetaDataBySchoolName( "Saint John's College MN" )
       
       /* Student Edit Test, setting leaveTerm to now in order to test Fee and Payment */
       urlFetch.fetch( new URIBuilder( "http://localhost:8080/StudentController.groovy" )

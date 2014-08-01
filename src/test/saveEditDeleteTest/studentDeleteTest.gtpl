@@ -303,6 +303,14 @@
         .addQueryParam( "lastUpdateDate", parentalRelationship.lastUpdateDate.format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
       
       /* Delete the Terms created for the Student Save, Edit, and Delete Test. */
+      term = Term.findByTermSchoolAndTermNoAndYear( "Saint John's College MN", 2, 1901 )
+      
+      urlFetch.fetch( new URIBuilder( "http://localhost:8080/TermController.groovy" )
+        .addQueryParam( "action", "delete" )
+        .addQueryParam( "id", term.getKey().getId() )
+        .addQueryParam( "nextTwentyOffset", 20 )
+        .addQueryParam( "lastUpdateDate", term.lastUpdateDate.format( "MMM d yyyy HH:mm:ss.SSS zzz" ) ).toURL() )
+        
       term = Term.findByTermSchoolAndTermNoAndYear( "Saint John's College MN", 3, 1901 )
       
       urlFetch.fetch( new URIBuilder( "http://localhost:8080/TermController.groovy" )

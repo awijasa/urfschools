@@ -114,6 +114,14 @@ else {
 				)
 			}
 			
+			studentDocument = studentIndex.get( params.id )
+			
+			if(
+				Date.parse( "MMM d yyyy HH:mm:ss.SSS zzz", params.lastUpdateDate ) != studentDocument.getOnlyField( "lastUpdateDate" ).getDate() ||
+	            ( params.lastUpdateUser?: "" ) != ( studentDocument.getFieldNames().contains( "lastUpdateUser" )? studentDocument.getOnlyField( "lastUpdateUser" ).getText(): "" )
+	        )
+	            throw new StaleRecordException( params.action, "Student" )
+			
 			classesAttended = ClassAttended.findByStudentId( params.studentId )
 			classesAttended.each(
 				{
@@ -170,8 +178,6 @@ else {
 					}
 				}
 			)
-			
-			studentDocument = studentIndex.get( params.id )
             
 			fees = Fee.findByStudentId( studentDocument.getOnlyField( "studentId" ).getAtom() )
 			
@@ -200,10 +206,6 @@ else {
 						throw new AuthorizationException( it.schoolName )
 				}
 			)
-			
-			if( Date.parse( "MMM d yyyy HH:mm:ss.SSS zzz", params.lastUpdateDate ) != studentDocument.getOnlyField( "lastUpdateDate" ).getDate() ||
-                ( params.lastUpdateUser?: "" ) != ( studentDocument.getFieldNames().contains( "lastUpdateUser" )? studentDocument.getOnlyField( "lastUpdateUser" ).getText(): "" ) )
-                throw new StaleRecordException( params.action, "Student" )
             
             studentIndex.delete( studentDocument.getId() )
 			
@@ -221,35 +223,34 @@ else {
             StudentDocument.deleteMemcache()
         }
         catch( Exception e ) {
-			
         	/* Rollback the deleted Classes Attended, Enrollments, Anonymous Parental Relationships, and Student. */
-            classesAttended.each(
+            classesAttended?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
 			
-			enrollments.each(
+			enrollments?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
 			
-            anonymousParentalRelationships.each(
+			anonymousParentalRelationships?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
 			
-			relationships.each(
+			relationships?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
-            
+			
 			try { student.save() } catch( Exception saveException ) {}
             
-			enrollmentResults.each(
+            enrollmentResults?.each(
 				{
 					try{ enrollmentIndex.put( it ) } catch( Exception saveException ) {}
 				}
@@ -263,21 +264,21 @@ else {
 			
 			try { studentIndex.put( studentDocument ) } catch( Exception saveException ) {}
 			
-			try { studentMetaDataBackup.save() } catch( Exception saveException ) {}
+            try { studentMetaDataBackup.save() } catch( Exception saveException ) {}
 			
-			fees.each(
+            fees?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
 			
-			payments.each(
+			payments?.each(
 				{
 					try { it.save() } catch( Exception saveException ) {}
 				}
 			)
-            
-            /* Respond with an Internal Server error message if the delete fails. */
+			
+			/* Respond with an Internal Server error message if the delete fails. */
             response.setStatus( response.SC_INTERNAL_SERVER_ERROR )
             response.setHeader( "Response-Phrase", e.getMessage() )
         }
@@ -310,9 +311,10 @@ else {
         Entity anonymousParentalRelationship
         Entity enrollment
         Entity enrollmentBackup
-		Builder enrollmentDocBuilder = Document.newBuilder()
+		Builder enrollmentDocBuilder
 		Document enrollmentDocument
         Document enrollmentDocumentBackup
+        Results<ScoredDocument> enrollmentDocumentBackups
 		Index enrollmentIndex = search.index( "Enrollment" )
 		Entity enrollmentMetaData
 		Entity enrollmentMetaDataBackup
@@ -745,7 +747,9 @@ else {
 			if( feesDueNumber < 0 )
 				feesDueNumber = 0
 			
-            enrollmentDocBuilder.setId( "" + enrollment.getKey().getId() )
+			enrollmentDocBuilder = Document.newBuilder()
+				
+			enrollmentDocBuilder.setId( "" + enrollment.getKey().getId() )
 				.addField( Field.newBuilder().setName( "studentId" ).setAtom( studentId ) )
 				.addField( Field.newBuilder().setName( "firstName" ).setText( firstName ) )
 				.addField( Field.newBuilder().setName( "schoolName" ).setText( enrollmentSchool ) )
@@ -796,6 +800,70 @@ else {
                 
             enrollmentDocument = enrollmentDocBuilder.build()
 			enrollmentIndex.put( enrollmentDocument )
+			
+			if( params.action == "edit" ) {
+				enrollmentDocumentBackups = EnrollmentDocument.findByStudentId( studentId )
+						
+				enrollmentDocumentBackups.each(
+					{
+						if( it.getOnlyField( "schoolName" ).getText() != enrollmentSchool || it.getOnlyField( "enrollTermStartDate" ).getDate() != lastEnrollmentDate ) {
+							enrollmentDocBuilder = Document.newBuilder()
+							Set<String> itFieldNames = it.getFieldNames()
+									
+							enrollmentDocBuilder.setId( it.getId() )
+								.addField( Field.newBuilder().setName( "studentId" ).setAtom( studentId ) )
+								.addField( Field.newBuilder().setName( "firstName" ).setText( firstName ) )
+								.addField( Field.newBuilder().setName( "schoolName" ).setText( it.getOnlyField( "schoolName" ).getText() ) )
+								.addField( Field.newBuilder().setName( "termsEnrolled" ).setText( it.getOnlyField( "termsEnrolled" ).getText() ) )
+								.addField( Field.newBuilder().setName( "enrollTermYear" ).setNumber( it.getOnlyField( "enrollTermYear" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "enrollTermNo" ).setNumber( it.getOnlyField( "enrollTermNo" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "enrollTermStartDate" ).setDate( it.getOnlyField( "enrollTermStartDate" ).getDate() ) )
+								.addField( Field.newBuilder().setName( "leaveTermEndDate" ).setDate( it.getOnlyField( "leaveTermEndDate" ).getDate() ) )
+								.addField( Field.newBuilder().setName( "classesAttended" ).setText( it.getOnlyField( "classesAttended" ).getText() ) )
+								.addField( Field.newBuilder().setName( "firstClassAttended" ).setText( it.getOnlyField( "firstClassAttended" ).getText() ) )
+								.addField( Field.newBuilder().setName( "lastClassAttended" ).setText( it.getOnlyField( "lastClassAttended" ).getText() ) )
+								.addField( Field.newBuilder().setName( "tuitionFees" ).setNumber( it.getOnlyField( "tuitionFees" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "boardingFees" ).setNumber( it.getOnlyField( "boardingFees" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "otherFees" ).setNumber( it.getOnlyField( "otherFees" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "payments" ).setNumber( it.getOnlyField( "payments" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "feesDue" ).setNumber( it.getOnlyField( "feesDue" ).getNumber() ) )
+								.addField( Field.newBuilder().setName( "lastUpdateDate" ).setDate( new Date() ) )
+							
+							if( lastName != null )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastName" ).setText( lastName ) )
+									
+							if( birthDate != null )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "birthDate" ).setDate( birthDate ) )
+									
+							if( village != null )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "village" ).setText( village ) )
+									
+							if( genderCode != null )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "genderCode" ).setText( genderCode ) )
+									
+							if( specialInfo != null )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "specialInfo" ).setText( specialInfo ) )
+									
+							if( itFieldNames.contains( "leaveTermYear" ) )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermYear" ).setNumber( it.getOnlyField( "leaveTermYear" ).getNumber() ) )
+									
+							if( itFieldNames.contains( "leaveTermNo" ) )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermNo" ).setNumber( it.getOnlyField( "leaveTermNo" ).getNumber() ) )
+								
+							if( itFieldNames.contains( "leaveReasonCategory" ) )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReasonCategory" ).setText( it.getOnlyField( "leaveReasonCategory" ).getText() ) )
+								
+							if( itFieldNames.contains( "leaveReason" ) )
+								enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReason" ).setText( it.getOnlyField( "leaveReason" ).getText() ) )
+									
+							if( user != null )
+				                enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastUpdateUser" ).setText( user.getEmail() ) )
+				                
+				            enrollmentIndex.put( enrollmentDocBuilder.build() )
+						}
+					}
+				)
+			}
 			
 			if( params.action == "save" ) {
 				enrollmentMetaData = Enrollment.findMetaDataBySchoolName( enrollmentSchool )
@@ -920,15 +988,14 @@ else {
 				)
 			}
 			
-			EnrollmentDocument.deleteMemcache()
-            StudentDocument.deleteMemcache()
-            
-            /* Respond with the HTML code that is required to display the new StudentDocument within an accordion. */
+			/* Respond with the HTML code that is required to display the new StudentDocument within an accordion. */
             println ListItemFormatter.getStudentListItem( studentDocument, student )
+            
+            EnrollmentDocument.deleteMemcache()
+            StudentDocument.deleteMemcache()
         }
         catch( Exception e ) {
-        	e.printStackTrace()
-            if( params.action.equals( "save" ) ) {
+        	if( params.action.equals( "save" ) ) {
                 
                 /* If the save fails, delete the records that have been created during the save process. */
                 try{
@@ -989,7 +1056,17 @@ else {
                     try{ it.save() } catch( Exception backupRestoreException ) {}
                 }
                 
-                try {
+                if( enrollmentDocumentBackups != null ) {
+					enrollmentDocumentBackups.each(
+	            		{
+	            			try { enrollmentIndex.put( it ) } catch( Exception backupRestoreException ) {}
+	            		}
+	                )
+	                
+	                EnrollmentDocument.deleteMemcache()
+                }
+				
+				try {
                 	if( enrollmentDocumentBackup != null ) {
                 		enrollmentIndex.put( enrollmentDocumentBackup )
                 		EnrollmentDocument.deleteMemcache()

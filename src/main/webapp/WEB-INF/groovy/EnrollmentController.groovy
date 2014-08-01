@@ -863,6 +863,102 @@ else if( /* Test Script */ user == null || /* Admin with Modify privilege */ URF
             println e.getMessage()
         }
     }
+    
+    /* Sync Student data in EnrollmentDocument with StudentDocument */
+    else if( params.action == "sync" ) {
+    	Index enrollmentIndex = search.index( "Enrollment" )
+    			
+    	EnrollmentDocument.list().each(
+			{
+				Set<String> itFieldNames = it.getFieldNames()
+				Document studentDocument = StudentDocument.findByStudentId( it.getOnlyField( "studentId" ).getAtom() )
+				Set<String> studentDocumentFieldNames = studentDocument.getFieldNames()
+						
+				if(
+					it.getOnlyField( "firstName" ).getText() != studentDocument.getOnlyField( "firstName" ).getText() ||
+					itFieldNames.contains( "lastName" ) != studentDocumentFieldNames.contains( "lastName" ) ||
+					(
+						itFieldNames.contains( "lastName" ) && studentDocumentFieldNames.contains( "lastName" ) &&
+						it.getOnlyField( "lastName" ).getText() != studentDocument.getOnlyField( "lastName" ).getText()
+					) ||
+					itFieldNames.contains( "birthDate" ) != studentDocumentFieldNames.contains( "birthDate" ) ||
+					(
+						itFieldNames.contains( "birthDate" ) && studentDocumentFieldNames.contains( "birthDate" ) &&
+						it.getOnlyField( "birthDate" ).getDate() != studentDocument.getOnlyField( "birthDate" ).getDate()
+					) ||
+					itFieldNames.contains( "village" ) != studentDocumentFieldNames.contains( "village" ) ||
+					(
+						itFieldNames.contains( "village" ) && studentDocumentFieldNames.contains( "village" ) &&
+						it.getOnlyField( "village" ).getText() != studentDocument.getOnlyField( "village" ).getText()
+					) ||
+					itFieldNames.contains( "genderCode" ) != studentDocumentFieldNames.contains( "genderCode" ) ||
+					(
+						itFieldNames.contains( "genderCode" ) && studentDocumentFieldNames.contains( "genderCode" ) &&
+						it.getOnlyField( "genderCode" ).getText() != studentDocument.getOnlyField( "genderCode" ).getText()
+					) ||
+					itFieldNames.contains( "specialInfo" ) != studentDocumentFieldNames.contains( "specialInfo" ) ||
+					(
+						itFieldNames.contains( "specialInfo" ) && studentDocumentFieldNames.contains( "specialInfo" ) &&
+						it.getOnlyField( "specialInfo" ).getText() != studentDocument.getOnlyField( "specialInfo" ).getText()
+					)
+				) {
+					Document.Builder enrollmentDocBuilder = Document.newBuilder()
+					enrollmentDocBuilder.setId( it.getId() )
+						.addField( Field.newBuilder().setName( "studentId" ).setAtom( it.getOnlyField( "studentId" ).getAtom() ) )
+						.addField( Field.newBuilder().setName( "firstName" ).setText( studentDocument.getOnlyField( "firstName" ).getText() ) )
+						.addField( Field.newBuilder().setName( "schoolName" ).setText( it.getOnlyField( "schoolName" ).getText() ) )
+						.addField( Field.newBuilder().setName( "termsEnrolled" ).setText( it.getOnlyField( "termsEnrolled" ).getText() ) )
+						.addField( Field.newBuilder().setName( "enrollTermYear" ).setNumber( it.getOnlyField( "enrollTermYear" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "enrollTermNo" ).setNumber( it.getOnlyField( "enrollTermNo" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "enrollTermStartDate" ).setDate( it.getOnlyField( "enrollTermStartDate" ).getDate() ) )
+						.addField( Field.newBuilder().setName( "leaveTermEndDate" ).setDate( it.getOnlyField( "leaveTermEndDate" ).getDate() ) )
+						.addField( Field.newBuilder().setName( "classesAttended" ).setText( it.getOnlyField( "classesAttended" ).getText() ) )
+						.addField( Field.newBuilder().setName( "firstClassAttended" ).setText( it.getOnlyField( "firstClassAttended" ).getText() ) )
+						.addField( Field.newBuilder().setName( "lastClassAttended" ).setText( it.getOnlyField( "lastClassAttended" ).getText() ) )
+						.addField( Field.newBuilder().setName( "tuitionFees" ).setNumber( it.getOnlyField( "tuitionFees" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "boardingFees" ).setNumber( it.getOnlyField( "boardingFees" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "otherFees" ).setNumber( it.getOnlyField( "otherFees" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "payments" ).setNumber( it.getOnlyField( "payments" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "feesDue" ).setNumber( it.getOnlyField( "feesDue" ).getNumber() ) )
+						.addField( Field.newBuilder().setName( "lastUpdateDate" ).setDate( new Date() ) )
+					
+					if( studentDocumentFieldNames.contains( "lastName" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastName" ).setText( studentDocument.getOnlyField( "lastName" ).getText() ) )
+							
+					if( studentDocumentFieldNames.contains( "birthDate" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "birthDate" ).setDate( studentDocument.getOnlyField( "birthDate" ).getDate() ) )
+							
+					if( studentDocumentFieldNames.contains( "village" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "village" ).setText( studentDocument.getOnlyField( "village" ).getText() ) )
+							
+					if( studentDocumentFieldNames.contains( "genderCode" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "genderCode" ).setText( studentDocument.getOnlyField( "genderCode" ).getText() ) )
+							
+					if( studentDocumentFieldNames.contains( "specialInfo" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "specialInfo" ).setText( studentDocument.getOnlyField( "specialInfo" ).getText() ) )
+							
+					if( itFieldNames.contains( "leaveTermYear" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermYear" ).setNumber( it.getOnlyField( "leaveTermYear" ).getNumber() ) )
+							
+					if( itFieldNames.contains( "leaveTermNo" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveTermNo" ).setNumber( it.getOnlyField( "leaveTermNo" ).getNumber() ) )
+						
+					if( itFieldNames.contains( "leaveReasonCategory" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReasonCategory" ).setText( it.getOnlyField( "leaveReasonCategory" ).getText() ) )
+						
+					if( itFieldNames.contains( "leaveReason" ) )
+						enrollmentDocBuilder.addField( Field.newBuilder().setName( "leaveReason" ).setText( it.getOnlyField( "leaveReason" ).getText() ) )
+							
+					if( user != null )
+			            enrollmentDocBuilder.addField( Field.newBuilder().setName( "lastUpdateUser" ).setText( user.getEmail() ) )
+			            
+			        enrollmentIndex.put( enrollmentDocBuilder.build() )
+			        
+			        println( "<p>Synced ${ it.getOnlyField( "studentId" ).getAtom() }</p>" )
+				}
+			}
+    	)
+    }
 }
 else {
     response.setStatus( response.SC_UNAUTHORIZED )
