@@ -309,7 +309,7 @@
   var studentLists = jQuery( ".student_list" );
   
   studentLists.each(
-        function() {
+        function() {        	
           if( jQuery( this ).parent().hasClass( "list_record_form" ) ) {
             if( navigator.userAgent.match( /(android)|(iPad)|(iPhone)|(iPod)|(webOS)/i ) ) {
               var studentList = jQuery( this );
@@ -323,6 +323,8 @@
                   	}
                 }
               ).show();
+              
+              autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_student_first_name", 150 );
 
               jQuery( this ).css( "overflow", "visible" );
               jQuery( ".list_record_form .student_list" ).css( "height", "1555px" );
@@ -344,6 +346,8 @@
                   	}
                 }
               ).show();
+              
+              autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_student_first_name", 150 );
 
               jQuery( this ).scroll(
                 function() {
@@ -607,6 +611,8 @@
                   	}
               }
             ).show();
+            
+            autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_student_first_name", 150 );
             
             jQuery( this ).find( ".list_student_enrollment_period_lookup" ).eq( activeSeqNo ).fadeIn();
           }

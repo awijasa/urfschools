@@ -268,6 +268,8 @@
 			      	}
 		      }
 		    ).show();
+		    
+		    autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_enrollment_first_name", 150 );
 		  
 		    enrollmentList.css( "overflow", "visible" );
 		    enrollmentList.css( "height", "1555px" );
@@ -287,6 +289,8 @@
 			      	}
 		      }
 		    ).show();
+		    
+		    autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_enrollment_first_name", 150 );
 		    
 		    enrollmentList.scroll(
 		      function() {
@@ -549,6 +553,8 @@
 		      	}
 		  }
 		).show();
+		
+		autoResizeFieldBasedOnWidth( jQuery( this ).find( ".ui-accordion-header" ), "div.list_enrollment_first_name", 150 );
 		
 		enrollmentList.find( ".list_enrollment_period_lookup" ).eq( activeSeqNo ).fadeIn();
 	  }
