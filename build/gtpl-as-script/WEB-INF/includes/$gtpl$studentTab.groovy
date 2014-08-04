@@ -304,6 +304,8 @@ out.print("""
 							              /* Insert the newly added Student to the top of the Student list accordion. */
 							              studentList.prepend( data ).accordion( \"refresh\" ).accordion( \"option\", \"active\", 0 ).scrollTop( 0 );
 							              
+							              autoResizeFieldBasedOnWidth( studentList.find( \".ui-accordion-header\" ).eq( 0 ), \"div.list_student_first_name\", 150 );
+							              
 							              /* Refer to /js/listInit.js. */
 							              initStudentList();
 							  

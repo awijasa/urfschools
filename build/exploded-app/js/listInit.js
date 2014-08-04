@@ -2287,6 +2287,7 @@ function initParentList() {
 											parentListItemHeader.find( "div.list_parent_village" ).text( parentListItemHeader.find( "input.list_parent_village" ).val() );
 											parentListItemHeader.find( "div.list_parent_primary_phone" ).text( parentListItemHeader.find( "input.list_parent_primary_phone" ).val() );
 											parentListItemDetails.find( "div.list_parent_email" ).text( parentListItemDetails.find( "input.list_parent_email" ).val() );
+											autoResizeFieldBasedOnWidth( parentListItemDetails, ".list_parent_email", 210 );
 											parentListItemDetails.find( "div.list_parent_secondary_phone" ).text( parentListItemDetails.find( "input.list_parent_secondary_phone" ).val() );
 											parentListItemDetails.find( "div.list_parent_profession" ).text( parentListItemDetails.find( "input.list_parent_profession" ).val() );
 	
@@ -5823,6 +5824,7 @@ function saveEditedStudent( studentListItemHeader, studentListItemDetails ) {
 
 						/* Assign display values based on their existing edit field values */
 						studentListItemHeader.find( "div.list_student_first_name" ).text( studentListItemHeader.find( "input.list_student_first_name" ).val() );
+						autoResizeFieldBasedOnWidth( studentListItemHeader, "div.list_student_first_name", 150 );
 						studentListItemHeader.find( "div.list_student_last_name" ).text( studentListItemHeader.find( "input.list_student_last_name" ).val() );
 						studentListItemDetails.find( "div.list_student_birth_date" ).text( studentListItemDetails.find( "input.list_student_birth_date" ).val() );
 						studentListItemDetails.find( "div.list_student_village" ).text( studentListItemDetails.find( "input.list_student_village" ).val() );

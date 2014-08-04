@@ -364,6 +364,8 @@ out.print("""
 								              /* Insert the newly added Enrollment to the top of the Enrollment list accordion. */
 								              enrollmentList.prepend( data ).accordion( \"refresh\" ).accordion( \"option\", \"active\", 0 ).scrollTop( 0 );
 								              
+								              autoResizeFieldBasedOnWidth( enrollmentList.find( \".ui-accordion-header\" ).eq( 0 ), \"div.list_enrollment_first_name\", 150 );
+								              
 								              /* Refer to /js/listInit.js. */
 								              initEnrollmentList();
 								  
