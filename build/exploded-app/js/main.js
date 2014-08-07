@@ -166,7 +166,12 @@ function initMain() {
         		  );
                 }
               , error: function( jqXHR, textStatus, errorThrown ) {
-                  alert( textStatus + " " + errorThrown );
+            	  if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+						alert( "We're sorry. The servers did not respond on time. Please try again" );
+					}
+					else {
+						alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+					}
                 }
             }
           );
