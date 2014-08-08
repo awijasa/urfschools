@@ -627,7 +627,7 @@ class ListItemFormatter {
 										mkp.yield( "of " )
 										
 										if( studentIdNotToLink == relationship.studentId )
-											mkp.yield( relationship.studentId )
+											span( relationship.studentId )
 										else
 											a( href: "javascript:void( 0 )", relationship.studentId )
 											
@@ -666,7 +666,7 @@ class ListItemFormatter {
 										mkp.yield( "of " )
 										
 										if( studentIdNotToLink == relationship.studentId )
-											mkp.yield( relationship.studentId )
+											span( relationship.studentId )
 										else
 											a( href: "javascript:void( 0 )", relationship.studentId )
 											

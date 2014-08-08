@@ -1912,7 +1912,7 @@ function initParentList() {
 				var listParentChildTableSelector = listParentChildTableTr.find( ".list_parent_child_table_selector" );
 
 				listParentChildTableSelector.append(
-						'<input name="deleteChildId' + listParentChildTableTr.index() + '" type="hidden" value="' + listParentChildTableSelector.find( "a" ).text() + '" />'
+						'<input name="deleteChildId' + listParentChildTableTr.index() + '" type="hidden" value="' + listParentChildTableSelector.find( "a, span" ).text() + '" />'
 				);
 
 				listParentChildTableTr.hide();
@@ -2888,7 +2888,7 @@ function initParentList() {
 				var listParentRelativeTableSelector = listParentRelativeTableTr.find( ".list_parent_relative_table_selector" );
 
 				listParentRelativeTableSelector.append(
-						'<input name="deleteRelativeId' + listParentRelativeTableTr.index() + '" type="hidden" value="' + listParentRelativeTableSelector.find( "a" ).text() + '" />'
+						'<input name="deleteRelativeId' + listParentRelativeTableTr.index() + '" type="hidden" value="' + listParentRelativeTableSelector.find( "a, span" ).text() + '" />'
 				);
 
 				listParentRelativeTableTr.hide();
