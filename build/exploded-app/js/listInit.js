@@ -82,7 +82,12 @@ function initEnrollmentList() {
 								dialogListParent.append( data );
 							}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 						}
 				);
@@ -230,7 +235,12 @@ function initEnrollmentList() {
 									);
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 				);
@@ -329,7 +339,13 @@ function initEnrollmentList() {
 										enrollmentList.toggle();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										enrollmentToDeleteDiv.find( ".list_enrollment_delete" ).show();
 										enrollmentToDeleteDiv.find( ".list_enrollment_edit" ).show();
 										enrollmentToDeleteDiv.find( ".list_enrollment_save_wait" ).hide();
@@ -935,7 +951,12 @@ function initEnrollmentList() {
 												dialogListFee.append( data );
 											}
 											, error: function( jqXHR, textStatus, errorThrown ) {
-												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+													alert( "We're sorry. The servers did not respond on time. Please try again" );
+												}
+												else {
+													alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												}
 											}
 										}
 								);
@@ -1035,7 +1056,12 @@ function initEnrollmentList() {
 												dialogListPayment.append( data );
 											}
 											, error: function( jqXHR, textStatus, errorThrown ) {
-												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+													alert( "We're sorry. The servers did not respond on time. Please try again" );
+												}
+												else {
+													alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												}
 											}
 										}
 								);
@@ -1344,7 +1370,13 @@ function initFeeList() {
 	
 										}
 									, error: function( jqXHR, textStatus, errorThrown ) {
-											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+												alert( "We're sorry. The servers did not respond on time. Please try again" );
+											}
+											else {
+												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											}
+											
 											feeToDeleteDiv.find( ".list_fee_delete" ).show();
 											feeToDeleteDiv.find( ".list_fee_edit" ).show();
 											feeToDeleteDiv.find( ".list_fee_save_wait" ).hide();
@@ -1438,7 +1470,13 @@ function initFeeList() {
 									feeListItemDetails.find( ".list_fee_save" ).toggle();
 									feeListItemDetails.find( ".list_fee_cancel" ).toggle();
 									feeListItemDetails.find( ".list_fee_save_wait" ).toggle();
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 					);
@@ -1491,7 +1529,12 @@ function initFeeList() {
 								dialogEnrollmentLookup.append( data );
 							}
 						, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 					}
 				);
@@ -1586,7 +1629,13 @@ function initGenderList() {
 										genderListItem.remove();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										genderListItem.find( ".list_gender_delete" ).show();
 										genderListItem.find( ".list_gender_edit" ).show();
 									}
@@ -1620,7 +1669,12 @@ function initGenderList() {
 										toggleGenderListItemElements( genderListItemTr );
 									}
 						, error: function( jqXHR, textStatus, errorThrown ) {
-							alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+							if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+								alert( "We're sorry. The servers did not respond on time. Please try again" );
+							}
+							else {
+								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+							}
 						}
 						}
 				);
@@ -1680,7 +1734,13 @@ function initLeaveReasonCategoryList() {
 										leaveReasonCategoryListItem.remove();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										leaveReasonCategoryListItem.find( ".list_leave_reason_category_delete" ).show();
 									}
 							}
@@ -1798,7 +1858,12 @@ function initParentList() {
 							, error: function( jqXHR, textStatus, errorThrown ) {
 
 								/* Display an error message popup if the AJAX call returned an error. */
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 							}
 					);
@@ -1820,7 +1885,12 @@ function initParentList() {
 							, error: function( jqXHR, textStatus, errorThrown ) {
 
 								/* Display an error message popup if the AJAX call returned an error. */
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 							}
 					);
@@ -1876,7 +1946,12 @@ function initParentList() {
 											dialogStudentLookup.append( data );
 										}
 										, error: function( jqXHR, textStatus, errorThrown ) {
-											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+												alert( "We're sorry. The servers did not respond on time. Please try again" );
+											}
+											else {
+												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											}
 										}
 										}
 								);
@@ -1998,7 +2073,13 @@ function initParentList() {
 	
 										}
 									, error: function( jqXHR, textStatus, errorThrown ) {
-											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+												alert( "We're sorry. The servers did not respond on time. Please try again" );
+											}
+											else {
+												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											}
+											
 											parentToDeleteDiv.find( ".list_parent_delete" ).show();
 											parentToDeleteDiv.find( ".list_parent_edit" ).show();
 											parentToDeleteDiv.find( ".list_parent_save_wait" ).hide();
@@ -2468,7 +2549,13 @@ function initParentList() {
 								parentListItemDetails.find( ".list_parent_save" ).toggle();
 								parentListItemDetails.find( ".list_parent_cancel" ).toggle();
 								parentListItemDetails.find( ".list_parent_save_wait" ).toggle();
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 							}
 					);
@@ -2637,7 +2724,12 @@ function initParentList() {
 										listParentChildListStudent.append( data );
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
 									}
 							}
 						);
@@ -2685,7 +2777,12 @@ function initParentList() {
 									listParentChildListStudent.append( data );
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 					);
@@ -2733,7 +2830,12 @@ function initParentList() {
 								dialogStudentLookup.append( data );
 							}
 						, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 					}
 				);
@@ -2774,7 +2876,12 @@ function initParentList() {
 							, error: function( jqXHR, textStatus, errorThrown ) {
 
 								/* Display an error message popup if the AJAX call returned an error. */
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 							}
 					);
@@ -2796,7 +2903,12 @@ function initParentList() {
 							, error: function( jqXHR, textStatus, errorThrown ) {
 
 								/* Display an error message popup if the AJAX call returned an error. */
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 							}
 					);
@@ -2852,7 +2964,12 @@ function initParentList() {
 											dialogStudentLookup.append( data );
 										}
 										, error: function( jqXHR, textStatus, errorThrown ) {
-											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+												alert( "We're sorry. The servers did not respond on time. Please try again" );
+											}
+											else {
+												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											}
 										}
 										}
 								);
@@ -2940,7 +3057,12 @@ function initParentList() {
 										listParentRelativeListStudent.append( data );
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
 									}
 							}
 						);
@@ -2988,7 +3110,12 @@ function initParentList() {
 									listParentRelativeListStudent.append( data );
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 					);
@@ -3036,7 +3163,12 @@ function initParentList() {
 									dialogStudentLookup.append( data );
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 				);
@@ -3099,7 +3231,13 @@ function initParentalRelationshipList() {
 										parentalRelationshipListItem.remove();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										parentalRelationshipListItem.find( ".list_parental_relationship_delete" ).show();
 									}
 							}
@@ -3193,7 +3331,13 @@ function initPaymentList() {
 	
 										}
 									, error: function( jqXHR, textStatus, errorThrown ) {
-											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+												alert( "We're sorry. The servers did not respond on time. Please try again" );
+											}
+											else {
+												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+											}
+											
 											paymentToDeleteDiv.find( ".list_payment_delete" ).show();
 											paymentToDeleteDiv.find( ".list_payment_edit" ).show();
 											paymentToDeleteDiv.find( ".list_payment_save_wait" ).hide();
@@ -3287,7 +3431,13 @@ function initPaymentList() {
 									paymentListItemDetails.find( ".list_payment_save" ).toggle();
 									paymentListItemDetails.find( ".list_payment_cancel" ).toggle();
 									paymentListItemDetails.find( ".list_payment_save_wait" ).toggle();
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 					);
@@ -3338,7 +3488,12 @@ function initPaymentList() {
 								dialogParentLookup.append( data );
 							}
 						, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 					}
 				);
@@ -3390,7 +3545,12 @@ function initPaymentList() {
 								dialogEnrollmentLookup.append( data );
 							}
 						, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 					}
 				);
@@ -3671,7 +3831,13 @@ function initSchoolList() {
 										initSchoolList();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										schoolListItem.find( ".list_school_delete" ).show();
 										schoolListItem.find( ".list_school_edit" ).show();
 										schoolListItem.find( ".list_school_save_wait" ).hide();
@@ -3781,7 +3947,13 @@ function initSchoolList() {
 									listSchoolClassesColForm.find( "input[name^='newClass']" ).remove();
 									listSchoolClassesColForm.find( "input[name^='class']" ).remove();
 									schoolListItemTr.find( ".list_school_save, .list_school_cancel" ).toggle();
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 							}
 					);
@@ -3990,7 +4162,13 @@ function initStudentList() {
 										studentList.toggle();
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										studentToDeleteDiv.find( ".list_student_delete" ).show();
 										studentToDeleteDiv.find( ".list_student_edit" ).show();
 										studentToDeleteDiv.find( ".list_student_save_wait" ).hide();
@@ -4244,7 +4422,12 @@ function initStudentList() {
 									);
 								}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+										alert( "We're sorry. The servers did not respond on time. Please try again" );
+									}
+									else {
+										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+									}
 								}
 						}
 				);
@@ -4680,7 +4863,12 @@ function initStudentList() {
 												dialogListFee.append( data );
 											}
 											, error: function( jqXHR, textStatus, errorThrown ) {
-												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+													alert( "We're sorry. The servers did not respond on time. Please try again" );
+												}
+												else {
+													alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												}
 											}
 										}
 								);
@@ -4780,7 +4968,12 @@ function initStudentList() {
 												dialogListPayment.append( data );
 											}
 											, error: function( jqXHR, textStatus, errorThrown ) {
-												alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+													alert( "We're sorry. The servers did not respond on time. Please try again" );
+												}
+												else {
+													alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+												}
 											}
 										}
 								);
@@ -5059,7 +5252,12 @@ function initStudentList() {
 								dialogListParent.append( data );
 							}
 							, error: function( jqXHR, textStatus, errorThrown ) {
-								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+									alert( "We're sorry. The servers did not respond on time. Please try again" );
+								}
+								else {
+									alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+								}
 							}
 						}
 				);
@@ -5337,7 +5535,13 @@ function initTermList() {
 										termList.accordion( "refresh" ).accordion( "option", "active", false );
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										termListItemDiv.find( ".list_term_delete" ).show();
 										termListItemDiv.find( ".list_term_edit" ).show();
 										termListItemDiv.find( ".list_term_save_wait" ).hide();
@@ -5421,7 +5625,13 @@ function initTermList() {
 							termListItemDetails.find( ".list_term_save" ).toggle();
 							termListItemDetails.find( ".list_term_cancel" ).toggle();
 							termListItemDetails.find( ".list_term_save_wait" ).toggle();
-							alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+							if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+								alert( "We're sorry. The servers did not respond on time. Please try again" );
+							}
+							else {
+								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+							}
 						}
 						}
 				);
@@ -5517,7 +5727,13 @@ function initURFUserList() {
 										urfUserList.accordion( "refresh" ).accordion( "option", "active", false );
 									}
 								, error: function( jqXHR, textStatus, errorThrown ) {
-										alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+											alert( "We're sorry. The servers did not respond on time. Please try again" );
+										}
+										else {
+											alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+										}
+										
 										urfUserListItemDiv.find( ".list_urfuser_delete" ).show();
 										urfUserListItemDiv.find( ".list_urfuser_edit" ).show();
 										urfUserListItemDiv.find( ".list_urfuser_save_wait" ).hide();
@@ -5599,7 +5815,13 @@ function initURFUserList() {
 							urfUserListItemDetails.find( ".list_urfuser_save" ).toggle();
 							urfUserListItemDetails.find( ".list_urfuser_cancel" ).toggle();
 							urfUserListItemDetails.find( ".list_urfuser_save_wait" ).toggle();
-							alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+							if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+								alert( "We're sorry. The servers did not respond on time. Please try again" );
+							}
+							else {
+								alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+							}
 						}
 						}
 				);
@@ -5808,7 +6030,13 @@ function saveEditedEnrollment( enrollmentListItemHeader, enrollmentListItemDetai
 					enrollmentListItemDetails.find( ".list_enrollment_cancel" ).toggle();
 					enrollmentListItemDetails.find( ".list_enrollment_save_wait" ).toggle();
 					enrollmentListItemDetails.find( "select[name^='classAttended']" ).remove();
-					alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+					if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+						alert( "We're sorry. The servers did not respond on time. Please try again" );
+					}
+					else {
+						alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+					}
 				}
 		}
 	);
@@ -6006,7 +6234,13 @@ function saveEditedStudent( studentListItemHeader, studentListItemDetails ) {
 						studentListItemDetails.find( ".list_student_cancel" ).toggle();
 						studentListItemDetails.find( ".list_student_save_wait" ).toggle();
 						studentListItemDetails.find( "select[name^='classAttended']" ).remove();
-						alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+
+						if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+							alert( "We're sorry. The servers did not respond on time. Please try again" );
+						}
+						else {
+							alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+						}
 					}
 			}
 	);

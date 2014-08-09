@@ -155,7 +155,12 @@ out.print("""
 				  , error: function( jqXHR, textStatus, errorThrown ) {
 			
 					/* Display an error message popup if the AJAX call returned an error. */
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+							alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+						}
+						else {
+							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+						}
 				  }
 				}
 			  );
@@ -177,7 +182,12 @@ out.print("""
 				  , error: function( jqXHR, textStatus, errorThrown ) {
 			
 					/* Display an error message popup if the AJAX call returned an error. */
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+							alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+						}
+						else {
+							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+						}
 				  }
 				}
 			  );
@@ -233,7 +243,12 @@ out.print("""
 							dialogStudentLookup.append( data );
 						  }
 						, error: function( jqXHR, textStatus, errorThrown ) {
-							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+							if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+								alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+							}
+							else {
+								alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+							}
 						  }
 					  }
 					);
@@ -287,7 +302,12 @@ out.print("""
 				  , error: function( jqXHR, textStatus, errorThrown ) {
 			
 					/* Display an error message popup if the AJAX call returned an error. */
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+							alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+						}
+						else {
+							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+						}
 				  }
 				}
 			  );
@@ -309,7 +329,12 @@ out.print("""
 				  , error: function( jqXHR, textStatus, errorThrown ) {
 			
 					/* Display an error message popup if the AJAX call returned an error. */
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+							alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+						}
+						else {
+							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+						}
 				  }
 				}
 			  );
@@ -365,7 +390,12 @@ out.print("""
 							dialogStudentLookup.append( data );
 						  }
 						, error: function( jqXHR, textStatus, errorThrown ) {
-							alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+							if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+								alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+							}
+							else {
+								alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+							}
 						  }
 					  }
 					);
@@ -427,7 +457,12 @@ out.print("""
 					addParentChildListStudent.append( data );
 				  }
 				, error: function( jqXHR, textStatus, errorThrown ) {
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+						alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+					}
+					else {
+						alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					}
 				  }
 			  }
 			);
@@ -467,7 +502,12 @@ out.print("""
                 addParentChildListStudent.append( data );
               }
             , error: function( jqXHR, textStatus, errorThrown ) {
-                alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+            	if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
               }
           }
         );
@@ -508,7 +548,12 @@ out.print("""
 					addParentRelativeListStudent.append( data );
 				  }
 				, error: function( jqXHR, textStatus, errorThrown ) {
-					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+						alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+					}
+					else {
+						alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+					}
 				  }
 			  }
 			);
@@ -548,7 +593,12 @@ out.print("""
                 addParentRelativeListStudent.append( data );
               }
             , error: function( jqXHR, textStatus, errorThrown ) {
-                alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+            	if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
               }
           }
         );
@@ -611,7 +661,12 @@ out.print("""
           , error: function( jqXHR, textStatus, errorThrown ) {
             
             /* Display an error message popup if the AJAX call returned an error. */
-            alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+        	  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
           }
         }
       );

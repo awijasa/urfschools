@@ -186,7 +186,12 @@ out.print("""
   				jQuery( \".parent_filter_sortby_dialog_village_filter\" ).val( parentVillageFilter );
   			}
   		, error: function( jqXHR, textStatus, errorThrown ) {
-  				alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+	  			if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
   			}
   	}
   );
@@ -225,7 +230,12 @@ out.print("""
               listParent.toggle();
             }
           , error: function( jqXHR, textStatus, errorThrown ) {
-              alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+        	  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
             }
         }
       );
@@ -264,7 +274,12 @@ out.print("""
               listParent.toggle();
             }
           , error: function( jqXHR, textStatus, errorThrown ) {
-              alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+        	  if( textStatus == null || jqXHR.getResponseHeader( \"Response-Phrase\" ) == null ) {
+					alert( \"We're sorry. The servers did not respond on time. Please try again\" );
+				}
+				else {
+					alert( textStatus + \" \" + jqXHR.getResponseHeader( \"Response-Phrase\" ) );
+				}
             }
         }
       );

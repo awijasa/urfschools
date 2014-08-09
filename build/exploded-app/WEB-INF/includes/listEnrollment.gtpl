@@ -168,7 +168,12 @@
   				jQuery( ".enrollment_filter_sortby_dialog_village_filter" ).val( enrollmentVillageFilter );
   			}
   		, error: function( jqXHR, textStatus, errorThrown ) {
-  				alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+	  			if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+					alert( "We're sorry. The servers did not respond on time. Please try again" );
+				}
+				else {
+					alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+				}
   			}
   	}
   );
@@ -206,7 +211,12 @@
               listEnrollment.toggle();
             }
           , error: function( jqXHR, textStatus, errorThrown ) {
-              alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+        	  if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+					alert( "We're sorry. The servers did not respond on time. Please try again" );
+				}
+				else {
+					alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+				}
             }
         }
       );
@@ -244,7 +254,12 @@
               listEnrollment.toggle();
             }
           , error: function( jqXHR, textStatus, errorThrown ) {
-              alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+        	  if( textStatus == null || jqXHR.getResponseHeader( "Response-Phrase" ) == null ) {
+					alert( "We're sorry. The servers did not respond on time. Please try again" );
+				}
+				else {
+					alert( textStatus + " " + jqXHR.getResponseHeader( "Response-Phrase" ) );
+				}
             }
         }
       );
