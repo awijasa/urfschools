@@ -1,4 +1,4 @@
-<!-- Indices written at Thu, 7 Aug 2014 20:01:08 CDT -->
+<!-- Indices written at Fri, 15 Aug 2014 09:52:40 CDT -->
 
 <datastore-indexes>
 
@@ -24,20 +24,20 @@
         <property name="parentalRelationship" direction="asc"/>
     </datastore-index>
 
-    <!-- Used 3 times in query history -->
-    <datastore-index kind="Relationship" ancestor="true" source="auto">
-        <property name="parentalRelationship" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 3 times in query history -->
-    <datastore-index kind="Relationship" ancestor="true" source="auto">
-        <property name="guardianRelationship" direction="asc"/>
-    </datastore-index>
-
     <!-- Used 1 time in query history -->
     <datastore-index kind="Parent" ancestor="false" source="auto">
         <property name="firstName" direction="asc"/>
         <property name="lastName" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Relationship" ancestor="true" source="auto">
+        <property name="parentalRelationship" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Relationship" ancestor="true" source="auto">
+        <property name="guardianRelationship" direction="asc"/>
     </datastore-index>
 
 </datastore-indexes>
