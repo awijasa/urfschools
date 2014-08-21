@@ -1,6 +1,40 @@
-<!-- Indices written at Fri, 15 Aug 2014 10:29:18 CDT -->
+<!-- Indices written at Sat, 29 Mar 2014 01:05:32 CDT -->
 
 <datastore-indexes>
+
+    <!-- Used 13 times in query history -->
+    <datastore-index kind="AnonymousParentalRelationship" ancestor="true" source="auto">
+        <property name="parentalRelationship" direction="asc"/>
+    </datastore-index>
+    
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="ClassFees" ancestor="true" source="auto">
+        <property name="class" direction="asc"/>
+        <property name="classLevel" direction="asc"/>
+    </datastore-index>
+    
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Parent" ancestor="false" source="auto">
+        <property name="firstName" direction="asc"/>
+        <property name="lastName" direction="asc"/>
+    </datastore-index>
+    
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Relationship" ancestor="true" source="auto">
+        <property name="parentalRelationship" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Relationship" ancestor="true" source="auto">
+        <property name="guardianRelationship" direction="asc"/>
+    </datastore-index>
+    
+    <!-- Used 3 times in query history -->
+    <datastore-index kind="Term" ancestor="false" source="auto">
+        <property name="termSchool" direction="asc"/>
+        <property name="year" direction="desc"/>
+        <property name="termNo" direction="desc"/>
+    </datastore-index>
 
     <!-- Used 1 time in query history -->
     <datastore-index kind="UserPrivilege" ancestor="true" source="auto">
@@ -8,36 +42,9 @@
         <property name="schoolName" direction="asc"/>
     </datastore-index>
 
-    <!-- Used 2 times in query history -->
-    <datastore-index kind="Term" ancestor="false" source="auto">
-        <property name="termSchool" direction="asc"/>
-        <property name="startDate" direction="desc"/>
-    </datastore-index>
-
     <!-- Used 1 time in query history -->
     <datastore-index kind="UserPrivilege" ancestor="true" source="auto">
         <property name="schoolName" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 4 times in query history -->
-    <datastore-index kind="AnonymousParentalRelationship" ancestor="true" source="auto">
-        <property name="parentalRelationship" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 1 time in query history -->
-    <datastore-index kind="Parent" ancestor="false" source="auto">
-        <property name="firstName" direction="asc"/>
-        <property name="lastName" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 1 time in query history -->
-    <datastore-index kind="Relationship" ancestor="true" source="auto">
-        <property name="parentalRelationship" direction="asc"/>
-    </datastore-index>
-
-    <!-- Used 1 time in query history -->
-    <datastore-index kind="Relationship" ancestor="true" source="auto">
-        <property name="guardianRelationship" direction="asc"/>
     </datastore-index>
 
 </datastore-indexes>

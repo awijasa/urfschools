@@ -11,7 +11,7 @@ package web_inf.pages;out.print("""<!DOCTYPE html>
 		    meta( name: "viewport", content: "height=906, target-densityDpi=device-dpi, width=600" )
 		    title( "Welcome to URF Schools' Web Database" )
 		    link( rel: "stylesheet", type: "text/css", href: "/css/login.css" )
-		    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.0.custom.min.css" )
+		    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.1.custom.min.css" )
 		    script( type: "text/javascript", src: "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" )
 ;
 out.print("""

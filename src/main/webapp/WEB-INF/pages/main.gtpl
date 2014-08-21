@@ -58,7 +58,7 @@
 %>
 		<script type="text/javascript">
 			if (typeof jQuery.ui == 'undefined') {
-			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.2/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.1/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
 			}
 			
 			if (typeof jQuery.ui == 'undefined') {
