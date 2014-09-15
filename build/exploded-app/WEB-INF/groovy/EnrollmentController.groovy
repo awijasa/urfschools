@@ -114,7 +114,7 @@ else if( params.action.equals( "delete" ) ) {
 		
 		/* The local AppEngine server can't process this block properly */
 		if( !localMode ) {
-			EnrollmentDocument.findByLimitAndOffset( 0, Integer.parseInt( params.nextTwentyOffset ) ).each(
+			EnrollmentDocument.findByLimitAndOffset( 0, Integer.parseInt( params.nextTwentyOffset ), session ).each(
 				{
 					/*
 					 * Respond with the HTML code that is required to display the EnrollmentDocument that can fill the empty space that resulted
