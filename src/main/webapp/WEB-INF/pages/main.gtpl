@@ -42,15 +42,19 @@
 	    link( rel: "stylesheet", type: "text/css", href: "/css/enrollmentFilterSortByDialog.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/parentFilterSortByDialog.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/studentFilterSortByDialog.css" )   
-	    script( type: "text/javascript", src: "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" )
+	    script( type: "text/javascript", src: "//code.jquery.com/jquery-1.11.2.min.js" )
 %>
-		<script type="text/javascript">
-			if (typeof jQuery == 'undefined') {
-			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+	    <script type="text/javascript">
+			if ( typeof jQuery == 'undefined' ) {
+			    document.write( unescape( "%3Cscript src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js' type='text/javascript'%3E%3C/script%3E" ) );
 			}
 			
-			if (typeof jQuery == 'undefined') {
-			    document.write(unescape("%3Cscript src='/js/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+			if ( typeof jQuery == 'undefined' ) {
+			    document.write( unescape( "%3Cscript src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E" ) );
+			}
+			
+			if ( typeof jQuery == 'undefined' ) {
+			    document.write( unescape( "%3Cscript src='/js/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E" ) );
 			}
 		</script>
 <%
@@ -58,7 +62,7 @@
 %>
 		<script type="text/javascript">
 			if (typeof jQuery.ui == 'undefined') {
-			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.1/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.2/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
 			}
 			
 			if (typeof jQuery.ui == 'undefined') {
