@@ -50,7 +50,7 @@
 			}
 			
 			if ( typeof jQuery == 'undefined' ) {
-			    document.write( unescape( "%3Cscript src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E" ) );
+			    document.write( unescape( "%3Cscript src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E" ) );
 			}
 			
 			if ( typeof jQuery == 'undefined' ) {
