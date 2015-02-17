@@ -13,7 +13,7 @@
 	    meta( name: "viewport", content: "height=1576, width=1200" )
 	    title( "URF Schools' Web Database" )
 	    link( rel: "stylesheet", type: "text/css", href: "//fonts.googleapis.com/css?family=Didact+Gothic" )
-	    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.2.custom.min.css" )
+	    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.3.custom.min.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/addEnrollment.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/addFee.css" )
 	    link( rel: "stylesheet", type: "text/css", href: "/css/addGender.css" )
@@ -62,11 +62,11 @@
 %>
 		<script type="text/javascript">
 			if (typeof jQuery.ui == 'undefined') {
-			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.2/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+			    document.write(unescape("%3Cscript src='//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.3/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
 			}
 			
 			if (typeof jQuery.ui == 'undefined') {
-			    document.write(unescape("%3Cscript src='/js/jquery-ui-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+			    document.write(unescape("%3Cscript src='/js/jquery-ui-1.11.3.min.js' type='text/javascript'%3E%3C/script%3E"));
 			}
 		</script>
 <%

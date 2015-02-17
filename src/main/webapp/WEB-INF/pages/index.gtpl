@@ -11,7 +11,7 @@
 		    meta( name: "viewport", content: "height=906, target-densityDpi=device-dpi, width=600" )
 		    title( "Welcome to URF Schools' Web Database" )
 		    link( rel: "stylesheet", type: "text/css", href: "/css/login.css" )
-		    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.2.custom.min.css" )
+		    link( rel: "stylesheet", type: "text/css", href: "/css/jquery-ui-1.11.3.custom.min.css" )
 		    script( type: "text/javascript", src: "//code.jquery.com/jquery-1.11.2.min.js" )
 %>
 		    <script type="text/javascript">
