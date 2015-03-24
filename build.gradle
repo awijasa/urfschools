@@ -55,7 +55,7 @@ dependencies {
      */
     // compile 'org.codehaus.gpars:gpars-appengine:0.1'
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.3.2', transitive: false
-    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4', transitive: false
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.1', transitive: false
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.4', transitive: false
     compile group: 'org.codehaus.groovy.modules.http-builder', name: 'http-builder', version: '0.7.2', transitive: false
 
